@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace MidiEval.Analyzer {
 
+	/// <summary>
+	/// The Program class for MIDIEval, serving as its main entry point.
+	/// </summary>
 	internal static class Program {
 
 		private static readonly Dictionary<string, Song>[] _songs = new[] {
@@ -14,10 +17,19 @@ namespace MidiEval.Analyzer {
 			new Dictionary<string, Song>()
 		};
 
+		/// <summary>
+		/// Gets the loaded songs in the program.
+		/// </summary>
+		/// <value>
+		/// The songs loaded in the program.
+		/// </value>
 		public static Dictionary<string, Song>[] Songs {
 			get { return _songs; }
 		}
 
+		/// <summary>
+		/// Runs the analyzer.
+		/// </summary>
 		public static void RunAnalyzer() {
 			Analyzer.Instance.Analyze(_songs[0].Values.ToArray(), _songs[1].Values.ToArray());
 		}

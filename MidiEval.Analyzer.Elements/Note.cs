@@ -1,5 +1,4 @@
 ﻿using MidiEval.Analyzer.Elements.Notes;
-using System;
 
 namespace MidiEval.Analyzer.Elements {
 
@@ -31,7 +30,7 @@ namespace MidiEval.Analyzer.Elements {
 		}
 
 		/// <summary>
-		/// Initializes a new instance of a note.
+		/// Initializes a new instance of a <see cref="Note"/> class.
 		/// </summary>
 		/// <param name="pitch">The pitch of the note.</param>
 		/// <param name="noteOn">The time (by ticks) when the note is on.</param>

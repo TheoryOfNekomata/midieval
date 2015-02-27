@@ -2,18 +2,30 @@
 using MidiEval.Analyzer.Elements.Notes;
 using Sanford.Multimedia.Midi;
 using System.Collections.Generic;
-using System.Windows.Forms;
 
 namespace MidiEval.Analyzer.Parsing {
 
+	/// <summary>
+	/// A class for extracting notes in a given <see cref="Sequence"/>.
+	/// </summary>
 	public class NoteExtractor {
-		private static NoteExtractor _instance = new NoteExtractor();
+		private static readonly NoteExtractor _instance = new NoteExtractor();
 
+		/// <summary>
+		/// Gets the instance of the <see cref="NoteExtractor"/>.
+		/// </summary>
+		/// <value>
+		/// The instance of the <see cref="NoteExtractor"/>.
+		/// </value>
 		public static NoteExtractor Instance {
 			get { return _instance; }
-			set { _instance = value; }
 		}
 
+		/// <summary>
+		/// Parses the specified sequence.
+		/// </summary>
+		/// <param name="sequence">The sequence.</param>
+		/// <returns>Array of <see cref="Channel"/>s containing notes extracted from the <paramref name="sequence"/>.</returns>
 		public Channel[] Parse(Sequence sequence) {
 			var channels = new Channel[16];
 			var noteOns = new Dictionary<int, Dictionary<int, Queue<int>>>();

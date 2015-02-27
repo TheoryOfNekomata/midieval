@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidiEval.Analyzer.Parsing",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidiEval.Analyzer", "MidiEval.Analyzer\MidiEval.Analyzer.csproj", "{1369F272-13CF-489C-BCC6-A4DBB257304C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidiEval.Analyzer.Songs", "MidiEval.Analyzer.Songs\MidiEval.Analyzer.Songs.csproj", "{09718242-CFB1-41F1-B3B1-71983E4D691C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1369F272-13CF-489C-BCC6-A4DBB257304C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1369F272-13CF-489C-BCC6-A4DBB257304C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1369F272-13CF-489C-BCC6-A4DBB257304C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09718242-CFB1-41F1-B3B1-71983E4D691C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09718242-CFB1-41F1-B3B1-71983E4D691C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09718242-CFB1-41F1-B3B1-71983E4D691C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09718242-CFB1-41F1-B3B1-71983E4D691C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -68,5 +68,9 @@ namespace MidiEval.Analyzer.Forms {
 
 			this.UpdateLists();
 		}
+
+		private void LinkLicense_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+			new License().ShowDialog(this);
+		}
 	}
 }

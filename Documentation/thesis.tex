@@ -4,11 +4,12 @@
 \usepackage{amsfonts}
 \usepackage{mathptmx}
 \usepackage[scaled]{helvet}
+\usepackage[notocbib,bibnewpage]{apacite}
 
 \renewcommand*{\familydefault}{\sfdefault}
 
 \title{Trends of Music through Analysis and Comparison of Musical Structures}
-\author{Crisostomo, Allan V., Doydora, Jonathan L., Bragais, Alvin, Legarte, Kennedy}
+\author{Crisostomo, Allan V. (allan.crisostomo@pup.edu.ph); Doydora, Jonathan L.; Bragais, Alvin; Legarte, Kennedy}
 \begin{document}
     \maketitle
     
@@ -19,40 +20,106 @@
     This chapter presents the problem along with its background, the research assumptions for the system and the study, the conceptual frameworks of the system and the study, the scope, the limitations and the significance. At the end of this chapter, the definition of conceptual at operational terms is also presented.
     
     \section{Introduction}
-    Music, like any other art form, evolves with time. Ever since the dawn of civilization, man had been producing music utilizing the influence of nascent cultures everywhere, the collective experience of composers, and the power of artistic self-expression.
+    Music, like any other art form, evolves with time. Ever since the dawn of civilization, man has been producing music influenced by the nascent cultures everywhere, the collective experience of composers, and the power of artistic self-expression. 
+
+    Musical genres are categorical labels created by humans to characterize pieces of music. A musical genre is characterized by the common characteristics shared by its members. These characteristics typically are related to the instrumentation, rhythmic structure, and harmonic content of the music. Genre hierarchies are commonly used to structure the large collections of music available on the Web. Currently musical genre annotation is performed manually. Automatic musical genre classification can assist or replace the human user in this process and would be a valuable addition to music information retrieval systems. In addition, automatic musical genre classification provides a framework for developing and evaluating features for any type of content-based analysis of musical signals \cite{c1ref1}.
+
     
 %    Through man’s works, musical patterns emerge from the time period where they reside, and were reused and altered through the ages.
 %    The explosion of musical forms in the late 19th century showed how music was able to change.
     
     \section{Background of the Study}
     
+    Music genres in the 1900s started off, mainly as classical, blues,country, and ballad genres dominated the music scene, but as time progresses, many genres started to make their appearance. Then came the 1960’s, which gave birth to a wide range of musical genre from pop, rock,  jazz, metal, and many more. A huge variety of musical genres appeared gave fame to many people, however the time has come where the black and white that separated some genres became gray and became hard to tell and the distinctions are more subtle more than ever. Although there are studies that tackles music genre classification and music structure analysis, little research has been put to analyzing the trends of the different genres. The researchers’ solution to the problem is analyzing the trends of music in each genre by comparing identical patterns in each MIDI file and interpreting the “harmonicity” of the genres based on the inputted songs. The more patterns that have the most identical patterns determine the trend of the music. Two different genres are compared each other’s pattern to determine the difference or similarities of both genre in the case the researcher will know how two different genre related to another. 
+    
     \section{Conceptual Framework}
     
     \section{Statement of the Problem}
+    
+    The study aims differentiate the musical genres in order to answer the following questions:
+    \begin{enumerate}
+        \item What are the common musical structural patterns that can be recognized in each genre?
+        \item Is there any difference between the musical structures of songs in each genre?
+        \item Is there a clear trend that connects two genres through their musical structural patterns?
+    \end{enumerate}
     
     \section{Scope and Limitations}
     
     \subsection{System}
     
+    The provided system only analyzes songs represented in Musical Instrument Digital Interface (MIDI) file format that will be analyzed and will produce visualizations where the songs’ musical structures are displayed. The system only accepts MIDI files.
+    
     \subsection{Study}
     
+    The study is limited to analysis and comparison of only two genres at a time, and the system only generates a graphical representation of the results.
+    
     \section{Significance of the Study}
+    
+    The purpose of this study is to provide a better way of analyzing, understanding and differentiating music genres.
+    
+    \begin{description}
+        \item[Music Theorist] The study will benefit music theorists the most for it will provide the analytic part on.
+        \item[Musician] The study will benefit musicians for innovation.
+        \item[Future researcher] The study can be beneficial to researchers currently working on musical structures and forms.
+    \end{description}
     
     \section{Definition of Terms}
     
     \section{Conceptual Terms}
     
+    \begin{description}
+        \item[genre] a class or category of artistic endeavor having a particular form, content, technique, or the like (http://dictionary.reference.com/browse/genre?s=t); ○	a category of artistic, musical, or literary composition characterized by a particular style, form, or content (http://www.merriam-webster.com/dictionary/genre); a particular subject or style of literature, art, or music (http://dictionary.cambridge.org/us/dictionary/american-english/genre).
+        \item[MIDI (Musical Instrument Digital Interface)] a standard means of sending digitally encoded information about music between electronic devices,as between synthesizers and computers (http://dictionary.reference.com/browse/midi).
+    \end{description}
+    
+    
     \section{Operational Terms}
+    
+    \begin{description}
+        \item[pattern] a particular set of notes in a song.
+        \item[structure] arrangement of notes in a song.
+        \item[visualization] the process of converting a non-graphical representation of structured music (MIDI file) to a graphical representation (graph), outlining musical structures and its occurring patterns.
+    \end{description}
     
     \chapter{Review of Related Literature}
     
-    \section{Related Literature}
+    This chapter contains articles and papers that influenced the researchers in making their proposed study.
     
-    \section{Related Studies}
+    \section*{Music Information Retrieval and Music Data Mining}
+    Music Information Retrieval (MIR) and Music Data Mining (MDM) are strongly inter disciplinary research areas that have evolved from the necessity to manage huge collections of digital music for preservation, access, research and other uses” Joe Futrelle and J. Stephen Downie, 2003). This is indubitably a field with tremendous potential for applications.
+    Despite the surge of interest in recent years, the idea of music information retrieval dates back to the 1960’s, where the potential of applying automatic information retrieval techniques to music was recognized. Moreover, we can look at incipit and theme indexes, e.g., Harold Barlow and Sam Morganstern’s dictionary of musical themes, as the precursors of computer based MIR / MDM.
+    The current ever increasing awareness given to MIR / MDM research is a direct consequence of the explosion of the EMD industry, promoted by the generalized access to musical materials in digital form (with particular emphasis on compact audio formats with CD or near CD quality, such as mp3), widespread Internet availability, with increasing bandwidth at reduced costs in domestic connections and by the creation of online peer to peer services.” (Why MIR/MDM?, Center for Informatics and Systems of the University of Coimbra, 2011, http://mir.dei.uc.pt/)
+    
+    \section*{Musical Genre Classification}
+    The genre labels attached to a particular recordings can change, even though the recording itself, of course, remains static. What might now be called rock ‘n roll,” for example, was once classified as novelty,” and the Bob Marley recordings that we recognise as reggae” today were once classified as folk music.” The changes in genre definitions that can also occur as well are illustrated by the differences between what was considered rock” music in every decade from the 1950’s to now. In order to have true practical usefulness, a system of labels should be used that is entirely up to date, as it should coincide with the terms used by real people.”(Automatic Genre Classification of MIDI Recordings, Cory McKay, 2004) 
+    
+    \section*{Musical Structure Analysis}
+    Music structure is a term that denotes the sounds organization of a composition by means of melody, harmony, rhythm and timbre. Repetitions, transformations and evolutions of music structure contribute to the specific identity of music itself. Therefore, laying out the structural plan (in mind or on a piece of paper) has been a prerequisite for most music composers before starting to compose their music. The uniqueness of music structure can be seen through the use of different musical forms in music compositions.”( STRUCTURAL ANALYSIS AND SEGMENTATION OF MUSIC SIGNALS, Bee Suan Ong, 2006)
+    
+    \section*{Automatic Music Structural Analysis}
+    In the following sections, we explore several research works directly related to automatic audio-based music structural analysis in more detail, with a particular 23 focus on discovering structure descriptions. These related automatic structural analysis research works either form as the basis for other studies (i.e. music summarization) or as the subject of study in itself. We begin with a discussion of audio features that are commonly used in music structural analysis literature. It is then followed by the review of audio segmentation approaches aiming at a better truncation of the audio signal for further structural processing. Finally, we discuss a variety of identification techniques to discover the structure of music for further exploitations.”( Towards Automatic Music Structural Analysis: Identifying Characteristic Within-Song Excerpts in Popular Music, Bee Suan Ong, 2005)
+    
+    \section*{Chord Recognition}
+    A musical chord is a set of simultaneous tones. Succession of chords over time, or chord progression, form the core of harmony in a piece of music. Hence analyzing the overall harmonic structure of a musical piece often starts with labeling every chord. Automatic chord labeling is very useful for those who want to do harmonic analysis of music. Once the harmonic content of a piece is known, a sequence of chords can be used for further higher-level structural analysis where phrases or forms can be defined. Chord sequences are also a good mid-level representation of musical signals for such applications as music search, music segmentation, music similarity identification, and audio thumbnailing. For these reasons and others, automatic chord recognition has recently attracted a number of researchers in the Music Information Retrieval field.”( Automatic Chord Recognition from Audio Using an HMM with Supervised Learning, Kyogu Lee, Malcolm Slaney,2006)
+    
+    \section*{Harmonics}
+    When an instrument plays a note, the wave produced is not just a pure tone; it is a complex tone based on the physics of the instrument. When the note is played, the fundamental frequency is heard, as well as overtones, or harmonics. This is what determines the timbre of the instrument, or the tonal color; timbre is why different instruments playing the same note do not all sound the same. The instrument's timbre is what distinguishes its sound from that of a different instrument. The strength, or amplitude, of each harmonic is the difference we're hearing, since each note played includes the fundamental tone and some harmonics.”( Mathematics of Music, Janelle K. Hammond,2011)
     
     \section{Synthesis of the Study}
     
+    The notes states that the researchers are inspired by Music Information Retrieval(MIR) and Music Data Mining(MDM). In this field of study, musical structure analysis is one of the areas being tackled by music scientists. The researchers are going to apply the ideas used in automatic music structural analysis like chord recognition and harmonics by taking the extracted data from the MIDI files and evaluate the trending similarities and differences of different musical genres based on the output of the system.
+    
     \chapter{Research Methodology}
+    
+    This chapter deals with the methods of research used, the techniques used under Experimental Research Method, system architecture, data gathering and analytical tools used, as well as the algorithms used in developing the software.
+    
+    \section{Research Methodology}
+    
+    The researchers will use Experimental Research method in implementation of the study, the result of this experimentation is used for representing graphs for the patterns of each generated by the system. Data gathered in this experiment test.
+    
+    \section{Research Paradigm}
+    
+    The research paradigm of the study is Quantitative Approach uses measurement as the most precise method for assigning quantitative values. Measurement is defined as the assignment of numbers to objects that are logically accepted rules
     
     \section{System Architecture}
     
@@ -91,10 +158,23 @@
     
     Where $ {\iota_\nu}_p $ is an interval harmonicity function 
     
+    \section{Testing Plan}
+    
+    In collecting data,the researchers presented an experimental paper consisting elements needed for the system such as input values during the system.
+    
+    \section{Data Gathering Technique}
+    
+    \section{Statistical Treatment}
+    
+    
     \chapter{Analysis and Results}
     
     \chapter{Conclusion}
     
     \chapter*{Appendix}
+    
+    %\bibliographystyle{apacite}
+    
+    %\bibliography{bibliography.bib}
 
 \end{document}

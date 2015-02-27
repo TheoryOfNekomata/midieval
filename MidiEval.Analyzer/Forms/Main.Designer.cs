@@ -55,7 +55,7 @@
 			this.label10 = new System.Windows.Forms.Label();
 			this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
 			this.label8 = new System.Windows.Forms.Label();
-			this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+			this._linkLicense = new System.Windows.Forms.LinkLabel();
 			this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
 			this.label7 = new System.Windows.Forms.Label();
 			this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
@@ -371,7 +371,7 @@
 			this._btnAnalyze.Padding = new System.Windows.Forms.Padding(4);
 			this._btnAnalyze.Size = new System.Drawing.Size(64, 31);
 			this._btnAnalyze.TabIndex = 0;
-			this._btnAnalyze.Text = "Analyze";
+			this._btnAnalyze.Text = "&Analyze";
 			this._btnAnalyze.UseVisualStyleBackColor = true;
 			this._btnAnalyze.Click += new System.EventHandler(this.BtnAnalyze_Click);
 			// 
@@ -443,7 +443,7 @@
 			this.flowLayoutPanel7.AutoSize = true;
 			this.flowLayoutPanel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.flowLayoutPanel7.Controls.Add(this.label8);
-			this.flowLayoutPanel7.Controls.Add(this.linkLabel3);
+			this.flowLayoutPanel7.Controls.Add(this._linkLicense);
 			this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
 			this.flowLayoutPanel7.Location = new System.Drawing.Point(32, 297);
 			this.flowLayoutPanel7.Name = "flowLayoutPanel7";
@@ -462,15 +462,16 @@
 			this.label8.TabIndex = 7;
 			this.label8.Text = "MIDIEval is licensed under the MIT License.";
 			// 
-			// linkLabel3
+			// _linkLicense
 			// 
-			this.linkLabel3.AutoSize = true;
-			this.linkLabel3.Location = new System.Drawing.Point(260, 24);
-			this.linkLabel3.Name = "linkLabel3";
-			this.linkLabel3.Size = new System.Drawing.Size(81, 17);
-			this.linkLabel3.TabIndex = 8;
-			this.linkLabel3.TabStop = true;
-			this.linkLabel3.Text = "View License";
+			this._linkLicense.AutoSize = true;
+			this._linkLicense.Location = new System.Drawing.Point(260, 24);
+			this._linkLicense.Name = "_linkLicense";
+			this._linkLicense.Size = new System.Drawing.Size(81, 17);
+			this._linkLicense.TabIndex = 8;
+			this._linkLicense.TabStop = true;
+			this._linkLicense.Text = "View License";
+			this._linkLicense.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLicense_LinkClicked);
 			// 
 			// flowLayoutPanel6
 			// 
@@ -767,6 +768,6 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
 		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.LinkLabel linkLabel3;
+		private System.Windows.Forms.LinkLabel _linkLicense;
 	}
 }

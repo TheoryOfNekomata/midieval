@@ -213,6 +213,7 @@
 			this._listFiles1.TabIndex = 2;
 			this._listFiles1.UseCompatibleStateImageBehavior = false;
 			this._listFiles1.View = System.Windows.Forms.View.Details;
+			this._listFiles1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.List_KeyUp);
 			// 
 			// columnHeader1
 			// 
@@ -326,6 +327,7 @@
 			this._listFiles2.TabIndex = 3;
 			this._listFiles2.UseCompatibleStateImageBehavior = false;
 			this._listFiles2.View = System.Windows.Forms.View.Details;
+			this._listFiles2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.List_KeyUp);
 			// 
 			// columnHeader7
 			// 

@@ -112,5 +112,14 @@ namespace MidiEval.Analyzer.Forms {
 			listView.Items.Clear();
 			songList.Clear();
 		}
+
+		private void List_KeyUp(object sender, KeyEventArgs e) {
+			var list = (ListView) sender;
+			if(e.KeyCode != Keys.Delete)
+				return;
+			foreach(var item in list.SelectedItems)
+				list.Items.Remove((ListViewItem) item);
+			//list.SelectedItems
+		}
 	}
 }

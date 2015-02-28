@@ -29,6 +29,31 @@
 			System.Windows.Forms.GroupBox groupBox2;
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+			System.Windows.Forms.TabPage _tabPgAbout;
+			System.Windows.Forms.Panel panel1;
+			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
+			System.Windows.Forms.Label label10;
+			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+			System.Windows.Forms.Label label8;
+			System.Windows.Forms.LinkLabel _linkLicense;
+			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+			System.Windows.Forms.Label label7;
+			System.Windows.Forms.LinkLabel linkLabel3;
+			System.Windows.Forms.Label label12;
+			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+			System.Windows.Forms.Label label4;
+			System.Windows.Forms.Label label5;
+			System.Windows.Forms.Label label6;
+			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
+			System.Windows.Forms.LinkLabel linkLabel2;
+			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+			System.Windows.Forms.Label label3;
+			System.Windows.Forms.LinkLabel linkLabel1;
+			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
+			System.Windows.Forms.Label label2;
+			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
+			System.Windows.Forms.Label label1;
+			System.Windows.Forms.Label label9;
 			this._tabPgInput = new System.Windows.Forms.TabPage();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this._listFiles1 = new System.Windows.Forms.ListView();
@@ -38,6 +63,7 @@
 			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this._btnBrowse1 = new System.Windows.Forms.Button();
+			this._btnClear1 = new System.Windows.Forms.Button();
 			this._cmbBoxGenre1 = new System.Windows.Forms.ComboBox();
 			this._listFiles2 = new System.Windows.Forms.ListView();
 			this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,31 +73,9 @@
 			this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this._cmbBoxGenre2 = new System.Windows.Forms.ComboBox();
 			this._btnBrowse2 = new System.Windows.Forms.Button();
+			this._btnClear2 = new System.Windows.Forms.Button();
 			this._btnAnalyze = new System.Windows.Forms.Button();
 			this._tabPgOutput = new System.Windows.Forms.TabPage();
-			this._tabPgAbout = new System.Windows.Forms.TabPage();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
-			this.label10 = new System.Windows.Forms.Label();
-			this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-			this.label8 = new System.Windows.Forms.Label();
-			this._linkLicense = new System.Windows.Forms.LinkLabel();
-			this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-			this.label7 = new System.Windows.Forms.Label();
-			this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
-			this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-			this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-			this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-			this.label3 = new System.Windows.Forms.Label();
-			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-			this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
-			this.label2 = new System.Windows.Forms.Label();
-			this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
 			this._openDlgFiles = new System.Windows.Forms.OpenFileDialog();
 			_tabCtrlMain = new System.Windows.Forms.TabControl();
 			groupBox1 = new System.Windows.Forms.GroupBox();
@@ -79,6 +83,31 @@
 			groupBox2 = new System.Windows.Forms.GroupBox();
 			flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
 			flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+			_tabPgAbout = new System.Windows.Forms.TabPage();
+			panel1 = new System.Windows.Forms.Panel();
+			flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
+			label10 = new System.Windows.Forms.Label();
+			flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+			label8 = new System.Windows.Forms.Label();
+			_linkLicense = new System.Windows.Forms.LinkLabel();
+			flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+			label7 = new System.Windows.Forms.Label();
+			linkLabel3 = new System.Windows.Forms.LinkLabel();
+			label12 = new System.Windows.Forms.Label();
+			flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+			label4 = new System.Windows.Forms.Label();
+			label5 = new System.Windows.Forms.Label();
+			label6 = new System.Windows.Forms.Label();
+			flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+			linkLabel2 = new System.Windows.Forms.LinkLabel();
+			flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+			label3 = new System.Windows.Forms.Label();
+			linkLabel1 = new System.Windows.Forms.LinkLabel();
+			flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+			label2 = new System.Windows.Forms.Label();
+			flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+			label1 = new System.Windows.Forms.Label();
+			label9 = new System.Windows.Forms.Label();
 			_tabCtrlMain.SuspendLayout();
 			this._tabPgInput.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -90,23 +119,23 @@
 			groupBox2.SuspendLayout();
 			flowLayoutPanel3.SuspendLayout();
 			flowLayoutPanel1.SuspendLayout();
-			this._tabPgAbout.SuspendLayout();
-			this.panel1.SuspendLayout();
-			this.flowLayoutPanel11.SuspendLayout();
-			this.flowLayoutPanel7.SuspendLayout();
-			this.flowLayoutPanel6.SuspendLayout();
-			this.flowLayoutPanel5.SuspendLayout();
-			this.flowLayoutPanel8.SuspendLayout();
-			this.flowLayoutPanel4.SuspendLayout();
-			this.flowLayoutPanel9.SuspendLayout();
-			this.flowLayoutPanel10.SuspendLayout();
+			_tabPgAbout.SuspendLayout();
+			panel1.SuspendLayout();
+			flowLayoutPanel11.SuspendLayout();
+			flowLayoutPanel7.SuspendLayout();
+			flowLayoutPanel6.SuspendLayout();
+			flowLayoutPanel5.SuspendLayout();
+			flowLayoutPanel8.SuspendLayout();
+			flowLayoutPanel4.SuspendLayout();
+			flowLayoutPanel9.SuspendLayout();
+			flowLayoutPanel10.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// _tabCtrlMain
 			// 
 			_tabCtrlMain.Controls.Add(this._tabPgInput);
 			_tabCtrlMain.Controls.Add(this._tabPgOutput);
-			_tabCtrlMain.Controls.Add(this._tabPgAbout);
+			_tabCtrlMain.Controls.Add(_tabPgAbout);
 			_tabCtrlMain.Dock = System.Windows.Forms.DockStyle.Fill;
 			_tabCtrlMain.ItemSize = new System.Drawing.Size(64, 24);
 			_tabCtrlMain.Location = new System.Drawing.Point(0, 0);
@@ -114,7 +143,7 @@
 			_tabCtrlMain.Name = "_tabCtrlMain";
 			_tabCtrlMain.Padding = new System.Drawing.Point(0, 0);
 			_tabCtrlMain.SelectedIndex = 0;
-			_tabCtrlMain.Size = new System.Drawing.Size(552, 493);
+			_tabCtrlMain.Size = new System.Drawing.Size(604, 460);
 			_tabCtrlMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
 			_tabCtrlMain.TabIndex = 0;
 			// 
@@ -125,7 +154,7 @@
 			this._tabPgInput.Location = new System.Drawing.Point(4, 28);
 			this._tabPgInput.Margin = new System.Windows.Forms.Padding(0);
 			this._tabPgInput.Name = "_tabPgInput";
-			this._tabPgInput.Size = new System.Drawing.Size(544, 461);
+			this._tabPgInput.Size = new System.Drawing.Size(596, 428);
 			this._tabPgInput.TabIndex = 0;
 			this._tabPgInput.Text = "Input";
 			this._tabPgInput.UseVisualStyleBackColor = true;
@@ -146,8 +175,8 @@
 			// 
 			this.splitContainer1.Panel2.Controls.Add(groupBox2);
 			this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(3, 8, 8, 8);
-			this.splitContainer1.Size = new System.Drawing.Size(544, 422);
-			this.splitContainer1.SplitterDistance = 272;
+			this.splitContainer1.Size = new System.Drawing.Size(596, 389);
+			this.splitContainer1.SplitterDistance = 298;
 			this.splitContainer1.SplitterWidth = 2;
 			this.splitContainer1.TabIndex = 1;
 			// 
@@ -160,7 +189,7 @@
 			groupBox1.Location = new System.Drawing.Point(8, 8);
 			groupBox1.Name = "groupBox1";
 			groupBox1.Padding = new System.Windows.Forms.Padding(8);
-			groupBox1.Size = new System.Drawing.Size(261, 406);
+			groupBox1.Size = new System.Drawing.Size(287, 373);
 			groupBox1.TabIndex = 0;
 			groupBox1.TabStop = false;
 			groupBox1.Text = "Genre 1";
@@ -180,7 +209,7 @@
 			this._listFiles1.Location = new System.Drawing.Point(8, 44);
 			this._listFiles1.Name = "_listFiles1";
 			this._listFiles1.ShowGroups = false;
-			this._listFiles1.Size = new System.Drawing.Size(245, 315);
+			this._listFiles1.Size = new System.Drawing.Size(271, 282);
 			this._listFiles1.TabIndex = 2;
 			this._listFiles1.UseCompatibleStateImageBehavior = false;
 			this._listFiles1.View = System.Windows.Forms.View.Details;
@@ -214,20 +243,21 @@
 			flowLayoutPanel2.AutoSize = true;
 			flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			flowLayoutPanel2.Controls.Add(this._btnBrowse1);
+			flowLayoutPanel2.Controls.Add(this._btnClear1);
 			flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
 			flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-			flowLayoutPanel2.Location = new System.Drawing.Point(8, 359);
+			flowLayoutPanel2.Location = new System.Drawing.Point(8, 326);
 			flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
 			flowLayoutPanel2.Name = "flowLayoutPanel2";
 			flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-			flowLayoutPanel2.Size = new System.Drawing.Size(245, 39);
+			flowLayoutPanel2.Size = new System.Drawing.Size(271, 39);
 			flowLayoutPanel2.TabIndex = 1;
 			// 
 			// _btnBrowse1
 			// 
 			this._btnBrowse1.AutoSize = true;
 			this._btnBrowse1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this._btnBrowse1.Location = new System.Drawing.Point(182, 8);
+			this._btnBrowse1.Location = new System.Drawing.Point(208, 8);
 			this._btnBrowse1.Margin = new System.Windows.Forms.Padding(0);
 			this._btnBrowse1.Name = "_btnBrowse1";
 			this._btnBrowse1.Padding = new System.Windows.Forms.Padding(4);
@@ -236,6 +266,20 @@
 			this._btnBrowse1.Text = "Browse";
 			this._btnBrowse1.UseVisualStyleBackColor = true;
 			this._btnBrowse1.Click += new System.EventHandler(this.BtnBrowse_Click);
+			// 
+			// _btnClear1
+			// 
+			this._btnClear1.AutoSize = true;
+			this._btnClear1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this._btnClear1.Location = new System.Drawing.Point(157, 8);
+			this._btnClear1.Margin = new System.Windows.Forms.Padding(0);
+			this._btnClear1.Name = "_btnClear1";
+			this._btnClear1.Padding = new System.Windows.Forms.Padding(4);
+			this._btnClear1.Size = new System.Drawing.Size(51, 31);
+			this._btnClear1.TabIndex = 1;
+			this._btnClear1.Text = "Clear";
+			this._btnClear1.UseVisualStyleBackColor = true;
+			this._btnClear1.Click += new System.EventHandler(this.BtnClear_Click);
 			// 
 			// _cmbBoxGenre1
 			// 
@@ -246,7 +290,7 @@
             "Blues"});
 			this._cmbBoxGenre1.Location = new System.Drawing.Point(8, 23);
 			this._cmbBoxGenre1.Name = "_cmbBoxGenre1";
-			this._cmbBoxGenre1.Size = new System.Drawing.Size(245, 21);
+			this._cmbBoxGenre1.Size = new System.Drawing.Size(271, 21);
 			this._cmbBoxGenre1.TabIndex = 0;
 			// 
 			// groupBox2
@@ -258,7 +302,7 @@
 			groupBox2.Location = new System.Drawing.Point(3, 8);
 			groupBox2.Name = "groupBox2";
 			groupBox2.Padding = new System.Windows.Forms.Padding(8);
-			groupBox2.Size = new System.Drawing.Size(259, 406);
+			groupBox2.Size = new System.Drawing.Size(285, 373);
 			groupBox2.TabIndex = 0;
 			groupBox2.TabStop = false;
 			groupBox2.Text = "Genre 2";
@@ -278,7 +322,7 @@
 			this._listFiles2.Location = new System.Drawing.Point(8, 44);
 			this._listFiles2.Name = "_listFiles2";
 			this._listFiles2.ShowGroups = false;
-			this._listFiles2.Size = new System.Drawing.Size(243, 315);
+			this._listFiles2.Size = new System.Drawing.Size(269, 282);
 			this._listFiles2.TabIndex = 3;
 			this._listFiles2.UseCompatibleStateImageBehavior = false;
 			this._listFiles2.View = System.Windows.Forms.View.Details;
@@ -316,7 +360,7 @@
             "Blues"});
 			this._cmbBoxGenre2.Location = new System.Drawing.Point(8, 23);
 			this._cmbBoxGenre2.Name = "_cmbBoxGenre2";
-			this._cmbBoxGenre2.Size = new System.Drawing.Size(243, 21);
+			this._cmbBoxGenre2.Size = new System.Drawing.Size(269, 21);
 			this._cmbBoxGenre2.TabIndex = 2;
 			// 
 			// flowLayoutPanel3
@@ -324,20 +368,21 @@
 			flowLayoutPanel3.AutoSize = true;
 			flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			flowLayoutPanel3.Controls.Add(this._btnBrowse2);
+			flowLayoutPanel3.Controls.Add(this._btnClear2);
 			flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
 			flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-			flowLayoutPanel3.Location = new System.Drawing.Point(8, 359);
+			flowLayoutPanel3.Location = new System.Drawing.Point(8, 326);
 			flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
 			flowLayoutPanel3.Name = "flowLayoutPanel3";
 			flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-			flowLayoutPanel3.Size = new System.Drawing.Size(243, 39);
+			flowLayoutPanel3.Size = new System.Drawing.Size(269, 39);
 			flowLayoutPanel3.TabIndex = 1;
 			// 
 			// _btnBrowse2
 			// 
 			this._btnBrowse2.AutoSize = true;
 			this._btnBrowse2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this._btnBrowse2.Location = new System.Drawing.Point(180, 8);
+			this._btnBrowse2.Location = new System.Drawing.Point(206, 8);
 			this._btnBrowse2.Margin = new System.Windows.Forms.Padding(0);
 			this._btnBrowse2.Name = "_btnBrowse2";
 			this._btnBrowse2.Padding = new System.Windows.Forms.Padding(4);
@@ -347,6 +392,20 @@
 			this._btnBrowse2.UseVisualStyleBackColor = true;
 			this._btnBrowse2.Click += new System.EventHandler(this.BtnBrowse_Click);
 			// 
+			// _btnClear2
+			// 
+			this._btnClear2.AutoSize = true;
+			this._btnClear2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this._btnClear2.Location = new System.Drawing.Point(155, 8);
+			this._btnClear2.Margin = new System.Windows.Forms.Padding(0);
+			this._btnClear2.Name = "_btnClear2";
+			this._btnClear2.Padding = new System.Windows.Forms.Padding(4);
+			this._btnClear2.Size = new System.Drawing.Size(51, 31);
+			this._btnClear2.TabIndex = 2;
+			this._btnClear2.Text = "Clear";
+			this._btnClear2.UseVisualStyleBackColor = true;
+			this._btnClear2.Click += new System.EventHandler(this.BtnClear_Click);
+			// 
 			// flowLayoutPanel1
 			// 
 			flowLayoutPanel1.AutoSize = true;
@@ -354,18 +413,18 @@
 			flowLayoutPanel1.Controls.Add(this._btnAnalyze);
 			flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
 			flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-			flowLayoutPanel1.Location = new System.Drawing.Point(0, 422);
+			flowLayoutPanel1.Location = new System.Drawing.Point(0, 389);
 			flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
 			flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 8);
-			flowLayoutPanel1.Size = new System.Drawing.Size(544, 39);
+			flowLayoutPanel1.Size = new System.Drawing.Size(596, 39);
 			flowLayoutPanel1.TabIndex = 0;
 			// 
 			// _btnAnalyze
 			// 
 			this._btnAnalyze.AutoSize = true;
 			this._btnAnalyze.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this._btnAnalyze.Location = new System.Drawing.Point(472, 0);
+			this._btnAnalyze.Location = new System.Drawing.Point(524, 0);
 			this._btnAnalyze.Margin = new System.Windows.Forms.Padding(0);
 			this._btnAnalyze.Name = "_btnAnalyze";
 			this._btnAnalyze.Padding = new System.Windows.Forms.Padding(4);
@@ -380,288 +439,319 @@
 			this._tabPgOutput.Location = new System.Drawing.Point(4, 28);
 			this._tabPgOutput.Margin = new System.Windows.Forms.Padding(0);
 			this._tabPgOutput.Name = "_tabPgOutput";
-			this._tabPgOutput.Size = new System.Drawing.Size(544, 461);
+			this._tabPgOutput.Size = new System.Drawing.Size(596, 428);
 			this._tabPgOutput.TabIndex = 1;
 			this._tabPgOutput.Text = "Output";
 			this._tabPgOutput.UseVisualStyleBackColor = true;
 			// 
 			// _tabPgAbout
 			// 
-			this._tabPgAbout.Controls.Add(this.panel1);
-			this._tabPgAbout.Location = new System.Drawing.Point(4, 28);
-			this._tabPgAbout.Name = "_tabPgAbout";
-			this._tabPgAbout.Padding = new System.Windows.Forms.Padding(3);
-			this._tabPgAbout.Size = new System.Drawing.Size(544, 461);
-			this._tabPgAbout.TabIndex = 2;
-			this._tabPgAbout.Text = "About";
-			this._tabPgAbout.UseVisualStyleBackColor = true;
+			_tabPgAbout.Controls.Add(panel1);
+			_tabPgAbout.Location = new System.Drawing.Point(4, 28);
+			_tabPgAbout.Name = "_tabPgAbout";
+			_tabPgAbout.Padding = new System.Windows.Forms.Padding(3);
+			_tabPgAbout.Size = new System.Drawing.Size(596, 428);
+			_tabPgAbout.TabIndex = 2;
+			_tabPgAbout.Text = "About";
+			_tabPgAbout.UseVisualStyleBackColor = true;
 			// 
 			// panel1
 			// 
-			this.panel1.Controls.Add(this.flowLayoutPanel11);
-			this.panel1.Controls.Add(this.flowLayoutPanel7);
-			this.panel1.Controls.Add(this.flowLayoutPanel6);
-			this.panel1.Controls.Add(this.flowLayoutPanel5);
-			this.panel1.Controls.Add(this.flowLayoutPanel8);
-			this.panel1.Controls.Add(this.flowLayoutPanel4);
-			this.panel1.Controls.Add(this.flowLayoutPanel9);
-			this.panel1.Controls.Add(this.flowLayoutPanel10);
-			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.panel1.Location = new System.Drawing.Point(3, 3);
-			this.panel1.Margin = new System.Windows.Forms.Padding(0);
-			this.panel1.Name = "panel1";
-			this.panel1.Padding = new System.Windows.Forms.Padding(32, 48, 32, 8);
-			this.panel1.Size = new System.Drawing.Size(538, 455);
-			this.panel1.TabIndex = 8;
+			panel1.Controls.Add(flowLayoutPanel11);
+			panel1.Controls.Add(flowLayoutPanel7);
+			panel1.Controls.Add(flowLayoutPanel6);
+			panel1.Controls.Add(flowLayoutPanel5);
+			panel1.Controls.Add(flowLayoutPanel8);
+			panel1.Controls.Add(flowLayoutPanel4);
+			panel1.Controls.Add(flowLayoutPanel9);
+			panel1.Controls.Add(flowLayoutPanel10);
+			panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			panel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			panel1.Location = new System.Drawing.Point(3, 3);
+			panel1.Margin = new System.Windows.Forms.Padding(0);
+			panel1.Name = "panel1";
+			panel1.Padding = new System.Windows.Forms.Padding(32, 48, 32, 8);
+			panel1.Size = new System.Drawing.Size(590, 422);
+			panel1.TabIndex = 8;
 			// 
 			// flowLayoutPanel11
 			// 
-			this.flowLayoutPanel11.AutoSize = true;
-			this.flowLayoutPanel11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.flowLayoutPanel11.Controls.Add(this.label10);
-			this.flowLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flowLayoutPanel11.Location = new System.Drawing.Point(32, 338);
-			this.flowLayoutPanel11.Name = "flowLayoutPanel11";
-			this.flowLayoutPanel11.Padding = new System.Windows.Forms.Padding(0, 24, 0, 0);
-			this.flowLayoutPanel11.Size = new System.Drawing.Size(474, 41);
-			this.flowLayoutPanel11.TabIndex = 13;
+			flowLayoutPanel11.AutoSize = true;
+			flowLayoutPanel11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			flowLayoutPanel11.Controls.Add(label10);
+			flowLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Top;
+			flowLayoutPanel11.Location = new System.Drawing.Point(32, 321);
+			flowLayoutPanel11.Name = "flowLayoutPanel11";
+			flowLayoutPanel11.Padding = new System.Windows.Forms.Padding(10, 24, 10, 0);
+			flowLayoutPanel11.Size = new System.Drawing.Size(526, 41);
+			flowLayoutPanel11.TabIndex = 13;
 			// 
 			// label10
 			// 
-			this.label10.AutoSize = true;
-			this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label10.Location = new System.Drawing.Point(0, 24);
-			this.label10.Margin = new System.Windows.Forms.Padding(0);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(109, 17);
-			this.label10.TabIndex = 7;
-			this.label10.Text = "2015 February 27";
+			label10.AutoSize = true;
+			label10.Dock = System.Windows.Forms.DockStyle.Top;
+			label10.Location = new System.Drawing.Point(10, 24);
+			label10.Margin = new System.Windows.Forms.Padding(0);
+			label10.Name = "label10";
+			label10.Size = new System.Drawing.Size(109, 17);
+			label10.TabIndex = 7;
+			label10.Text = "2015 February 27";
 			// 
 			// flowLayoutPanel7
 			// 
-			this.flowLayoutPanel7.AutoSize = true;
-			this.flowLayoutPanel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.flowLayoutPanel7.Controls.Add(this.label8);
-			this.flowLayoutPanel7.Controls.Add(this._linkLicense);
-			this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flowLayoutPanel7.Location = new System.Drawing.Point(32, 297);
-			this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-			this.flowLayoutPanel7.Padding = new System.Windows.Forms.Padding(0, 24, 0, 0);
-			this.flowLayoutPanel7.Size = new System.Drawing.Size(474, 41);
-			this.flowLayoutPanel7.TabIndex = 9;
+			flowLayoutPanel7.AutoSize = true;
+			flowLayoutPanel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			flowLayoutPanel7.Controls.Add(label8);
+			flowLayoutPanel7.Controls.Add(_linkLicense);
+			flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
+			flowLayoutPanel7.Location = new System.Drawing.Point(32, 280);
+			flowLayoutPanel7.Name = "flowLayoutPanel7";
+			flowLayoutPanel7.Padding = new System.Windows.Forms.Padding(10, 24, 10, 0);
+			flowLayoutPanel7.Size = new System.Drawing.Size(526, 41);
+			flowLayoutPanel7.TabIndex = 9;
 			// 
 			// label8
 			// 
-			this.label8.AutoSize = true;
-			this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label8.Location = new System.Drawing.Point(0, 24);
-			this.label8.Margin = new System.Windows.Forms.Padding(0);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(257, 17);
-			this.label8.TabIndex = 7;
-			this.label8.Text = "MIDIEval is licensed under the MIT License.";
+			label8.AutoSize = true;
+			label8.Dock = System.Windows.Forms.DockStyle.Top;
+			label8.Location = new System.Drawing.Point(10, 24);
+			label8.Margin = new System.Windows.Forms.Padding(0);
+			label8.Name = "label8";
+			label8.Size = new System.Drawing.Size(257, 17);
+			label8.TabIndex = 7;
+			label8.Text = "MIDIEval is licensed under the MIT License.";
 			// 
 			// _linkLicense
 			// 
-			this._linkLicense.AutoSize = true;
-			this._linkLicense.Location = new System.Drawing.Point(260, 24);
-			this._linkLicense.Name = "_linkLicense";
-			this._linkLicense.Size = new System.Drawing.Size(81, 17);
-			this._linkLicense.TabIndex = 8;
-			this._linkLicense.TabStop = true;
-			this._linkLicense.Text = "View License";
-			this._linkLicense.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLicense_LinkClicked);
+			_linkLicense.AutoSize = true;
+			_linkLicense.Location = new System.Drawing.Point(270, 24);
+			_linkLicense.Name = "_linkLicense";
+			_linkLicense.Size = new System.Drawing.Size(81, 17);
+			_linkLicense.TabIndex = 8;
+			_linkLicense.TabStop = true;
+			_linkLicense.Text = "View License";
+			_linkLicense.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLicense_LinkClicked);
 			// 
 			// flowLayoutPanel6
 			// 
-			this.flowLayoutPanel6.AutoSize = true;
-			this.flowLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.flowLayoutPanel6.Controls.Add(this.label7);
-			this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flowLayoutPanel6.Location = new System.Drawing.Point(32, 256);
-			this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
-			this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-			this.flowLayoutPanel6.Padding = new System.Windows.Forms.Padding(0, 24, 0, 0);
-			this.flowLayoutPanel6.Size = new System.Drawing.Size(474, 41);
-			this.flowLayoutPanel6.TabIndex = 8;
+			flowLayoutPanel6.AutoSize = true;
+			flowLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			flowLayoutPanel6.Controls.Add(label7);
+			flowLayoutPanel6.Controls.Add(linkLabel3);
+			flowLayoutPanel6.Controls.Add(label12);
+			flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
+			flowLayoutPanel6.Location = new System.Drawing.Point(32, 239);
+			flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
+			flowLayoutPanel6.Name = "flowLayoutPanel6";
+			flowLayoutPanel6.Padding = new System.Windows.Forms.Padding(10, 24, 10, 0);
+			flowLayoutPanel6.Size = new System.Drawing.Size(526, 41);
+			flowLayoutPanel6.TabIndex = 8;
 			// 
 			// label7
 			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(0, 24);
-			this.label7.Margin = new System.Windows.Forms.Padding(0);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(377, 17);
-			this.label7.TabIndex = 6;
-			this.label7.Text = "Using Leslie Sanford\'s MIDI Toolkit (2007 April 19), MIT License.";
+			label7.AutoSize = true;
+			label7.Location = new System.Drawing.Point(10, 24);
+			label7.Margin = new System.Windows.Forms.Padding(0);
+			label7.Name = "label7";
+			label7.Size = new System.Drawing.Size(136, 17);
+			label7.TabIndex = 6;
+			label7.Text = "Using Leslie Sanford\'s";
+			// 
+			// linkLabel3
+			// 
+			linkLabel3.AutoSize = true;
+			linkLabel3.Location = new System.Drawing.Point(149, 24);
+			linkLabel3.Name = "linkLabel3";
+			linkLabel3.Size = new System.Drawing.Size(78, 17);
+			linkLabel3.TabIndex = 9;
+			linkLabel3.TabStop = true;
+			linkLabel3.Tag = "http://www.codeproject.com/Articles/6228/C-MIDI-Toolkit";
+			linkLabel3.Text = "MIDI Toolkit";
+			linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UrlLink_LinkClicked);
+			// 
+			// label12
+			// 
+			label12.AutoSize = true;
+			label12.Location = new System.Drawing.Point(230, 24);
+			label12.Margin = new System.Windows.Forms.Padding(0);
+			label12.Name = "label12";
+			label12.Size = new System.Drawing.Size(171, 17);
+			label12.TabIndex = 8;
+			label12.Text = "(2007 April 19), MIT License.";
 			// 
 			// flowLayoutPanel5
 			// 
-			this.flowLayoutPanel5.AutoSize = true;
-			this.flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.flowLayoutPanel5.Controls.Add(this.label4);
-			this.flowLayoutPanel5.Controls.Add(this.label5);
-			this.flowLayoutPanel5.Controls.Add(this.label6);
-			this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flowLayoutPanel5.Location = new System.Drawing.Point(32, 164);
-			this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-			this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-			this.flowLayoutPanel5.Padding = new System.Windows.Forms.Padding(0, 24, 0, 0);
-			this.flowLayoutPanel5.Size = new System.Drawing.Size(474, 92);
-			this.flowLayoutPanel5.TabIndex = 5;
+			flowLayoutPanel5.AutoSize = true;
+			flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			flowLayoutPanel5.Controls.Add(label4);
+			flowLayoutPanel5.Controls.Add(label5);
+			flowLayoutPanel5.Controls.Add(label6);
+			flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
+			flowLayoutPanel5.Location = new System.Drawing.Point(32, 164);
+			flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+			flowLayoutPanel5.Name = "flowLayoutPanel5";
+			flowLayoutPanel5.Padding = new System.Windows.Forms.Padding(10, 24, 10, 0);
+			flowLayoutPanel5.Size = new System.Drawing.Size(526, 75);
+			flowLayoutPanel5.TabIndex = 5;
 			// 
 			// label4
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(0, 24);
-			this.label4.Margin = new System.Windows.Forms.Padding(0);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(127, 17);
-			this.label4.TabIndex = 4;
-			this.label4.Text = "For our thesis paper";
+			label4.AutoSize = true;
+			label4.Location = new System.Drawing.Point(10, 24);
+			label4.Margin = new System.Windows.Forms.Padding(0);
+			label4.Name = "label4";
+			label4.Size = new System.Drawing.Size(130, 17);
+			label4.TabIndex = 4;
+			label4.Text = "For our thesis paper:";
 			// 
 			// label5
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(0, 41);
-			this.label5.Margin = new System.Windows.Forms.Padding(0);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(466, 17);
-			this.label5.TabIndex = 5;
-			this.label5.Text = "\"Trends of Music through Analysis and Comparison of Musical Structures\"";
+			label5.AutoSize = true;
+			label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			label5.Location = new System.Drawing.Point(10, 41);
+			label5.Margin = new System.Windows.Forms.Padding(0);
+			label5.Name = "label5";
+			label5.Size = new System.Drawing.Size(466, 17);
+			label5.TabIndex = 5;
+			label5.Text = "\"Trends of Music through Analysis and Comparison of Musical Structures\"";
 			// 
 			// label6
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(0, 58);
-			this.label6.Margin = new System.Windows.Forms.Padding(0);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(441, 34);
-			this.label6.TabIndex = 6;
-			this.label6.Text = "by Crisostomo, Allan V.; Doydora, Jonathan L.; Bragais, Alvin; and Legarte, Kenne" +
+			label6.AutoSize = true;
+			label6.Location = new System.Drawing.Point(10, 58);
+			label6.Margin = new System.Windows.Forms.Padding(0);
+			label6.Name = "label6";
+			label6.Size = new System.Drawing.Size(494, 17);
+			label6.TabIndex = 6;
+			label6.Text = "by Crisostomo, Allan V.; Doydora, Jonathan L.; Bragais, Alvin; and Legarte, Kenne" +
     "dy.";
 			// 
 			// flowLayoutPanel8
 			// 
-			this.flowLayoutPanel8.AutoSize = true;
-			this.flowLayoutPanel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.flowLayoutPanel8.Controls.Add(this.linkLabel2);
-			this.flowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flowLayoutPanel8.Location = new System.Drawing.Point(32, 147);
-			this.flowLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
-			this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-			this.flowLayoutPanel8.Size = new System.Drawing.Size(474, 17);
-			this.flowLayoutPanel8.TabIndex = 10;
+			flowLayoutPanel8.AutoSize = true;
+			flowLayoutPanel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			flowLayoutPanel8.Controls.Add(linkLabel2);
+			flowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top;
+			flowLayoutPanel8.Location = new System.Drawing.Point(32, 147);
+			flowLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
+			flowLayoutPanel8.Name = "flowLayoutPanel8";
+			flowLayoutPanel8.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+			flowLayoutPanel8.Size = new System.Drawing.Size(526, 17);
+			flowLayoutPanel8.TabIndex = 10;
 			// 
 			// linkLabel2
 			// 
-			this.linkLabel2.AutoSize = true;
-			this.linkLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.linkLabel2.Location = new System.Drawing.Point(0, 0);
-			this.linkLabel2.Margin = new System.Windows.Forms.Padding(0);
-			this.linkLabel2.Name = "linkLabel2";
-			this.linkLabel2.Size = new System.Drawing.Size(190, 17);
-			this.linkLabel2.TabIndex = 3;
-			this.linkLabel2.TabStop = true;
-			this.linkLabel2.Text = "https://github.com/Temoto-kun";
+			linkLabel2.AutoSize = true;
+			linkLabel2.Dock = System.Windows.Forms.DockStyle.Top;
+			linkLabel2.Location = new System.Drawing.Point(10, 0);
+			linkLabel2.Margin = new System.Windows.Forms.Padding(0);
+			linkLabel2.Name = "linkLabel2";
+			linkLabel2.Size = new System.Drawing.Size(190, 17);
+			linkLabel2.TabIndex = 3;
+			linkLabel2.TabStop = true;
+			linkLabel2.Tag = "https://github.com/Temoto-kun";
+			linkLabel2.Text = "https://github.com/Temoto-kun";
+			linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UrlLink_LinkClicked);
 			// 
 			// flowLayoutPanel4
 			// 
-			this.flowLayoutPanel4.AutoSize = true;
-			this.flowLayoutPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.flowLayoutPanel4.Controls.Add(this.label3);
-			this.flowLayoutPanel4.Controls.Add(this.linkLabel1);
-			this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flowLayoutPanel4.Location = new System.Drawing.Point(32, 130);
-			this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-			this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-			this.flowLayoutPanel4.Size = new System.Drawing.Size(474, 17);
-			this.flowLayoutPanel4.TabIndex = 2;
+			flowLayoutPanel4.AutoSize = true;
+			flowLayoutPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			flowLayoutPanel4.Controls.Add(label3);
+			flowLayoutPanel4.Controls.Add(linkLabel1);
+			flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+			flowLayoutPanel4.Location = new System.Drawing.Point(32, 130);
+			flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+			flowLayoutPanel4.Name = "flowLayoutPanel4";
+			flowLayoutPanel4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+			flowLayoutPanel4.Size = new System.Drawing.Size(526, 17);
+			flowLayoutPanel4.TabIndex = 2;
 			// 
 			// label3
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(0, 0);
-			this.label3.Margin = new System.Windows.Forms.Padding(0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(122, 17);
-			this.label3.TabIndex = 0;
-			this.label3.Text = "Allan V. Crisostomo";
+			label3.AutoSize = true;
+			label3.Location = new System.Drawing.Point(10, 0);
+			label3.Margin = new System.Windows.Forms.Padding(0);
+			label3.Name = "label3";
+			label3.Size = new System.Drawing.Size(122, 17);
+			label3.TabIndex = 0;
+			label3.Text = "Allan V. Crisostomo";
 			// 
 			// linkLabel1
 			// 
-			this.linkLabel1.AutoSize = true;
-			this.linkLabel1.Location = new System.Drawing.Point(122, 0);
-			this.linkLabel1.Margin = new System.Windows.Forms.Padding(0);
-			this.linkLabel1.Name = "linkLabel1";
-			this.linkLabel1.Size = new System.Drawing.Size(181, 17);
-			this.linkLabel1.TabIndex = 1;
-			this.linkLabel1.TabStop = true;
-			this.linkLabel1.Text = "allan.crisostomo@pup.edu.ph";
+			linkLabel1.AutoSize = true;
+			linkLabel1.Location = new System.Drawing.Point(132, 0);
+			linkLabel1.Margin = new System.Windows.Forms.Padding(0);
+			linkLabel1.Name = "linkLabel1";
+			linkLabel1.Size = new System.Drawing.Size(181, 17);
+			linkLabel1.TabIndex = 1;
+			linkLabel1.TabStop = true;
+			linkLabel1.Tag = "mailto:allan.crisostomo@pup.edu.ph";
+			linkLabel1.Text = "allan.crisostomo@pup.edu.ph";
+			linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UrlLink_LinkClicked);
 			// 
 			// flowLayoutPanel9
 			// 
-			this.flowLayoutPanel9.AutoSize = true;
-			this.flowLayoutPanel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.flowLayoutPanel9.Controls.Add(this.label2);
-			this.flowLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flowLayoutPanel9.Location = new System.Drawing.Point(32, 113);
-			this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
-			this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-			this.flowLayoutPanel9.Size = new System.Drawing.Size(474, 17);
-			this.flowLayoutPanel9.TabIndex = 11;
+			flowLayoutPanel9.AutoSize = true;
+			flowLayoutPanel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			flowLayoutPanel9.Controls.Add(label2);
+			flowLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Top;
+			flowLayoutPanel9.Location = new System.Drawing.Point(32, 113);
+			flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
+			flowLayoutPanel9.Name = "flowLayoutPanel9";
+			flowLayoutPanel9.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+			flowLayoutPanel9.Size = new System.Drawing.Size(526, 17);
+			flowLayoutPanel9.TabIndex = 11;
 			// 
 			// label2
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label2.Location = new System.Drawing.Point(0, 0);
-			this.label2.Margin = new System.Windows.Forms.Padding(0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(92, 17);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Developed by:";
+			label2.AutoSize = true;
+			label2.Dock = System.Windows.Forms.DockStyle.Top;
+			label2.Location = new System.Drawing.Point(10, 0);
+			label2.Margin = new System.Windows.Forms.Padding(0);
+			label2.Name = "label2";
+			label2.Size = new System.Drawing.Size(92, 17);
+			label2.TabIndex = 1;
+			label2.Text = "Developed by:";
 			// 
 			// flowLayoutPanel10
 			// 
-			this.flowLayoutPanel10.AutoSize = true;
-			this.flowLayoutPanel10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.flowLayoutPanel10.Controls.Add(this.label1);
-			this.flowLayoutPanel10.Controls.Add(this.label9);
-			this.flowLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-			this.flowLayoutPanel10.Location = new System.Drawing.Point(32, 48);
-			this.flowLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
-			this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-			this.flowLayoutPanel10.Size = new System.Drawing.Size(474, 65);
-			this.flowLayoutPanel10.TabIndex = 12;
+			flowLayoutPanel10.AutoSize = true;
+			flowLayoutPanel10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			flowLayoutPanel10.Controls.Add(label1);
+			flowLayoutPanel10.Controls.Add(label9);
+			flowLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Top;
+			flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
+			flowLayoutPanel10.Location = new System.Drawing.Point(32, 48);
+			flowLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
+			flowLayoutPanel10.Name = "flowLayoutPanel10";
+			flowLayoutPanel10.Size = new System.Drawing.Size(526, 65);
+			flowLayoutPanel10.TabIndex = 12;
 			// 
 			// label1
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label1.Font = new System.Drawing.Font("Segoe UI Light", 36F);
-			this.label1.Location = new System.Drawing.Point(0, 0);
-			this.label1.Margin = new System.Windows.Forms.Padding(0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(202, 65);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "MIDIEval";
+			label1.AutoSize = true;
+			label1.Dock = System.Windows.Forms.DockStyle.Top;
+			label1.Font = new System.Drawing.Font("Segoe UI Light", 36F);
+			label1.Location = new System.Drawing.Point(0, 0);
+			label1.Margin = new System.Windows.Forms.Padding(0);
+			label1.Name = "label1";
+			label1.Size = new System.Drawing.Size(202, 65);
+			label1.TabIndex = 0;
+			label1.Text = "MIDIEval";
 			// 
 			// label9
 			// 
-			this.label9.AutoSize = true;
-			this.label9.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(202, 34);
-			this.label9.Margin = new System.Windows.Forms.Padding(0);
-			this.label9.Name = "label9";
-			this.label9.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.label9.Size = new System.Drawing.Size(54, 31);
-			this.label9.TabIndex = 1;
-			this.label9.Text = "v.0.0.1";
+			label9.AutoSize = true;
+			label9.Dock = System.Windows.Forms.DockStyle.Top;
+			label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			label9.Location = new System.Drawing.Point(202, 34);
+			label9.Margin = new System.Windows.Forms.Padding(0);
+			label9.Name = "label9";
+			label9.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			label9.Size = new System.Drawing.Size(54, 31);
+			label9.TabIndex = 1;
+			label9.Text = "v.0.0.1";
 			// 
 			// _openDlgFiles
 			// 
@@ -675,11 +765,12 @@
 			// 
 			// Main
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(552, 493);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+			this.ClientSize = new System.Drawing.Size(604, 460);
 			this.Controls.Add(_tabCtrlMain);
 			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.MinimumSize = new System.Drawing.Size(620, 500);
 			this.Name = "Main";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "MIDIEval";
@@ -700,25 +791,25 @@
 			flowLayoutPanel3.PerformLayout();
 			flowLayoutPanel1.ResumeLayout(false);
 			flowLayoutPanel1.PerformLayout();
-			this._tabPgAbout.ResumeLayout(false);
-			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
-			this.flowLayoutPanel11.ResumeLayout(false);
-			this.flowLayoutPanel11.PerformLayout();
-			this.flowLayoutPanel7.ResumeLayout(false);
-			this.flowLayoutPanel7.PerformLayout();
-			this.flowLayoutPanel6.ResumeLayout(false);
-			this.flowLayoutPanel6.PerformLayout();
-			this.flowLayoutPanel5.ResumeLayout(false);
-			this.flowLayoutPanel5.PerformLayout();
-			this.flowLayoutPanel8.ResumeLayout(false);
-			this.flowLayoutPanel8.PerformLayout();
-			this.flowLayoutPanel4.ResumeLayout(false);
-			this.flowLayoutPanel4.PerformLayout();
-			this.flowLayoutPanel9.ResumeLayout(false);
-			this.flowLayoutPanel9.PerformLayout();
-			this.flowLayoutPanel10.ResumeLayout(false);
-			this.flowLayoutPanel10.PerformLayout();
+			_tabPgAbout.ResumeLayout(false);
+			panel1.ResumeLayout(false);
+			panel1.PerformLayout();
+			flowLayoutPanel11.ResumeLayout(false);
+			flowLayoutPanel11.PerformLayout();
+			flowLayoutPanel7.ResumeLayout(false);
+			flowLayoutPanel7.PerformLayout();
+			flowLayoutPanel6.ResumeLayout(false);
+			flowLayoutPanel6.PerformLayout();
+			flowLayoutPanel5.ResumeLayout(false);
+			flowLayoutPanel5.PerformLayout();
+			flowLayoutPanel8.ResumeLayout(false);
+			flowLayoutPanel8.PerformLayout();
+			flowLayoutPanel4.ResumeLayout(false);
+			flowLayoutPanel4.PerformLayout();
+			flowLayoutPanel9.ResumeLayout(false);
+			flowLayoutPanel9.PerformLayout();
+			flowLayoutPanel10.ResumeLayout(false);
+			flowLayoutPanel10.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -743,31 +834,10 @@
 		private System.Windows.Forms.ColumnHeader columnHeader10;
 		private System.Windows.Forms.ColumnHeader columnHeader11;
 		private System.Windows.Forms.ColumnHeader columnHeader12;
-		private System.Windows.Forms.TabPage _tabPgAbout;
 		private System.Windows.Forms.OpenFileDialog _openDlgFiles;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ColumnHeader columnHeader3;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.LinkLabel linkLabel2;
-		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.LinkLabel linkLabel1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
-		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
-		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
-		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
-		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.LinkLabel _linkLicense;
+		private System.Windows.Forms.Button _btnClear1;
+		private System.Windows.Forms.Button _btnClear2;
 	}
 }

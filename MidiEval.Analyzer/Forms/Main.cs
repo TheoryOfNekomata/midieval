@@ -3,6 +3,7 @@ using MidiEval.Analyzer.Songs;
 using Sanford.Multimedia.Midi;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing.Text;
 using System.Linq;
 using System.Windows.Forms;
@@ -17,6 +18,18 @@ namespace MidiEval.Analyzer.Forms {
 
 		private void InitializeForm() {
 			this.InitializeComponent();
+		}
+
+		private void ListViewNewEvent1OnItemRemovedAt(int index, ListViewItem item) {
+			Dictionary<string, Song> songs = null;
+
+			if(item.ListView == this._listFiles1)
+				songs = Program.Songs[0];
+			else if(item.ListView == this._listFiles2)
+				songs = Program.Songs[1];
+
+			if(songs != null)
+				songs.Remove(item.Name);
 		}
 
 		private void UpdateLists() {
@@ -71,6 +84,33 @@ namespace MidiEval.Analyzer.Forms {
 
 		private void LinkLicense_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
 			new License().ShowDialog(this);
+		}
+
+		private void UrlLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+			System.Diagnostics.Process.Start((string) (((LinkLabel) sender).Tag));
+		}
+
+		private void BtnClear_Click(object sender, EventArgs e) {
+			var button = (Button) sender;
+			ListView listView = null;
+			Dictionary<string, Song> songList = null;
+
+			if(button == this._btnClear1) {
+				listView = this._listFiles1;
+				songList = Program.Songs[0];
+			} else if(button == this._btnClear2) {
+				listView = this._listFiles2;
+				songList = Program.Songs[1];
+			}
+
+			if(MessageBox.Show(
+				"Are you sure you want to clear this list?",
+				"Clear List",
+				MessageBoxButtons.YesNo,
+				MessageBoxIcon.Warning) != DialogResult.Yes)
+				return;
+			listView.Items.Clear();
+			songList.Clear();
 		}
 	}
 }

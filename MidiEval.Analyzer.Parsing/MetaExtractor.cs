@@ -3,6 +3,7 @@ using Sanford.Multimedia;
 using Sanford.Multimedia.Midi;
 
 namespace MidiEval.Analyzer.Parsing {
+	// TODO Key Analyzer (for MIDI files without KeySignature Meta
 
 	/// <summary>
 	/// A class for extracting data from meta messages such as tempo, time signature, and key signature.

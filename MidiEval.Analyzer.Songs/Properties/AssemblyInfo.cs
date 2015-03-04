@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MidiEval.Analyzer.Parsing")]
+[assembly: AssemblyTitle("MidiEval.Analyzer.Songs")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MidiEval.Analyzer.Parsing")]
+[assembly: AssemblyProduct("MidiEval.Analyzer.Songs")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6cedb9d5-c61d-41dc-b1c6-8eddfe15e5f2")]
+[assembly: Guid("ebbf39ab-ac41-43e0-9199-037ad708f0dd")]
 
 // Version information for an assembly consists of the following four values:
 //

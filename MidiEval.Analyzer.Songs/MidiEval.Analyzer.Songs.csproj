@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2472CC2-DBB5-4CAA-96BC-A1600D7521C0}</ProjectGuid>
+    <ProjectGuid>{09718242-CFB1-41F1-B3B1-71983E4D691C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MidiEval.Analyzer.Data</RootNamespace>
-    <AssemblyName>MidiEval.Analyzer.Data</AssemblyName>
+    <RootNamespace>MidiEval.Analyzer.Songs</RootNamespace>
+    <AssemblyName>MidiEval.Analyzer.Songs</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -50,7 +50,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,14 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventReader.cs" />
-    <Compile Include="MidiEventTicksComparer.cs" />
-    <Compile Include="Parsers\ChannelDataParser.cs" />
-    <Compile Include="Parsers\IMidiDataParser.cs" />
-    <Compile Include="Parsers\ChannelDataParserBackup.cs" />
-    <Compile Include="Parsers\MetaDataParser.cs" />
+    <Compile Include="Input\ChannelEventParser.cs" />
+    <Compile Include="Input\EventParser.cs" />
+    <Compile Include="Input\MetaEventParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SongData.cs" />
+    <Compile Include="Song.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MidiEval.Analyzer.Elements\MidiEval.Analyzer.Elements.csproj">
@@ -76,6 +72,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

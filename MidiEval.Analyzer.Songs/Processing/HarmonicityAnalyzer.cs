@@ -55,5 +55,31 @@ namespace MidiEval.Analyzer.Songs.Processing {
 		public float Analyze(Pitch pitch, Key key, KeyFindingProfile profile = KeyFindingProfile.Simple) {
 			return this._profiles[profile][this.IsMinorKey(key) ? 1 : 0, (int) pitch.Key];
 		}
+
+		private float GetMinorHarmonicity(Pitch pitch1, Pitch pitch2, KeyFindingProfile profile = KeyFindingProfile.Simple) {
+			return this._profiles[profile][1, Math.Abs(pitch1.MidiPitch - pitch2.MidiPitch) % 12];
+		}
+
+		private float GetMajorHarmonicity(Pitch pitch1, Pitch pitch2, KeyFindingProfile profile = KeyFindingProfile.Simple) {
+			return this._profiles[profile][0, Math.Abs(pitch1.MidiPitch - pitch2.MidiPitch) % 12];
+		}
+
+		private float[] AnalyzeIntervals(Pitch[] pitches, KeyFindingProfile profile = KeyFindingProfile.Simple) {
+			var pitchList = new List<Pitch>(pitches);
+			pitchList.Sort((pitch, pitch1) => pitch.Key - pitch1.Key);
+			var pitchArray = pitchList.ToArray();
+
+			return pitchArray
+				.Select((t, i) =>
+					(
+						this.GetMajorHarmonicity(t, pitchArray[(i + 1) % pitchArray.Length], profile)
+						+ this.GetMinorHarmonicity(t, pitchArray[(i + 1) % pitchArray.Length], profile)
+					) / 2
+				).ToArray();
+		}
+
+		public float AnalyzeAverage(Pitch[] pitches, KeyFindingProfile profile = KeyFindingProfile.Simple) {
+			return this.AnalyzeIntervals(pitches, profile).Average();
+		}
 	}
 }

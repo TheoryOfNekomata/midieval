@@ -1,8 +1,10 @@
 ﻿using MidiEval.Analyzer.Forms;
 using MidiEval.Analyzer.Processing;
+using MidiEval.Analyzer.Properties;
 using MidiEval.Analyzer.Songs;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
@@ -13,6 +15,8 @@ namespace MidiEval.Analyzer {
 	/// The Program class for MIDIEval, serving as its main entry point.
 	/// </summary>
 	internal static class Program {
+
+		public static Properties.Settings Settings { get; private set; }
 
 		private static readonly Dictionary<string, Song>[] _songs = new[] {
 			new Dictionary<string, Song>(),
@@ -49,6 +53,7 @@ namespace MidiEval.Analyzer {
 		/// </summary>
 		[STAThread]
 		private static void Main() {
+			Settings = Settings.Default;
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Main());

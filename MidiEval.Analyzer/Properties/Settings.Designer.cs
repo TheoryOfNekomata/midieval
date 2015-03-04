@@ -22,5 +22,40 @@ namespace MidiEval.Analyzer.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Genre1 {
+            get {
+                return ((string)(this["Genre1"]));
+            }
+            set {
+                this["Genre1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Genre2 {
+            get {
+                return ((string)(this["Genre2"]));
+            }
+            set {
+                this["Genre2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::MidiEval.Analyzer.Processing.KeyFindingProfile Profile {
+            get {
+                return ((global::MidiEval.Analyzer.Processing.KeyFindingProfile)(this["Profile"]));
+            }
+            set {
+                this["Profile"] = value;
+            }
+        }
     }
 }

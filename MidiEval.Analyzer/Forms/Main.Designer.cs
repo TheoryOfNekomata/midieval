@@ -29,12 +29,17 @@
 			System.Windows.Forms.GroupBox groupBox2;
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+			System.Windows.Forms.Label label11;
 			System.Windows.Forms.GroupBox groupBox3;
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
 			System.Windows.Forms.GroupBox groupBox4;
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
 			System.Windows.Forms.LinkLabel linkLabel4;
 			System.Windows.Forms.TabPage _tabPgAbout;
@@ -62,14 +67,6 @@
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
 			System.Windows.Forms.Label label1;
 			System.Windows.Forms.Label label9;
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-			System.Windows.Forms.Label label11;
-			this._tabCtrlMain = new System.Windows.Forms.TabControl();
-			this._tabPgInput = new System.Windows.Forms.TabPage();
-			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this._listFiles1 = new System.Windows.Forms.ListView();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -90,8 +87,6 @@
 			this._btnClear2 = new System.Windows.Forms.Button();
 			this._btnAnalyze = new System.Windows.Forms.Button();
 			this._cmbBoxProfile = new System.Windows.Forms.ComboBox();
-			this._tabPgOutput = new System.Windows.Forms.TabPage();
-			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
 			this._chartHarmonicities1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this._labelAvgNoteCount1 = new System.Windows.Forms.Label();
@@ -99,19 +94,26 @@
 			this._labelHarmonicity1 = new System.Windows.Forms.Label();
 			this._labelGenre1 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this._chartHarmonicities2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this._labelAvgNoteCount2 = new System.Windows.Forms.Label();
 			this._labelAvgPhraseCount2 = new System.Windows.Forms.Label();
 			this._labelHarmonicity2 = new System.Windows.Forms.Label();
 			this._labelGenre2 = new System.Windows.Forms.Label();
+			this._tabCtrlMain = new System.Windows.Forms.TabControl();
+			this._tabPgInput = new System.Windows.Forms.TabPage();
+			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+			this._tabPgOutput = new System.Windows.Forms.TabPage();
+			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
 			this._openDlgFiles = new System.Windows.Forms.OpenFileDialog();
-			this._chartHarmonicities2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.programBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			groupBox1 = new System.Windows.Forms.GroupBox();
 			flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
 			groupBox2 = new System.Windows.Forms.GroupBox();
 			flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
 			flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+			label11 = new System.Windows.Forms.Label();
 			groupBox3 = new System.Windows.Forms.GroupBox();
 			groupBox4 = new System.Windows.Forms.GroupBox();
 			flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
@@ -141,28 +143,17 @@
 			flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
 			label1 = new System.Windows.Forms.Label();
 			label9 = new System.Windows.Forms.Label();
-			label11 = new System.Windows.Forms.Label();
-			this._tabCtrlMain.SuspendLayout();
-			this._tabPgInput.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-			this.splitContainer1.Panel1.SuspendLayout();
-			this.splitContainer1.Panel2.SuspendLayout();
-			this.splitContainer1.SuspendLayout();
 			groupBox1.SuspendLayout();
 			flowLayoutPanel2.SuspendLayout();
 			groupBox2.SuspendLayout();
 			flowLayoutPanel3.SuspendLayout();
 			flowLayoutPanel1.SuspendLayout();
-			this._tabPgOutput.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-			this.splitContainer2.Panel1.SuspendLayout();
-			this.splitContainer2.Panel2.SuspendLayout();
-			this.splitContainer2.SuspendLayout();
 			groupBox3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this._chartHarmonicities1)).BeginInit();
 			this.panel2.SuspendLayout();
 			groupBox4.SuspendLayout();
 			this.panel3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this._chartHarmonicities2)).BeginInit();
 			this.panel4.SuspendLayout();
 			flowLayoutPanel12.SuspendLayout();
 			_tabPgAbout.SuspendLayout();
@@ -175,58 +166,20 @@
 			flowLayoutPanel4.SuspendLayout();
 			flowLayoutPanel9.SuspendLayout();
 			flowLayoutPanel10.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this._chartHarmonicities2)).BeginInit();
+			this._tabCtrlMain.SuspendLayout();
+			this._tabPgInput.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+			this.splitContainer1.Panel1.SuspendLayout();
+			this.splitContainer1.Panel2.SuspendLayout();
+			this.splitContainer1.SuspendLayout();
+			this._tabPgOutput.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+			this.splitContainer2.Panel1.SuspendLayout();
+			this.splitContainer2.Panel2.SuspendLayout();
+			this.splitContainer2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// _tabCtrlMain
-			// 
-			this._tabCtrlMain.Controls.Add(this._tabPgInput);
-			this._tabCtrlMain.Controls.Add(this._tabPgOutput);
-			this._tabCtrlMain.Controls.Add(_tabPgAbout);
-			this._tabCtrlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-			this._tabCtrlMain.ItemSize = new System.Drawing.Size(64, 24);
-			this._tabCtrlMain.Location = new System.Drawing.Point(0, 0);
-			this._tabCtrlMain.Margin = new System.Windows.Forms.Padding(0);
-			this._tabCtrlMain.Name = "_tabCtrlMain";
-			this._tabCtrlMain.Padding = new System.Drawing.Point(0, 0);
-			this._tabCtrlMain.SelectedIndex = 0;
-			this._tabCtrlMain.Size = new System.Drawing.Size(604, 460);
-			this._tabCtrlMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-			this._tabCtrlMain.TabIndex = 0;
-			// 
-			// _tabPgInput
-			// 
-			this._tabPgInput.Controls.Add(this.splitContainer1);
-			this._tabPgInput.Controls.Add(flowLayoutPanel1);
-			this._tabPgInput.Location = new System.Drawing.Point(4, 28);
-			this._tabPgInput.Margin = new System.Windows.Forms.Padding(0);
-			this._tabPgInput.Name = "_tabPgInput";
-			this._tabPgInput.Size = new System.Drawing.Size(596, 428);
-			this._tabPgInput.TabIndex = 0;
-			this._tabPgInput.Text = "Input";
-			this._tabPgInput.UseVisualStyleBackColor = true;
-			// 
-			// splitContainer1
-			// 
-			this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.splitContainer1.IsSplitterFixed = true;
-			this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-			this.splitContainer1.Name = "splitContainer1";
-			// 
-			// splitContainer1.Panel1
-			// 
-			this.splitContainer1.Panel1.Controls.Add(groupBox1);
-			this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(8, 8, 3, 8);
-			// 
-			// splitContainer1.Panel2
-			// 
-			this.splitContainer1.Panel2.Controls.Add(groupBox2);
-			this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(3, 8, 8, 8);
-			this.splitContainer1.Size = new System.Drawing.Size(596, 389);
-			this.splitContainer1.SplitterDistance = 298;
-			this.splitContainer1.SplitterWidth = 2;
-			this.splitContainer1.TabIndex = 1;
 			// 
 			// groupBox1
 			// 
@@ -332,16 +285,22 @@
 			// 
 			// _cmbBoxGenre1
 			// 
+			this._cmbBoxGenre1.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::MidiEval.Analyzer.Properties.Settings.Default, "Genre1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
 			this._cmbBoxGenre1.Dock = System.Windows.Forms.DockStyle.Top;
 			this._cmbBoxGenre1.FormattingEnabled = true;
 			this._cmbBoxGenre1.Items.AddRange(new object[] {
+            "Rock",
+            "Pop",
             "Jazz",
             "Blues"});
 			this._cmbBoxGenre1.Location = new System.Drawing.Point(8, 23);
 			this._cmbBoxGenre1.Name = "_cmbBoxGenre1";
 			this._cmbBoxGenre1.Size = new System.Drawing.Size(271, 21);
 			this._cmbBoxGenre1.TabIndex = 0;
-			this._cmbBoxGenre1.Text = "Rock";
+			this._cmbBoxGenre1.Text = global::MidiEval.Analyzer.Properties.Settings.Default.Genre1;
+			this._cmbBoxGenre1.SelectedIndexChanged += new System.EventHandler(this.CmbBoxGenre_SelectedValueChanged);
+			this._cmbBoxGenre1.TextUpdate += new System.EventHandler(this.CmbBoxGenre_SelectedValueChanged);
+			this._cmbBoxGenre1.SelectedValueChanged += new System.EventHandler(this.CmbBoxGenre_SelectedValueChanged);
 			// 
 			// groupBox2
 			// 
@@ -404,16 +363,22 @@
 			// 
 			// _cmbBoxGenre2
 			// 
+			this._cmbBoxGenre2.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::MidiEval.Analyzer.Properties.Settings.Default, "Genre2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
 			this._cmbBoxGenre2.Dock = System.Windows.Forms.DockStyle.Top;
 			this._cmbBoxGenre2.FormattingEnabled = true;
 			this._cmbBoxGenre2.Items.AddRange(new object[] {
+            "Rock",
+            "Pop",
             "Jazz",
             "Blues"});
 			this._cmbBoxGenre2.Location = new System.Drawing.Point(8, 23);
 			this._cmbBoxGenre2.Name = "_cmbBoxGenre2";
 			this._cmbBoxGenre2.Size = new System.Drawing.Size(269, 21);
 			this._cmbBoxGenre2.TabIndex = 2;
-			this._cmbBoxGenre2.Text = "Pop";
+			this._cmbBoxGenre2.Text = global::MidiEval.Analyzer.Properties.Settings.Default.Genre2;
+			this._cmbBoxGenre2.SelectedIndexChanged += new System.EventHandler(this.CmbBoxGenre_SelectedValueChanged);
+			this._cmbBoxGenre2.TextUpdate += new System.EventHandler(this.CmbBoxGenre_SelectedValueChanged);
+			this._cmbBoxGenre2.SelectedValueChanged += new System.EventHandler(this.CmbBoxGenre_SelectedValueChanged);
 			// 
 			// flowLayoutPanel3
 			// 
@@ -490,6 +455,7 @@
 			// 
 			// _cmbBoxProfile
 			// 
+			this._cmbBoxProfile.DataSource = this.programBindingSource;
 			this._cmbBoxProfile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this._cmbBoxProfile.FormattingEnabled = true;
 			this._cmbBoxProfile.Location = new System.Drawing.Point(379, 5);
@@ -497,39 +463,17 @@
 			this._cmbBoxProfile.Name = "_cmbBoxProfile";
 			this._cmbBoxProfile.Size = new System.Drawing.Size(121, 21);
 			this._cmbBoxProfile.TabIndex = 1;
+			this._cmbBoxProfile.SelectedIndexChanged += new System.EventHandler(this.CmbBoxProfile_SelectedIndexChanged);
 			// 
-			// _tabPgOutput
+			// label11
 			// 
-			this._tabPgOutput.Controls.Add(this.splitContainer2);
-			this._tabPgOutput.Controls.Add(flowLayoutPanel12);
-			this._tabPgOutput.Location = new System.Drawing.Point(4, 28);
-			this._tabPgOutput.Margin = new System.Windows.Forms.Padding(0);
-			this._tabPgOutput.Name = "_tabPgOutput";
-			this._tabPgOutput.Size = new System.Drawing.Size(596, 428);
-			this._tabPgOutput.TabIndex = 1;
-			this._tabPgOutput.Text = "Output";
-			this._tabPgOutput.UseVisualStyleBackColor = true;
-			// 
-			// splitContainer2
-			// 
-			this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.splitContainer2.IsSplitterFixed = true;
-			this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-			this.splitContainer2.Name = "splitContainer2";
-			// 
-			// splitContainer2.Panel1
-			// 
-			this.splitContainer2.Panel1.Controls.Add(groupBox3);
-			this.splitContainer2.Panel1.Padding = new System.Windows.Forms.Padding(8, 8, 3, 8);
-			// 
-			// splitContainer2.Panel2
-			// 
-			this.splitContainer2.Panel2.Controls.Add(groupBox4);
-			this.splitContainer2.Panel2.Padding = new System.Windows.Forms.Padding(3, 8, 8, 8);
-			this.splitContainer2.Size = new System.Drawing.Size(596, 407);
-			this.splitContainer2.SplitterDistance = 298;
-			this.splitContainer2.SplitterWidth = 2;
-			this.splitContainer2.TabIndex = 2;
+			label11.AutoSize = true;
+			label11.Location = new System.Drawing.Point(339, 9);
+			label11.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
+			label11.Name = "label11";
+			label11.Size = new System.Drawing.Size(40, 13);
+			label11.TabIndex = 2;
+			label11.Text = "Profile";
 			// 
 			// groupBox3
 			// 
@@ -664,6 +608,38 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(269, 360);
 			this.panel3.TabIndex = 3;
+			// 
+			// _chartHarmonicities2
+			// 
+			chartArea4.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea4.AxisX.MajorGrid.Enabled = false;
+			chartArea4.AxisX.MajorTickMark.Enabled = false;
+			chartArea4.AxisX.Minimum = 0D;
+			chartArea4.AxisX.Title = "Song";
+			chartArea4.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			chartArea4.AxisY.Title = "Harmonicity";
+			chartArea4.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			chartArea4.Name = "ChartArea1";
+			this._chartHarmonicities2.ChartAreas.Add(chartArea4);
+			this._chartHarmonicities2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._chartHarmonicities2.IsSoftShadows = false;
+			legend4.Enabled = false;
+			legend4.Name = "Legend1";
+			this._chartHarmonicities2.Legends.Add(legend4);
+			this._chartHarmonicities2.Location = new System.Drawing.Point(0, 97);
+			this._chartHarmonicities2.Name = "_chartHarmonicities2";
+			this._chartHarmonicities2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+			series4.ChartArea = "ChartArea1";
+			series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
+			series4.Legend = "Legend1";
+			series4.Name = "Harmonicity";
+			series4.YValuesPerPoint = 4;
+			this._chartHarmonicities2.Series.Add(series4);
+			this._chartHarmonicities2.Size = new System.Drawing.Size(269, 203);
+			this._chartHarmonicities2.TabIndex = 7;
+			this._chartHarmonicities2.Text = "chart1";
+			title4.Name = "Harmonicity Chart";
+			this._chartHarmonicities2.Titles.Add(title4);
 			// 
 			// panel4
 			// 
@@ -1062,6 +1038,88 @@
 			label9.TabIndex = 1;
 			label9.Text = "v.1.0.0";
 			// 
+			// _tabCtrlMain
+			// 
+			this._tabCtrlMain.Controls.Add(this._tabPgInput);
+			this._tabCtrlMain.Controls.Add(this._tabPgOutput);
+			this._tabCtrlMain.Controls.Add(_tabPgAbout);
+			this._tabCtrlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._tabCtrlMain.ItemSize = new System.Drawing.Size(64, 24);
+			this._tabCtrlMain.Location = new System.Drawing.Point(0, 0);
+			this._tabCtrlMain.Margin = new System.Windows.Forms.Padding(0);
+			this._tabCtrlMain.Name = "_tabCtrlMain";
+			this._tabCtrlMain.Padding = new System.Drawing.Point(0, 0);
+			this._tabCtrlMain.SelectedIndex = 0;
+			this._tabCtrlMain.Size = new System.Drawing.Size(604, 460);
+			this._tabCtrlMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+			this._tabCtrlMain.TabIndex = 0;
+			// 
+			// _tabPgInput
+			// 
+			this._tabPgInput.Controls.Add(this.splitContainer1);
+			this._tabPgInput.Controls.Add(flowLayoutPanel1);
+			this._tabPgInput.Location = new System.Drawing.Point(4, 28);
+			this._tabPgInput.Margin = new System.Windows.Forms.Padding(0);
+			this._tabPgInput.Name = "_tabPgInput";
+			this._tabPgInput.Size = new System.Drawing.Size(596, 428);
+			this._tabPgInput.TabIndex = 0;
+			this._tabPgInput.Text = "Input";
+			this._tabPgInput.UseVisualStyleBackColor = true;
+			// 
+			// splitContainer1
+			// 
+			this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer1.IsSplitterFixed = true;
+			this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer1.Name = "splitContainer1";
+			// 
+			// splitContainer1.Panel1
+			// 
+			this.splitContainer1.Panel1.Controls.Add(groupBox1);
+			this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(8, 8, 3, 8);
+			// 
+			// splitContainer1.Panel2
+			// 
+			this.splitContainer1.Panel2.Controls.Add(groupBox2);
+			this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(3, 8, 8, 8);
+			this.splitContainer1.Size = new System.Drawing.Size(596, 389);
+			this.splitContainer1.SplitterDistance = 298;
+			this.splitContainer1.SplitterWidth = 2;
+			this.splitContainer1.TabIndex = 1;
+			// 
+			// _tabPgOutput
+			// 
+			this._tabPgOutput.Controls.Add(this.splitContainer2);
+			this._tabPgOutput.Controls.Add(flowLayoutPanel12);
+			this._tabPgOutput.Location = new System.Drawing.Point(4, 28);
+			this._tabPgOutput.Margin = new System.Windows.Forms.Padding(0);
+			this._tabPgOutput.Name = "_tabPgOutput";
+			this._tabPgOutput.Size = new System.Drawing.Size(596, 428);
+			this._tabPgOutput.TabIndex = 1;
+			this._tabPgOutput.Text = "Output";
+			this._tabPgOutput.UseVisualStyleBackColor = true;
+			// 
+			// splitContainer2
+			// 
+			this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer2.IsSplitterFixed = true;
+			this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer2.Name = "splitContainer2";
+			// 
+			// splitContainer2.Panel1
+			// 
+			this.splitContainer2.Panel1.Controls.Add(groupBox3);
+			this.splitContainer2.Panel1.Padding = new System.Windows.Forms.Padding(8, 8, 3, 8);
+			// 
+			// splitContainer2.Panel2
+			// 
+			this.splitContainer2.Panel2.Controls.Add(groupBox4);
+			this.splitContainer2.Panel2.Padding = new System.Windows.Forms.Padding(3, 8, 8, 8);
+			this.splitContainer2.Size = new System.Drawing.Size(596, 407);
+			this.splitContainer2.SplitterDistance = 298;
+			this.splitContainer2.SplitterWidth = 2;
+			this.splitContainer2.TabIndex = 2;
+			// 
 			// _openDlgFiles
 			// 
 			this._openDlgFiles.DefaultExt = "mid";
@@ -1072,51 +1130,13 @@
 			this._openDlgFiles.SupportMultiDottedExtensions = true;
 			this._openDlgFiles.Title = "Open MIDI Files";
 			// 
-			// _chartHarmonicities2
-			// 
-			chartArea4.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-			chartArea4.AxisX.MajorGrid.Enabled = false;
-			chartArea4.AxisX.MajorTickMark.Enabled = false;
-			chartArea4.AxisX.Minimum = 0D;
-			chartArea4.AxisX.Title = "Song";
-			chartArea4.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			chartArea4.AxisY.Title = "Harmonicity";
-			chartArea4.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			chartArea4.Name = "ChartArea1";
-			this._chartHarmonicities2.ChartAreas.Add(chartArea4);
-			this._chartHarmonicities2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this._chartHarmonicities2.IsSoftShadows = false;
-			legend4.Enabled = false;
-			legend4.Name = "Legend1";
-			this._chartHarmonicities2.Legends.Add(legend4);
-			this._chartHarmonicities2.Location = new System.Drawing.Point(0, 97);
-			this._chartHarmonicities2.Name = "_chartHarmonicities2";
-			this._chartHarmonicities2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-			series4.ChartArea = "ChartArea1";
-			series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
-			series4.Legend = "Legend1";
-			series4.Name = "Harmonicity";
-			series4.YValuesPerPoint = 4;
-			this._chartHarmonicities2.Series.Add(series4);
-			this._chartHarmonicities2.Size = new System.Drawing.Size(269, 203);
-			this._chartHarmonicities2.TabIndex = 7;
-			this._chartHarmonicities2.Text = "chart1";
-			title4.Name = "Harmonicity Chart";
-			this._chartHarmonicities2.Titles.Add(title4);
-			// 
-			// label11
-			// 
-			label11.AutoSize = true;
-			label11.Location = new System.Drawing.Point(339, 9);
-			label11.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
-			label11.Name = "label11";
-			label11.Size = new System.Drawing.Size(40, 13);
-			label11.TabIndex = 2;
-			label11.Text = "Profile";
-			// 
 			// programBindingSource
 			// 
 			this.programBindingSource.DataSource = typeof(MidiEval.Analyzer.Program);
+			// 
+			// programBindingSource1
+			// 
+			this.programBindingSource1.DataSource = typeof(MidiEval.Analyzer.Program);
 			// 
 			// Main
 			// 
@@ -1129,13 +1149,7 @@
 			this.Name = "Main";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "MIDIEval";
-			this._tabCtrlMain.ResumeLayout(false);
-			this._tabPgInput.ResumeLayout(false);
-			this._tabPgInput.PerformLayout();
-			this.splitContainer1.Panel1.ResumeLayout(false);
-			this.splitContainer1.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-			this.splitContainer1.ResumeLayout(false);
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
 			groupBox1.ResumeLayout(false);
 			groupBox1.PerformLayout();
 			flowLayoutPanel2.ResumeLayout(false);
@@ -1146,12 +1160,6 @@
 			flowLayoutPanel3.PerformLayout();
 			flowLayoutPanel1.ResumeLayout(false);
 			flowLayoutPanel1.PerformLayout();
-			this._tabPgOutput.ResumeLayout(false);
-			this._tabPgOutput.PerformLayout();
-			this.splitContainer2.Panel1.ResumeLayout(false);
-			this.splitContainer2.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-			this.splitContainer2.ResumeLayout(false);
 			groupBox3.ResumeLayout(false);
 			groupBox3.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this._chartHarmonicities1)).EndInit();
@@ -1160,6 +1168,7 @@
 			groupBox4.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this._chartHarmonicities2)).EndInit();
 			this.panel4.ResumeLayout(false);
 			this.panel4.PerformLayout();
 			flowLayoutPanel12.ResumeLayout(false);
@@ -1183,8 +1192,21 @@
 			flowLayoutPanel9.PerformLayout();
 			flowLayoutPanel10.ResumeLayout(false);
 			flowLayoutPanel10.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this._chartHarmonicities2)).EndInit();
+			this._tabCtrlMain.ResumeLayout(false);
+			this._tabPgInput.ResumeLayout(false);
+			this._tabPgInput.PerformLayout();
+			this.splitContainer1.Panel1.ResumeLayout(false);
+			this.splitContainer1.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+			this.splitContainer1.ResumeLayout(false);
+			this._tabPgOutput.ResumeLayout(false);
+			this._tabPgOutput.PerformLayout();
+			this.splitContainer2.Panel1.ResumeLayout(false);
+			this.splitContainer2.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+			this.splitContainer2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1231,5 +1253,6 @@
 		private System.Windows.Forms.Label _labelGenre2;
 		private System.Windows.Forms.DataVisualization.Charting.Chart _chartHarmonicities2;
 		private System.Windows.Forms.TabControl _tabCtrlMain;
+		private System.Windows.Forms.BindingSource programBindingSource1;
 	}
 }

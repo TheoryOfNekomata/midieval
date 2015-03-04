@@ -43,7 +43,7 @@ namespace MidiEval.Analyzer.Songs {
 		/// <value>
 		/// The channels.
 		/// </value>
-		public Elements.Channel[] Channels { get; private set; }
+		public Channel[] Channels { get; private set; }
 
 		private void InitializeTracks() {
 			this.Channels = new Elements.Channel[16];
@@ -51,10 +51,12 @@ namespace MidiEval.Analyzer.Songs {
 				this.Channels[i] = new Elements.Channel();
 		}
 
-		private Note[] GetAllNotes() {
-			return this.Channels.SelectMany(
-				channel => channel.Notes
-			).ToArray();
+		public Note[] GetAllNotes() {
+			return this.Channels
+				.Where((t, i) => i != 9)
+				.SelectMany(
+					channel => channel.Notes
+				).ToArray();
 		}
 
 		/// <summary>
@@ -64,9 +66,10 @@ namespace MidiEval.Analyzer.Songs {
 		/// <param name="end">The end.</param>
 		/// <returns>Array of <see cref="Elements.Note"/>s.</returns>
 		public Note[] GetNotesInTimeRange(int start, int end) {
-			return this.Channels.SelectMany(
-				channel => channel.GetNotesInTimeRange(start, end)
-			).ToArray();
+			return this.Channels
+				.Where((t, i) => i != 9)
+				.SelectMany(t => t.GetNotesInTimeRange(start, end))
+				.ToArray();
 		}
 
 		/// <summary>
@@ -95,10 +98,9 @@ namespace MidiEval.Analyzer.Songs {
 				for(var i = 0; i < track.Count; i++)
 					events.Add(track.GetMidiEvent(i));
 
-			var channelEventParser = new ChannelEventParser(events);
 			var metaEventParser = new MetaEventParser(events);
 
-			this.Channels = channelEventParser.Channels;
+			this.Channels = new ChannelEventParser(events).Channels;
 			this.KeySignature = metaEventParser.KeySignature;
 			this.TimeSignature = metaEventParser.TimeSignature;
 			this.Tempo = metaEventParser.Tempo;

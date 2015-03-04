@@ -1,13 +1,15 @@
 ﻿using MidiEval.Analyzer.Elements;
+using MidiEval.Analyzer.Processing;
 using MidiEval.Analyzer.Songs;
-using MidiEval.Analyzer.Songs.Processing;
 using Sanford.Multimedia.Midi;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MidiEval.Analyzer.Forms {
 
@@ -62,7 +64,24 @@ namespace MidiEval.Analyzer.Forms {
 		}
 
 		private void BtnAnalyze_Click(object sender, EventArgs e) {
-			Program.RunAnalyzer();
+			KeyFindingProfile profile;
+			Enum.TryParse(this._cmbBoxProfile.SelectedItem.ToString(), out profile);
+			Program.RunAnalyzer(profile);
+			var charts = new[] {
+				this._chartHarmonicities1,
+				this._chartHarmonicities2
+			};
+
+			this._labelGenre1.Text = this._cmbBoxGenre1.Text;
+			this._labelGenre2.Text = this._cmbBoxGenre2.Text;
+
+			for(var i = 0; i < Program.Harmonicities.Length; i++) {
+				charts[i].Series["Harmonicity"].Points.Clear();
+				for(var j = 0; j < Program.Harmonicities[i].GetLength(0); j++)
+					charts[i].Series["Harmonicity"].Points.AddXY(j + 1, Program.Harmonicities[i][j, 0], Program.Harmonicities[i][j, 1]);
+			}
+
+			this._tabCtrlMain.SelectedTab = this._tabPgOutput;
 		}
 
 		private void BtnBrowse_Click(object sender, EventArgs e) {
@@ -125,6 +144,10 @@ namespace MidiEval.Analyzer.Forms {
 			foreach(var item in list.SelectedItems)
 				list.Items.Remove((ListViewItem) item);
 			//list.SelectedItems
+		}
+
+		private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+			new DataHelp().ShowDialog();
 		}
 	}
 }

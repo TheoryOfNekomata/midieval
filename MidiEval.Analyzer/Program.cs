@@ -1,8 +1,10 @@
 ﻿using MidiEval.Analyzer.Forms;
+using MidiEval.Analyzer.Processing;
 using MidiEval.Analyzer.Songs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace MidiEval.Analyzer {
@@ -17,6 +19,8 @@ namespace MidiEval.Analyzer {
 			new Dictionary<string, Song>()
 		};
 
+		public static double[][,] Harmonicities { get; private set; }
+
 		/// <summary>
 		/// Gets the loaded songs in the program.
 		/// </summary>
@@ -30,8 +34,14 @@ namespace MidiEval.Analyzer {
 		/// <summary>
 		/// Runs the analyzer.
 		/// </summary>
-		public static void RunAnalyzer() {
-			Analyzer.Instance.Analyze(_songs[0].Values.ToArray(), _songs[1].Values.ToArray());
+		public static void RunAnalyzer(KeyFindingProfile profile = KeyFindingProfile.Simple) {
+			var analyzer = Analyzer.Instance
+				.Analyze(new[] {
+					_songs[0].Values.ToArray(),
+					_songs[1].Values.ToArray()
+				}, profile);
+
+			Harmonicities = analyzer.Harmonicities;
 		}
 
 		/// <summary>

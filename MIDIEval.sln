@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		Documentation\thesis.tex = Documentation\thesis.tex
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidiEval.Analyzer.Collections", "MidiEval.Analyzer.Collections\MidiEval.Analyzer.Collections.csproj", "{A9834C77-72E2-427E-B2A0-F648A260DE22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidiEval.Analyzer.Processing", "MidiEval.Analyzer.Processing\MidiEval.Analyzer.Processing.csproj", "{C22AD82D-D95A-41B3-890B-ED121AB6D97D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{09718242-CFB1-41F1-B3B1-71983E4D691C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09718242-CFB1-41F1-B3B1-71983E4D691C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09718242-CFB1-41F1-B3B1-71983E4D691C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9834C77-72E2-427E-B2A0-F648A260DE22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9834C77-72E2-427E-B2A0-F648A260DE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9834C77-72E2-427E-B2A0-F648A260DE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9834C77-72E2-427E-B2A0-F648A260DE22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C22AD82D-D95A-41B3-890B-ED121AB6D97D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C22AD82D-D95A-41B3-890B-ED121AB6D97D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C22AD82D-D95A-41B3-890B-ED121AB6D97D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C22AD82D-D95A-41B3-890B-ED121AB6D97D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

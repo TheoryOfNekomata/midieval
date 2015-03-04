@@ -1,11 +1,11 @@
 ﻿using MidiEval.Analyzer.Elements.Notes;
+using MidiEval.Analyzer.Songs.Processing;
 using Sanford.Multimedia;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace MidiEval.Analyzer.Songs.Processing {
+namespace MidiEval.Analyzer.Processing {
 
 	public class HarmonicityAnalyzer {
 		private static readonly HarmonicityAnalyzer _instance = new HarmonicityAnalyzer();

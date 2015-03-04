@@ -28,6 +28,12 @@ namespace MidiEval.Analyzer {
 			get { return _instance; }
 		}
 
+		/// <summary>
+		/// Gets the analyzed harmonicities.
+		/// </summary>
+		/// <value>
+		/// The harmonicities.
+		/// </value>
 		public double[][,] Harmonicities {
 			get { return this._harmonicities; }
 		}

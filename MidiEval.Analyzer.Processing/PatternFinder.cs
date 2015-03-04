@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 
-namespace MidiEval.Analyzer.Songs.Processing {
+namespace MidiEval.Analyzer.Processing {
 
 	public class PatternFinder {
 		private static readonly PatternFinder _instance = new PatternFinder();

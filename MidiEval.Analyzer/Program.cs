@@ -16,6 +16,12 @@ namespace MidiEval.Analyzer {
 	/// </summary>
 	internal static class Program {
 
+		/// <summary>
+		/// Gets the settings of the program.
+		/// </summary>
+		/// <value>
+		/// The settings.
+		/// </value>
 		public static Properties.Settings Settings { get; private set; }
 
 		private static readonly Dictionary<string, Song>[] _songs = new[] {

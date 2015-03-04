@@ -4,8 +4,17 @@ using System.Linq;
 
 namespace MidiEval.Analyzer.Collections {
 
+	/// <summary>
+	/// Class for a group of <see cref="Note"/>s.
+	/// </summary>
 	public abstract class NoteGroup {
 
+		/// <summary>
+		/// Gets the notes in the note group.
+		/// </summary>
+		/// <value>
+		/// The notes.
+		/// </value>
 		public List<Note> Notes { get; private set; }
 
 		protected NoteGroup() {
@@ -15,6 +24,12 @@ namespace MidiEval.Analyzer.Collections {
 			this.Notes = new List<Note>(notes);
 		}
 
+		/// <summary>
+		/// Gets the note in the note group with the latest Note Off.
+		/// </summary>
+		/// <value>
+		/// The note with the latest Note Off.
+		/// </value>
 		public Note LatestNote {
 			get {
 				Note[] latestNote = { null };
@@ -28,6 +43,12 @@ namespace MidiEval.Analyzer.Collections {
 			}
 		}
 
+		/// <summary>
+		/// Gets the note in the note group with the Earliest Note On.
+		/// </summary>
+		/// <value>
+		/// The note with the earliest Note On.
+		/// </value>
 		public Note EarliestNote {
 			get {
 				Note[] earliestNote = { null };

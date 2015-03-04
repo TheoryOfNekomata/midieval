@@ -51,6 +51,10 @@ namespace MidiEval.Analyzer.Songs {
 				this.Channels[i] = new Elements.Channel();
 		}
 
+		/// <summary>
+		/// Gets all notes.
+		/// </summary>
+		/// <returns>All notes of the song.</returns>
 		public Note[] GetAllNotes() {
 			return this.Channels
 				.Where((t, i) => i != 9)

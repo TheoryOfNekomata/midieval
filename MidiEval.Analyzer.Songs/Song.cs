@@ -1,5 +1,5 @@
 ﻿using MidiEval.Analyzer.Elements;
-using MidiEval.Analyzer.Parsing;
+using MidiEval.Analyzer.Songs.Input;
 using Sanford.Multimedia;
 using Sanford.Multimedia.Midi;
 using System.Collections.Generic;
@@ -51,7 +51,7 @@ namespace MidiEval.Analyzer.Songs {
 				this.Channels[i] = new Elements.Channel();
 		}
 
-		private IEnumerable<Note> GetAllNotes() {
+		private Note[] GetAllNotes() {
 			return this.Channels.SelectMany(
 				channel => channel.Notes
 			).ToArray();
@@ -63,7 +63,7 @@ namespace MidiEval.Analyzer.Songs {
 		/// <param name="start">The start.</param>
 		/// <param name="end">The end.</param>
 		/// <returns>Array of <see cref="Elements.Note"/>s.</returns>
-		public Elements.Note[] GetNotesInTimeRange(int start, int end) {
+		public Note[] GetNotesInTimeRange(int start, int end) {
 			return this.Channels.SelectMany(
 				channel => channel.GetNotesInTimeRange(start, end)
 			).ToArray();
@@ -90,11 +90,18 @@ namespace MidiEval.Analyzer.Songs {
 		public Song(Sequence sequence)
 			: this() {
 			this.InitializeTracks();
-			this.Channels = NoteExtractor.Instance.Parse(sequence);
-			var meta = MetaExtractor.Instance.Parse(sequence);
-			this.TimeSignature = meta.TimeSignature;
-			this.KeySignature = meta.KeySignature;
-			this.Tempo = meta.Tempo;
+			var events = new List<MidiEvent>();
+			foreach(var track in sequence)
+				for(var i = 0; i < track.Count; i++)
+					events.Add(track.GetMidiEvent(i));
+
+			var channelEventParser = new ChannelEventParser(events);
+			var metaEventParser = new MetaEventParser(events);
+
+			this.Channels = channelEventParser.Channels;
+			this.KeySignature = metaEventParser.KeySignature;
+			this.TimeSignature = metaEventParser.TimeSignature;
+			this.Tempo = metaEventParser.Tempo;
 		}
 	}
 }

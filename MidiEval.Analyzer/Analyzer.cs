@@ -27,9 +27,10 @@ namespace MidiEval.Analyzer {
 		/// <param name="songs2">Second array of songs.</param>
 		public void Analyze(Song[] songs1, Song[] songs2) {
 			foreach(var song in songs1) {
+				var i = 1;
 				foreach(var channel in song.Channels) {
 					var noteGroups = NoteGrouper.Instance.GroupNotes(channel);
-					MessageBox.Show("" + noteGroups.Length);
+					MessageBox.Show("Channel " + i++ + ": " + noteGroups.Length);
 				}
 			}
 		}

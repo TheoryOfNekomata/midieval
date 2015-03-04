@@ -7,10 +7,11 @@
     <ProjectGuid>{F2472CC2-DBB5-4CAA-96BC-A1600D7521C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MidiEval.Analyzer.Parsing</RootNamespace>
-    <AssemblyName>MidiEval.Analyzer.Parsing</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>MidiEval.Analyzer.Data</RootNamespace>
+    <AssemblyName>MidiEval.Analyzer.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Sanford.Collections">
@@ -55,9 +58,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NoteExtractor.cs" />
+    <Compile Include="EventReader.cs" />
+    <Compile Include="MidiEventTicksComparer.cs" />
+    <Compile Include="Parsers\ChannelDataParser.cs" />
+    <Compile Include="Parsers\IMidiDataParser.cs" />
+    <Compile Include="Parsers\ChannelDataParserBackup.cs" />
+    <Compile Include="Parsers\MetaDataParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MetaExtractor.cs" />
+    <Compile Include="SongData.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MidiEval.Analyzer.Elements\MidiEval.Analyzer.Elements.csproj">

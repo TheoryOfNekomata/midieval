@@ -29,8 +29,8 @@ namespace MidiEval.Analyzer.Elements {
 		public Note[] GetNotesInTimeRange(int start, int end) {
 			return this.Notes
 				.Where(
-					note => start > note.NoteOff && end >= note.NoteOff
-						|| start >= note.NoteOn && end > note.NoteOn
+					note => start < note.NoteOff && end >= note.NoteOff
+						|| start <= note.NoteOn && end > note.NoteOn
 				).ToArray();
 		}
 	}

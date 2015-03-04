@@ -1,5 +1,7 @@
 ﻿using MidiEval.Analyzer.Elements;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace MidiEval.Analyzer.Songs.Processing {
@@ -64,6 +66,8 @@ namespace MidiEval.Analyzer.Songs.Processing {
 				var notes = channel.GetNotesInTimeRange(start, end);
 				var latestNote = this.GetLatestNote(notes);
 				var earliestNote = this.GetEarliestNote(notes);
+				if(latestNote == null || earliestNote == null)
+					return new Note[] { };
 				if(latestNote.NoteOff <= end && earliestNote.NoteOn >= start)
 					return notes;
 				start = earliestNote.NoteOn;
@@ -83,6 +87,8 @@ namespace MidiEval.Analyzer.Songs.Processing {
 				var notes = song.GetNotesInTimeRange(start, end);
 				var latestNote = this.GetLatestNote(notes);
 				var earliestNote = this.GetEarliestNote(notes);
+				if(latestNote == null || earliestNote == null)
+					return new Note[] { };
 				if(latestNote.NoteOff <= end && earliestNote.NoteOn >= start)
 					return notes;
 				start = earliestNote.NoteOn;
@@ -97,11 +103,28 @@ namespace MidiEval.Analyzer.Songs.Processing {
 		/// <returns>Array of <see cref="Note"/> arrays.</returns>
 		public Note[][] GroupNotes(Channel channel) {
 			var noteGroups = new List<Note[]>();
-			var noteGroup = new[] { this.GetEarliestNote(channel.Notes.ToArray()) };
-			for(var start = this.GetEarliestNote(noteGroup).NoteOn; noteGroup.Length > 0; start = this.GetLatestNote(noteGroup).NoteOff + 1) {
-				noteGroup = this.GetContiguousNotes(start, this.GetLatestNote(noteGroup).NoteOff, channel);
-				noteGroups.Add(noteGroup);
+
+			if(channel.Notes.Count <= 0)
+				return noteGroups.ToArray();
+
+			var firstNote = this.GetEarliestNote(channel.Notes.ToArray());
+
+			var notesRemaining = channel.Notes.Count;
+
+			var start = firstNote.NoteOn;
+			var end = firstNote.NoteOff;
+			while(notesRemaining > 0) {
+				var noteGroup = this.GetContiguousNotes(start, end, channel);
+				if(noteGroup.Length > 0) {
+					noteGroups.Add(noteGroup);
+					notesRemaining -= noteGroup.Length;
+					start = this.GetLatestNote(noteGroup).NoteOff + 1;
+				} else {
+					start++;
+				}
+				end = start + 1;
 			}
+
 			return noteGroups.ToArray();
 		}
 	}

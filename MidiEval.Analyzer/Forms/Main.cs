@@ -1,5 +1,6 @@
-﻿using MidiEval.Analyzer.Parsing;
+﻿using MidiEval.Analyzer.Elements;
 using MidiEval.Analyzer.Songs;
+using MidiEval.Analyzer.Songs.Processing;
 using Sanford.Multimedia.Midi;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace MidiEval.Analyzer.Forms {
 
 		private void InitializeForm() {
 			this.InitializeComponent();
+			this._cmbBoxProfile.DataSource = Enum.GetValues(typeof(KeyFindingProfile));
 		}
 
 		private void ListViewNewEvent1OnItemRemovedAt(int index, ListViewItem item) {
@@ -35,12 +37,15 @@ namespace MidiEval.Analyzer.Forms {
 		private void UpdateLists() {
 			var lists = new[] { this._listFiles1, this._listFiles2 };
 			for(var i = 0; i < Program.Songs.Length; i++) {
+				lists[i].Items.Clear();
 				foreach(var songEntry in Program.Songs[i]) {
 					var fileName = songEntry.Key;
 					var song = songEntry.Value;
 					var listViewItem = new ListViewItem(fileName);
 
-					var songNotes = song.Channels.Sum(track => track.Notes.Count);
+					var songNotes = song.Channels
+						.Where((t, j) => j != 9) // exclude drum track
+						.Sum(track => track.Notes.Count);
 
 					listViewItem.SubItems.Add(new ListViewItem.ListViewSubItem(listViewItem, (string.Format("{0:##.000} BPM", song.Tempo))));
 					listViewItem.SubItems.Add(new ListViewItem.ListViewSubItem(listViewItem, song.KeySignature.ToString()));

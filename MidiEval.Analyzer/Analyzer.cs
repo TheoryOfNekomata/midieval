@@ -38,6 +38,16 @@ namespace MidiEval.Analyzer {
 			get { return this._harmonicities; }
 		}
 
+		/// <summary>
+		/// Gets the note groups.
+		/// </summary>
+		/// <value>
+		/// The note groups.
+		/// </value>
+		public NoteGroup[][][] NoteGroups {
+			get { return this._noteGroups; }
+		}
+
 		private Analyzer ReadSongs(Song[][] songs) {
 			this._songLists = new List<Song>[songs.Length];
 			for(var i = 0; i < this._songLists.Length; i++) {
@@ -69,11 +79,18 @@ namespace MidiEval.Analyzer {
 					var min = float.MaxValue;
 					var max = float.MinValue;
 
+					var i1 = i;
+					var j1 = j;
+
+					if((int) this._songLists[i1][j1].KeySignature == -1) {
+						var thisSong = this._songLists[i1][j1];
+						thisSong.KeySignature = KeySignatureAnalyzer.Instance.Analyze(this._songLists[i1][j1]);
+					}
+
 					foreach(var harmonicity in song
-						.Select(
-							noteGroup => noteGroup.GetHarmonicity(profile)
-						)
-					) {
+						.Select(noteGroup => noteGroup.GetHarmonicity(
+							profile, this._songLists[i1][j1].KeySignature
+						))) {
 						if(harmonicity > max)
 							max = harmonicity;
 						if(harmonicity < min)

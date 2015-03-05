@@ -1,6 +1,7 @@
-﻿using MidiEval.Analyzer.Elements;
+﻿using Sanford.Multimedia;
 using System.Collections.Generic;
 using System.Linq;
+using Note = MidiEval.Analyzer.Elements.Note;
 
 namespace MidiEval.Analyzer.Processing.Collections {
 
@@ -14,7 +15,7 @@ namespace MidiEval.Analyzer.Processing.Collections {
 			: base(notes) {
 		}
 
-		public float GetHarmonicity(KeyFindingProfile profile = KeyFindingProfile.Simple) {
+		public float GetHarmonicity(KeyFindingProfile profile = KeyFindingProfile.Simple, Key keySignature = Key.CMajor) {
 			return HarmonicityAnalyzer.Instance
 				.AnalyzeAverage(
 					this.Notes

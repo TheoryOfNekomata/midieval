@@ -1,16 +1,11 @@
-﻿using MidiEval.Analyzer.Elements;
-using MidiEval.Analyzer.Processing;
+﻿using MidiEval.Analyzer.Processing;
 using MidiEval.Analyzer.Songs;
 using Sanford.Multimedia.Midi;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Text;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MidiEval.Analyzer.Forms {
 
@@ -45,6 +40,10 @@ namespace MidiEval.Analyzer.Forms {
 				songs.Remove(item.Name);
 		}
 
+		private void UpdateAnalyzeButton() {
+			this._btnAnalyze.Enabled = Program.Songs[0].Count > 0 && Program.Songs[1].Count > 0;
+		}
+
 		private void UpdateLists() {
 			var lists = new[] { this._listFiles1, this._listFiles2 };
 			for(var i = 0; i < Program.Songs.Length; i++) {
@@ -66,6 +65,8 @@ namespace MidiEval.Analyzer.Forms {
 					lists[i].Items.Add(listViewItem);
 				}
 			}
+
+			this.UpdateAnalyzeButton();
 		}
 
 		public Main() {
@@ -81,17 +82,45 @@ namespace MidiEval.Analyzer.Forms {
 				this._chartHarmonicities1,
 				this._chartHarmonicities2
 			};
+			var labelHarmonicities = new[] {
+				this._labelHarmonicity1,
+				this._labelHarmonicity2
+			};
+			var labelAverageNotes = new[] {
+				this._labelAvgNotes1,
+				this._labelAvgNotes2
+			};
+			var labelAveragePhrases = new[] {
+				this._labelAvgPhrases1,
+				this._labelAvgPhrases2
+			};
 
 			this._labelGenre1.Text = this._cmbBoxGenre1.Text;
 			this._labelGenre2.Text = this._cmbBoxGenre2.Text;
 
+			var harmonicities = new List<float>();
+			var noteCounts = new List<int>();
+			var noteGroupCounts = new List<int>();
+
 			for(var i = 0; i < Program.Harmonicities.Length; i++) {
 				charts[i].Series["Harmonicity"].Points.Clear();
-				for(var j = 0; j < Program.Harmonicities[i].GetLength(0); j++)
+				for(var j = 0; j < Program.Harmonicities[i].GetLength(0); j++) {
+					var majorHarmonicity = Program.Harmonicities[i][j, 0];
+					var minorHarmonicity = Program.Harmonicities[i][j, 1];
 					charts[i].Series["Harmonicity"].Points.AddXY(
 						j + 1,
-						Program.Harmonicities[i][j, 0],
-						Program.Harmonicities[i][j, 1]);
+						majorHarmonicity,
+						minorHarmonicity
+					);
+					harmonicities.Add((float) (majorHarmonicity + minorHarmonicity) / 2.0F);
+				}
+
+				noteCounts.AddRange(Program.Songs[i].Values.Select(song => song.GetAllNotes().Length));
+				noteGroupCounts.AddRange(from songList in Analyzer.Instance.NoteGroups from song in songList select song.Length);
+
+				labelHarmonicities[i].Text = string.Format("{0}", harmonicities.Average());
+				labelAverageNotes[i].Text = string.Format("{0:##.###}", noteCounts.Average());
+				labelAveragePhrases[i].Text = string.Format("{0:##.###}", noteGroupCounts.Average());
 			}
 
 			this._tabCtrlMain.SelectedTab = this._tabPgOutput;
@@ -124,7 +153,7 @@ namespace MidiEval.Analyzer.Forms {
 		}
 
 		private void UrlLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-			System.Diagnostics.Process.Start((string) (((LinkLabel) sender).Tag));
+			Process.Start((string) (((LinkLabel) sender).Tag));
 		}
 
 		private void BtnClear_Click(object sender, EventArgs e) {
@@ -146,17 +175,29 @@ namespace MidiEval.Analyzer.Forms {
 				MessageBoxButtons.YesNo,
 				MessageBoxIcon.Warning) != DialogResult.Yes)
 				return;
-			listView.Items.Clear();
+
+			//listView.Items.Clear();
 			songList.Clear();
+			this.UpdateLists();
 		}
 
 		private void List_KeyUp(object sender, KeyEventArgs e) {
 			var list = (ListView) sender;
+			var lists = new[] {
+				this._listFiles1,
+				this._listFiles2
+			};
+
 			if(e.KeyCode != Keys.Delete)
 				return;
-			foreach(var item in list.SelectedItems)
-				list.Items.Remove((ListViewItem) item);
-			//list.SelectedItems
+			for(var i = 0; i < lists.Length; i++) {
+				if(lists[i] != list)
+					continue;
+				foreach(var item in list.SelectedItems.Cast<ListViewItem>())
+					Program.Songs[i].Remove(item.Text);
+			}
+
+			this.UpdateLists();
 		}
 
 		private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {

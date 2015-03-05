@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +59,7 @@
     <Compile Include="HarmonicityAnalyzer.cs" />
     <Compile Include="IntervalAnalyzer.cs" />
     <Compile Include="KeyFindingProfile.cs" />
+    <Compile Include="KeySignatureAnalyzer.cs" />
     <Compile Include="NoteGrouper.cs" />
     <Compile Include="Collections\NoteGroup.cs" />
     <Compile Include="PatternFinder.cs" />

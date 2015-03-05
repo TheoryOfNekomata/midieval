@@ -31,17 +31,17 @@
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 			System.Windows.Forms.Label label11;
 			System.Windows.Forms.GroupBox groupBox3;
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
 			System.Windows.Forms.Label label16;
 			System.Windows.Forms.Label label15;
 			System.Windows.Forms.GroupBox groupBox4;
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
 			System.Windows.Forms.Label label17;
 			System.Windows.Forms.Label label18;
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
@@ -72,10 +72,10 @@
 			System.Windows.Forms.Label label1;
 			System.Windows.Forms.Label label9;
 			System.Windows.Forms.TabControl tabControl1;
-			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
-			System.Windows.Forms.Button _btnBack;
 			System.Windows.Forms.Label label13;
 			System.Windows.Forms.Label label14;
+			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
+			System.Windows.Forms.Button _btnBack;
 			this._listFiles1 = new System.Windows.Forms.ListView();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -121,9 +121,12 @@
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
 			this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
+			this.panel4 = new System.Windows.Forms.Panel();
+			this.panel6 = new System.Windows.Forms.Panel();
 			this._panelValidInput = new System.Windows.Forms.Panel();
 			this._openDlgFiles = new System.Windows.Forms.OpenFileDialog();
 			this.programBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.panel2 = new System.Windows.Forms.Panel();
 			groupBox1 = new System.Windows.Forms.GroupBox();
 			flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
 			groupBox2 = new System.Windows.Forms.GroupBox();
@@ -164,10 +167,10 @@
 			label1 = new System.Windows.Forms.Label();
 			label9 = new System.Windows.Forms.Label();
 			tabControl1 = new System.Windows.Forms.TabControl();
-			flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
-			_btnBack = new System.Windows.Forms.Button();
 			label13 = new System.Windows.Forms.Label();
 			label14 = new System.Windows.Forms.Label();
+			flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
+			_btnBack = new System.Windows.Forms.Button();
 			groupBox1.SuspendLayout();
 			flowLayoutPanel2.SuspendLayout();
 			groupBox2.SuspendLayout();
@@ -198,7 +201,6 @@
 			this.splitContainer2.Panel1.SuspendLayout();
 			this.splitContainer2.Panel2.SuspendLayout();
 			this.splitContainer2.SuspendLayout();
-			flowLayoutPanel13.SuspendLayout();
 			this._tabCtrlMain.SuspendLayout();
 			this._tabPgInput.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -210,8 +212,10 @@
 			this.panel5.SuspendLayout();
 			this.flowLayoutPanel15.SuspendLayout();
 			this.flowLayoutPanel14.SuspendLayout();
+			this.panel4.SuspendLayout();
 			this._panelValidInput.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).BeginInit();
+			flowLayoutPanel13.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -223,7 +227,7 @@
 			groupBox1.Location = new System.Drawing.Point(8, 8);
 			groupBox1.Name = "groupBox1";
 			groupBox1.Padding = new System.Windows.Forms.Padding(8);
-			groupBox1.Size = new System.Drawing.Size(287, 473);
+			groupBox1.Size = new System.Drawing.Size(287, 409);
 			groupBox1.TabIndex = 0;
 			groupBox1.TabStop = false;
 			groupBox1.Text = "Genre 1";
@@ -243,7 +247,7 @@
 			this._listFiles1.Location = new System.Drawing.Point(8, 44);
 			this._listFiles1.Name = "_listFiles1";
 			this._listFiles1.ShowGroups = false;
-			this._listFiles1.Size = new System.Drawing.Size(271, 382);
+			this._listFiles1.Size = new System.Drawing.Size(271, 318);
 			this._listFiles1.TabIndex = 1;
 			this._listFiles1.UseCompatibleStateImageBehavior = false;
 			this._listFiles1.View = System.Windows.Forms.View.Details;
@@ -281,7 +285,7 @@
 			flowLayoutPanel2.Controls.Add(this._btnClear1);
 			flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
 			flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-			flowLayoutPanel2.Location = new System.Drawing.Point(8, 426);
+			flowLayoutPanel2.Location = new System.Drawing.Point(8, 362);
 			flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
 			flowLayoutPanel2.Name = "flowLayoutPanel2";
 			flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
@@ -344,7 +348,7 @@
 			groupBox2.Location = new System.Drawing.Point(3, 8);
 			groupBox2.Name = "groupBox2";
 			groupBox2.Padding = new System.Windows.Forms.Padding(8);
-			groupBox2.Size = new System.Drawing.Size(285, 473);
+			groupBox2.Size = new System.Drawing.Size(285, 409);
 			groupBox2.TabIndex = 0;
 			groupBox2.TabStop = false;
 			groupBox2.Text = "Genre 2";
@@ -364,7 +368,7 @@
 			this._listFiles2.Location = new System.Drawing.Point(8, 44);
 			this._listFiles2.Name = "_listFiles2";
 			this._listFiles2.ShowGroups = false;
-			this._listFiles2.Size = new System.Drawing.Size(269, 382);
+			this._listFiles2.Size = new System.Drawing.Size(269, 318);
 			this._listFiles2.TabIndex = 1;
 			this._listFiles2.UseCompatibleStateImageBehavior = false;
 			this._listFiles2.View = System.Windows.Forms.View.Details;
@@ -421,7 +425,7 @@
 			flowLayoutPanel3.Controls.Add(this._btnClear2);
 			flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
 			flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-			flowLayoutPanel3.Location = new System.Drawing.Point(8, 426);
+			flowLayoutPanel3.Location = new System.Drawing.Point(8, 362);
 			flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
 			flowLayoutPanel3.Name = "flowLayoutPanel3";
 			flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
@@ -465,7 +469,7 @@
 			flowLayoutPanel1.Controls.Add(label11);
 			flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
 			flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-			flowLayoutPanel1.Location = new System.Drawing.Point(0, 489);
+			flowLayoutPanel1.Location = new System.Drawing.Point(0, 425);
 			flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
 			flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 8);
@@ -524,42 +528,42 @@
 			groupBox3.Margin = new System.Windows.Forms.Padding(0);
 			groupBox3.Name = "groupBox3";
 			groupBox3.Padding = new System.Windows.Forms.Padding(8);
-			groupBox3.Size = new System.Drawing.Size(283, 465);
+			groupBox3.Size = new System.Drawing.Size(283, 401);
 			groupBox3.TabIndex = 0;
 			groupBox3.TabStop = false;
 			groupBox3.Text = "Genre 1";
 			// 
 			// _chartHarmonicities1
 			// 
-			chartArea1.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-			chartArea1.AxisX.MajorGrid.Enabled = false;
-			chartArea1.AxisX.MajorTickMark.Enabled = false;
-			chartArea1.AxisX.Minimum = 0D;
-			chartArea1.AxisX.Title = "Song";
-			chartArea1.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			chartArea1.AxisY.Title = "Harmonicity";
-			chartArea1.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			chartArea1.Name = "ChartArea1";
-			this._chartHarmonicities1.ChartAreas.Add(chartArea1);
+			chartArea3.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea3.AxisX.MajorGrid.Enabled = false;
+			chartArea3.AxisX.MajorTickMark.Enabled = false;
+			chartArea3.AxisX.Minimum = 0D;
+			chartArea3.AxisX.Title = "Song";
+			chartArea3.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			chartArea3.AxisY.Title = "Harmonicity";
+			chartArea3.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			chartArea3.Name = "ChartArea1";
+			this._chartHarmonicities1.ChartAreas.Add(chartArea3);
 			this._chartHarmonicities1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this._chartHarmonicities1.IsSoftShadows = false;
-			legend1.Enabled = false;
-			legend1.Name = "Legend1";
-			this._chartHarmonicities1.Legends.Add(legend1);
+			legend3.Enabled = false;
+			legend3.Name = "Legend1";
+			this._chartHarmonicities1.Legends.Add(legend3);
 			this._chartHarmonicities1.Location = new System.Drawing.Point(8, 120);
 			this._chartHarmonicities1.Name = "_chartHarmonicities1";
 			this._chartHarmonicities1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-			series1.ChartArea = "ChartArea1";
-			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
-			series1.Legend = "Legend1";
-			series1.Name = "Harmonicity";
-			series1.YValuesPerPoint = 4;
-			this._chartHarmonicities1.Series.Add(series1);
-			this._chartHarmonicities1.Size = new System.Drawing.Size(267, 277);
+			series3.ChartArea = "ChartArea1";
+			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
+			series3.Legend = "Legend1";
+			series3.Name = "Harmonicity";
+			series3.YValuesPerPoint = 4;
+			this._chartHarmonicities1.Series.Add(series3);
+			this._chartHarmonicities1.Size = new System.Drawing.Size(267, 213);
 			this._chartHarmonicities1.TabIndex = 5;
 			this._chartHarmonicities1.Text = "chart1";
-			title1.Name = "Harmonicity Chart";
-			this._chartHarmonicities1.Titles.Add(title1);
+			title3.Name = "Harmonicity Chart";
+			this._chartHarmonicities1.Titles.Add(title3);
 			// 
 			// tableLayoutPanel1
 			// 
@@ -573,7 +577,7 @@
 			this.tableLayoutPanel1.Controls.Add(this._labelAvgNotes1, 1, 0);
 			this.tableLayoutPanel1.Controls.Add(this._labelAvgPhrases1, 1, 1);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 397);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 333);
 			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 2;
@@ -659,7 +663,7 @@
 			groupBox4.Margin = new System.Windows.Forms.Padding(0);
 			groupBox4.Name = "groupBox4";
 			groupBox4.Padding = new System.Windows.Forms.Padding(8);
-			groupBox4.Size = new System.Drawing.Size(281, 465);
+			groupBox4.Size = new System.Drawing.Size(281, 401);
 			groupBox4.TabIndex = 0;
 			groupBox4.TabStop = false;
 			groupBox4.Text = "Genre 2";
@@ -672,40 +676,40 @@
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel3.Location = new System.Drawing.Point(8, 23);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(265, 374);
+			this.panel3.Size = new System.Drawing.Size(265, 310);
 			this.panel3.TabIndex = 3;
 			// 
 			// _chartHarmonicities2
 			// 
-			chartArea2.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-			chartArea2.AxisX.MajorGrid.Enabled = false;
-			chartArea2.AxisX.MajorTickMark.Enabled = false;
-			chartArea2.AxisX.Minimum = 0D;
-			chartArea2.AxisX.Title = "Song";
-			chartArea2.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			chartArea2.AxisY.Title = "Harmonicity";
-			chartArea2.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			chartArea2.Name = "ChartArea1";
-			this._chartHarmonicities2.ChartAreas.Add(chartArea2);
+			chartArea4.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea4.AxisX.MajorGrid.Enabled = false;
+			chartArea4.AxisX.MajorTickMark.Enabled = false;
+			chartArea4.AxisX.Minimum = 0D;
+			chartArea4.AxisX.Title = "Song";
+			chartArea4.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			chartArea4.AxisY.Title = "Harmonicity";
+			chartArea4.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			chartArea4.Name = "ChartArea1";
+			this._chartHarmonicities2.ChartAreas.Add(chartArea4);
 			this._chartHarmonicities2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this._chartHarmonicities2.IsSoftShadows = false;
-			legend2.Enabled = false;
-			legend2.Name = "Legend1";
-			this._chartHarmonicities2.Legends.Add(legend2);
+			legend4.Enabled = false;
+			legend4.Name = "Legend1";
+			this._chartHarmonicities2.Legends.Add(legend4);
 			this._chartHarmonicities2.Location = new System.Drawing.Point(0, 97);
 			this._chartHarmonicities2.Name = "_chartHarmonicities2";
 			this._chartHarmonicities2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-			series2.ChartArea = "ChartArea1";
-			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
-			series2.Legend = "Legend1";
-			series2.Name = "Harmonicity";
-			series2.YValuesPerPoint = 4;
-			this._chartHarmonicities2.Series.Add(series2);
-			this._chartHarmonicities2.Size = new System.Drawing.Size(265, 277);
+			series4.ChartArea = "ChartArea1";
+			series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
+			series4.Legend = "Legend1";
+			series4.Name = "Harmonicity";
+			series4.YValuesPerPoint = 4;
+			this._chartHarmonicities2.Series.Add(series4);
+			this._chartHarmonicities2.Size = new System.Drawing.Size(265, 213);
 			this._chartHarmonicities2.TabIndex = 7;
 			this._chartHarmonicities2.Text = "chart1";
-			title2.Name = "Harmonicity Chart";
-			this._chartHarmonicities2.Titles.Add(title2);
+			title4.Name = "Harmonicity Chart";
+			this._chartHarmonicities2.Titles.Add(title4);
 			// 
 			// _labelHarmonicity2
 			// 
@@ -744,7 +748,7 @@
 			this.tableLayoutPanel2.Controls.Add(this._labelAvgNotes2, 1, 0);
 			this.tableLayoutPanel2.Controls.Add(this._labelAvgPhrases2, 1, 1);
 			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 397);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 333);
 			this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
 			this.tableLayoutPanel2.RowCount = 2;
@@ -804,7 +808,7 @@
 			flowLayoutPanel12.Controls.Add(linkLabel4);
 			flowLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Bottom;
 			flowLayoutPanel12.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-			flowLayoutPanel12.Location = new System.Drawing.Point(0, 507);
+			flowLayoutPanel12.Location = new System.Drawing.Point(0, 443);
 			flowLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
 			flowLayoutPanel12.Name = "flowLayoutPanel12";
 			flowLayoutPanel12.Padding = new System.Windows.Forms.Padding(8, 0, 0, 8);
@@ -829,7 +833,7 @@
 			_tabPgAbout.Location = new System.Drawing.Point(4, 28);
 			_tabPgAbout.Name = "_tabPgAbout";
 			_tabPgAbout.Padding = new System.Windows.Forms.Padding(3);
-			_tabPgAbout.Size = new System.Drawing.Size(596, 528);
+			_tabPgAbout.Size = new System.Drawing.Size(596, 464);
 			_tabPgAbout.TabIndex = 2;
 			_tabPgAbout.Text = "About";
 			_tabPgAbout.UseVisualStyleBackColor = true;
@@ -850,7 +854,7 @@
 			panel1.Margin = new System.Windows.Forms.Padding(0);
 			panel1.Name = "panel1";
 			panel1.Padding = new System.Windows.Forms.Padding(32, 48, 32, 8);
-			panel1.Size = new System.Drawing.Size(590, 522);
+			panel1.Size = new System.Drawing.Size(590, 458);
 			panel1.TabIndex = 8;
 			// 
 			// flowLayoutPanel11
@@ -1141,7 +1145,7 @@
 			tabControl1.Margin = new System.Windows.Forms.Padding(0);
 			tabControl1.Name = "tabControl1";
 			tabControl1.SelectedIndex = 0;
-			tabControl1.Size = new System.Drawing.Size(596, 507);
+			tabControl1.Size = new System.Drawing.Size(596, 443);
 			tabControl1.TabIndex = 7;
 			// 
 			// tabPage1
@@ -1150,7 +1154,7 @@
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
 			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Size = new System.Drawing.Size(588, 481);
+			this.tabPage1.Size = new System.Drawing.Size(588, 417);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Harmonicity";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -1171,7 +1175,7 @@
 			// 
 			this.splitContainer2.Panel2.Controls.Add(groupBox4);
 			this.splitContainer2.Panel2.Padding = new System.Windows.Forms.Padding(3, 8, 8, 8);
-			this.splitContainer2.Size = new System.Drawing.Size(588, 481);
+			this.splitContainer2.Size = new System.Drawing.Size(588, 417);
 			this.splitContainer2.SplitterDistance = 294;
 			this.splitContainer2.SplitterWidth = 2;
 			this.splitContainer2.TabIndex = 2;
@@ -1181,39 +1185,10 @@
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(588, 481);
+			this.tabPage2.Size = new System.Drawing.Size(588, 417);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Structure";
 			this.tabPage2.UseVisualStyleBackColor = true;
-			// 
-			// flowLayoutPanel13
-			// 
-			flowLayoutPanel13.AutoSize = true;
-			flowLayoutPanel13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			flowLayoutPanel13.BackColor = System.Drawing.SystemColors.ControlLightLight;
-			flowLayoutPanel13.Controls.Add(_btnBack);
-			flowLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-			flowLayoutPanel13.Location = new System.Drawing.Point(0, 481);
-			flowLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
-			flowLayoutPanel13.Name = "flowLayoutPanel13";
-			flowLayoutPanel13.Padding = new System.Windows.Forms.Padding(8, 8, 0, 8);
-			flowLayoutPanel13.Size = new System.Drawing.Size(596, 47);
-			flowLayoutPanel13.TabIndex = 6;
-			// 
-			// _btnBack
-			// 
-			_btnBack.AutoSize = true;
-			_btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			_btnBack.DialogResult = System.Windows.Forms.DialogResult.OK;
-			_btnBack.Location = new System.Drawing.Point(8, 8);
-			_btnBack.Margin = new System.Windows.Forms.Padding(0);
-			_btnBack.Name = "_btnBack";
-			_btnBack.Padding = new System.Windows.Forms.Padding(4);
-			_btnBack.Size = new System.Drawing.Size(49, 31);
-			_btnBack.TabIndex = 0;
-			_btnBack.Text = "&Back";
-			_btnBack.UseVisualStyleBackColor = true;
-			_btnBack.Click += new System.EventHandler(this.BtnBack_Click);
 			// 
 			// label13
 			// 
@@ -1223,8 +1198,8 @@
 			label13.Location = new System.Drawing.Point(0, 0);
 			label13.Margin = new System.Windows.Forms.Padding(0);
 			label13.Name = "label13";
-			label13.Padding = new System.Windows.Forms.Padding(56, 32, 56, 0);
-			label13.Size = new System.Drawing.Size(525, 77);
+			label13.Padding = new System.Windows.Forms.Padding(32, 32, 56, 0);
+			label13.Size = new System.Drawing.Size(399, 122);
 			label13.TabIndex = 2;
 			label13.Text = "Input not suitable for analysis";
 			label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1236,8 +1211,8 @@
 			label14.Location = new System.Drawing.Point(0, 0);
 			label14.Margin = new System.Windows.Forms.Padding(0);
 			label14.Name = "label14";
-			label14.Padding = new System.Windows.Forms.Padding(61, 16, 61, 16);
-			label14.Size = new System.Drawing.Size(560, 78);
+			label14.Padding = new System.Windows.Forms.Padding(37, 16, 61, 16);
+			label14.Size = new System.Drawing.Size(494, 78);
 			label14.TabIndex = 0;
 			label14.Text = "MIDIEval is unable to produce results for your input data. Please check if your d" +
     "ata are valid.";
@@ -1250,12 +1225,12 @@
 			this._tabCtrlMain.Controls.Add(_tabPgAbout);
 			this._tabCtrlMain.Dock = System.Windows.Forms.DockStyle.Fill;
 			this._tabCtrlMain.ItemSize = new System.Drawing.Size(64, 24);
-			this._tabCtrlMain.Location = new System.Drawing.Point(0, 0);
+			this._tabCtrlMain.Location = new System.Drawing.Point(0, 64);
 			this._tabCtrlMain.Margin = new System.Windows.Forms.Padding(0);
 			this._tabCtrlMain.Name = "_tabCtrlMain";
 			this._tabCtrlMain.Padding = new System.Drawing.Point(0, 0);
 			this._tabCtrlMain.SelectedIndex = 0;
-			this._tabCtrlMain.Size = new System.Drawing.Size(604, 560);
+			this._tabCtrlMain.Size = new System.Drawing.Size(604, 496);
 			this._tabCtrlMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
 			this._tabCtrlMain.TabIndex = 0;
 			// 
@@ -1266,7 +1241,7 @@
 			this._tabPgInput.Location = new System.Drawing.Point(4, 28);
 			this._tabPgInput.Margin = new System.Windows.Forms.Padding(0);
 			this._tabPgInput.Name = "_tabPgInput";
-			this._tabPgInput.Size = new System.Drawing.Size(596, 528);
+			this._tabPgInput.Size = new System.Drawing.Size(596, 464);
 			this._tabPgInput.TabIndex = 0;
 			this._tabPgInput.Text = "Input";
 			this._tabPgInput.UseVisualStyleBackColor = true;
@@ -1287,7 +1262,7 @@
 			// 
 			this.splitContainer1.Panel2.Controls.Add(groupBox2);
 			this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(3, 8, 8, 8);
-			this.splitContainer1.Size = new System.Drawing.Size(596, 489);
+			this.splitContainer1.Size = new System.Drawing.Size(596, 425);
 			this.splitContainer1.SplitterDistance = 298;
 			this.splitContainer1.SplitterWidth = 2;
 			this.splitContainer1.TabIndex = 0;
@@ -1299,7 +1274,7 @@
 			this._tabPgOutput.Location = new System.Drawing.Point(4, 28);
 			this._tabPgOutput.Margin = new System.Windows.Forms.Padding(0);
 			this._tabPgOutput.Name = "_tabPgOutput";
-			this._tabPgOutput.Size = new System.Drawing.Size(596, 528);
+			this._tabPgOutput.Size = new System.Drawing.Size(596, 464);
 			this._tabPgOutput.TabIndex = 1;
 			this._tabPgOutput.Text = "Output";
 			this._tabPgOutput.UseVisualStyleBackColor = true;
@@ -1307,12 +1282,12 @@
 			// _panelInvalidInput
 			// 
 			this._panelInvalidInput.Controls.Add(this.panel5);
-			this._panelInvalidInput.Controls.Add(flowLayoutPanel13);
 			this._panelInvalidInput.Controls.Add(this.flowLayoutPanel14);
+			this._panelInvalidInput.Controls.Add(this.panel4);
 			this._panelInvalidInput.Dock = System.Windows.Forms.DockStyle.Fill;
 			this._panelInvalidInput.Location = new System.Drawing.Point(0, 0);
 			this._panelInvalidInput.Name = "_panelInvalidInput";
-			this._panelInvalidInput.Size = new System.Drawing.Size(596, 528);
+			this._panelInvalidInput.Size = new System.Drawing.Size(596, 464);
 			this._panelInvalidInput.TabIndex = 7;
 			// 
 			// panel5
@@ -1320,11 +1295,12 @@
 			this.panel5.AutoScroll = true;
 			this.panel5.AutoSize = true;
 			this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.panel5.Controls.Add(flowLayoutPanel13);
 			this.panel5.Controls.Add(this.flowLayoutPanel15);
 			this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel5.Location = new System.Drawing.Point(0, 77);
+			this.panel5.Location = new System.Drawing.Point(98, 122);
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(596, 404);
+			this.panel5.Size = new System.Drawing.Size(498, 342);
 			this.panel5.TabIndex = 7;
 			// 
 			// flowLayoutPanel15
@@ -1336,7 +1312,7 @@
 			this.flowLayoutPanel15.Location = new System.Drawing.Point(0, 0);
 			this.flowLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
 			this.flowLayoutPanel15.Name = "flowLayoutPanel15";
-			this.flowLayoutPanel15.Size = new System.Drawing.Size(596, 78);
+			this.flowLayoutPanel15.Size = new System.Drawing.Size(498, 78);
 			this.flowLayoutPanel15.TabIndex = 1;
 			// 
 			// flowLayoutPanel14
@@ -1345,11 +1321,31 @@
 			this.flowLayoutPanel14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.flowLayoutPanel14.Controls.Add(label13);
 			this.flowLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flowLayoutPanel14.Location = new System.Drawing.Point(0, 0);
+			this.flowLayoutPanel14.Location = new System.Drawing.Point(98, 0);
 			this.flowLayoutPanel14.Margin = new System.Windows.Forms.Padding(0);
 			this.flowLayoutPanel14.Name = "flowLayoutPanel14";
-			this.flowLayoutPanel14.Size = new System.Drawing.Size(596, 77);
+			this.flowLayoutPanel14.Size = new System.Drawing.Size(498, 122);
 			this.flowLayoutPanel14.TabIndex = 5;
+			// 
+			// panel4
+			// 
+			this.panel4.Controls.Add(this.panel6);
+			this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+			this.panel4.Location = new System.Drawing.Point(0, 0);
+			this.panel4.Name = "panel4";
+			this.panel4.Padding = new System.Windows.Forms.Padding(32, 32, 0, 0);
+			this.panel4.Size = new System.Drawing.Size(98, 464);
+			this.panel4.TabIndex = 2;
+			// 
+			// panel6
+			// 
+			this.panel6.BackgroundImage = global::MidiEval.Analyzer.Properties.Resources.icon;
+			this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel6.Location = new System.Drawing.Point(32, 32);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(66, 64);
+			this.panel6.TabIndex = 0;
 			// 
 			// _panelValidInput
 			// 
@@ -1359,7 +1355,7 @@
 			this._panelValidInput.Location = new System.Drawing.Point(0, 0);
 			this._panelValidInput.Margin = new System.Windows.Forms.Padding(0);
 			this._panelValidInput.Name = "_panelValidInput";
-			this._panelValidInput.Size = new System.Drawing.Size(596, 528);
+			this._panelValidInput.Size = new System.Drawing.Size(596, 464);
 			this._panelValidInput.TabIndex = 7;
 			// 
 			// _openDlgFiles
@@ -1376,12 +1372,52 @@
 			// 
 			this.programBindingSource1.DataSource = typeof(MidiEval.Analyzer.Program);
 			// 
+			// panel2
+			// 
+			this.panel2.BackgroundImage = global::MidiEval.Analyzer.Properties.Resources.logo;
+			this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel2.Location = new System.Drawing.Point(0, 0);
+			this.panel2.Margin = new System.Windows.Forms.Padding(0);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(604, 64);
+			this.panel2.TabIndex = 1;
+			// 
+			// flowLayoutPanel13
+			// 
+			flowLayoutPanel13.AutoSize = true;
+			flowLayoutPanel13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			flowLayoutPanel13.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			flowLayoutPanel13.Controls.Add(_btnBack);
+			flowLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Top;
+			flowLayoutPanel13.Location = new System.Drawing.Point(0, 78);
+			flowLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
+			flowLayoutPanel13.Name = "flowLayoutPanel13";
+			flowLayoutPanel13.Padding = new System.Windows.Forms.Padding(41, 8, 8, 8);
+			flowLayoutPanel13.Size = new System.Drawing.Size(498, 47);
+			flowLayoutPanel13.TabIndex = 7;
+			// 
+			// _btnBack
+			// 
+			_btnBack.AutoSize = true;
+			_btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			_btnBack.DialogResult = System.Windows.Forms.DialogResult.OK;
+			_btnBack.Location = new System.Drawing.Point(41, 8);
+			_btnBack.Margin = new System.Windows.Forms.Padding(0);
+			_btnBack.Name = "_btnBack";
+			_btnBack.Padding = new System.Windows.Forms.Padding(4);
+			_btnBack.Size = new System.Drawing.Size(49, 31);
+			_btnBack.TabIndex = 0;
+			_btnBack.Text = "&Back";
+			_btnBack.UseVisualStyleBackColor = true;
+			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(604, 560);
 			this.Controls.Add(this._tabCtrlMain);
+			this.Controls.Add(this.panel2);
 			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.MinimumSize = new System.Drawing.Size(620, 500);
 			this.Name = "Main";
@@ -1438,8 +1474,6 @@
 			this.splitContainer2.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
 			this.splitContainer2.ResumeLayout(false);
-			flowLayoutPanel13.ResumeLayout(false);
-			flowLayoutPanel13.PerformLayout();
 			this._tabCtrlMain.ResumeLayout(false);
 			this._tabPgInput.ResumeLayout(false);
 			this._tabPgInput.PerformLayout();
@@ -1456,9 +1490,12 @@
 			this.flowLayoutPanel15.PerformLayout();
 			this.flowLayoutPanel14.ResumeLayout(false);
 			this.flowLayoutPanel14.PerformLayout();
+			this.panel4.ResumeLayout(false);
 			this._panelValidInput.ResumeLayout(false);
 			this._panelValidInput.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).EndInit();
+			flowLayoutPanel13.ResumeLayout(false);
+			flowLayoutPanel13.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -1513,5 +1550,8 @@
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;
 		private System.Windows.Forms.Panel panel5;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel15;
+		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.Panel panel4;
+		private System.Windows.Forms.Panel panel6;
 	}
 }

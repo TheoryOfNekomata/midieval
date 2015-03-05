@@ -81,6 +81,8 @@ namespace MidiEval.Analyzer.Forms {
 			KeyFindingProfile profile;
 			if(!Enum.TryParse(this._cmbBoxProfile.SelectedItem.ToString(), out profile))
 				return;
+			this._labelStatus.Text = "Performing analysis on selected files...";
+			this._progBarStatus.MarqueeAnimationSpeed = 100;
 			Program.RunAnalyzer(profile);
 			var charts = new[] {
 				this._chartHarmonicities1,
@@ -102,11 +104,11 @@ namespace MidiEval.Analyzer.Forms {
 			this._labelGenre1.Text = this._cmbBoxGenre1.Text;
 			this._labelGenre2.Text = this._cmbBoxGenre2.Text;
 
-			var harmonicities = new List<float>();
-			var noteCounts = new List<int>();
-			var noteGroupCounts = new List<int>();
-
 			for(var i = 0; i < Program.Harmonicities.Length; i++) {
+				var harmonicities = new List<float>();
+				var noteCounts = new List<int>();
+				var noteGroupCounts = new List<int>();
+
 				charts[i].Series["Harmonicity"].Points.Clear();
 				for(var j = 0; j < Program.Harmonicities[i].GetLength(0); j++) {
 					var majorHarmonicity = Program.Harmonicities[i][j, 0];
@@ -120,7 +122,7 @@ namespace MidiEval.Analyzer.Forms {
 				}
 
 				noteCounts.AddRange(Program.Songs[i].Values.Select(song => song.GetAllNotes().Length));
-				noteGroupCounts.AddRange(from songList in Analyzer.Instance.NoteGroups from song in songList select song.Length);
+				noteGroupCounts.AddRange(from song in Analyzer.Instance.NoteGroups[i] select song.Length);
 
 				labelHarmonicities[i].Text = string.Format("{0}", harmonicities.Average());
 				labelAverageNotes[i].Text = string.Format("{0:##.###}", noteCounts.Average());
@@ -128,6 +130,8 @@ namespace MidiEval.Analyzer.Forms {
 			}
 
 			this._tabCtrlMain.SelectedTab = this._tabPgOutput;
+			this._labelStatus.Text = "Done.";
+			this._progBarStatus.MarqueeAnimationSpeed = 0;
 		}
 
 		private void BtnBrowse_Click(object sender, EventArgs e) {

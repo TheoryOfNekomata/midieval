@@ -1,0 +1,23 @@
+\contentsline {chapter}{\numberline {1}The Problem and Its Background}{5}
+\contentsline {section}{\numberline {1.1}Introduction}{5}
+\contentsline {section}{\numberline {1.2}Background of the Study}{6}
+\contentsline {section}{\numberline {1.3}Conceptual Framework}{6}
+\contentsline {section}{\numberline {1.4}Statement of the Problem}{6}
+\contentsline {section}{\numberline {1.5}Scope and Limitations}{7}
+\contentsline {subsection}{\numberline {1.5.1}System}{7}
+\contentsline {subsection}{\numberline {1.5.2}Study}{7}
+\contentsline {section}{\numberline {1.6}Significance of the Study}{7}
+\contentsline {section}{\numberline {1.7}Definition of Terms}{7}
+\contentsline {section}{\numberline {1.8}Conceptual Terms}{7}
+\contentsline {section}{\numberline {1.9}Operational Terms}{8}
+\contentsline {chapter}{\numberline {2}Review of Related Literature}{9}
+\contentsline {section}{\numberline {2.1}Synthesis of the Study}{11}
+\contentsline {chapter}{\numberline {3}Research Methodology}{13}
+\contentsline {section}{\numberline {3.1}Research Methodology}{13}
+\contentsline {section}{\numberline {3.2}Research Paradigm}{13}
+\contentsline {section}{\numberline {3.3}System Architecture}{14}
+\contentsline {section}{\numberline {3.4}Testing Plan}{14}
+\contentsline {section}{\numberline {3.5}Data Gathering Technique}{14}
+\contentsline {section}{\numberline {3.6}Statistical Treatment}{14}
+\contentsline {chapter}{\numberline {4}Analysis and Results}{15}
+\contentsline {chapter}{\numberline {5}Conclusion}{17}

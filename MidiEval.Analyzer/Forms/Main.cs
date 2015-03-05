@@ -26,6 +26,7 @@ namespace MidiEval.Analyzer.Forms {
 				)
 			)
 				this._cmbBoxProfile.SelectedItem = item;
+			this.UpdateAnalyzeButton();
 		}
 
 		private void ListViewNewEvent1OnItemRemovedAt(int index, ListViewItem item) {
@@ -41,7 +42,10 @@ namespace MidiEval.Analyzer.Forms {
 		}
 
 		private void UpdateAnalyzeButton() {
-			this._btnAnalyze.Enabled = Program.Songs[0].Count > 0 && Program.Songs[1].Count > 0;
+			var isInputOk = Program.Songs[0].Count > 0 && Program.Songs[1].Count > 0;
+			this._btnAnalyze.Enabled = isInputOk;
+			this._panelInvalidInput.Visible = !isInputOk;
+			this._panelValidInput.Visible = isInputOk;
 		}
 
 		private void UpdateLists() {
@@ -176,7 +180,6 @@ namespace MidiEval.Analyzer.Forms {
 				MessageBoxIcon.Warning) != DialogResult.Yes)
 				return;
 
-			//listView.Items.Clear();
 			songList.Clear();
 			this.UpdateLists();
 		}
@@ -227,6 +230,10 @@ namespace MidiEval.Analyzer.Forms {
 
 		private void Main_FormClosed(object sender, FormClosedEventArgs e) {
 			Program.Settings.Save();
+		}
+
+		private void BtnBack_Click(object sender, EventArgs e) {
+			this._tabCtrlMain.SelectedTab = this._tabPgInput;
 		}
 	}
 }

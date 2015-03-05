@@ -31,17 +31,17 @@
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 			System.Windows.Forms.Label label11;
 			System.Windows.Forms.GroupBox groupBox3;
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
 			System.Windows.Forms.Label label16;
 			System.Windows.Forms.Label label15;
 			System.Windows.Forms.GroupBox groupBox4;
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
 			System.Windows.Forms.Label label17;
 			System.Windows.Forms.Label label18;
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
@@ -72,6 +72,10 @@
 			System.Windows.Forms.Label label1;
 			System.Windows.Forms.Label label9;
 			System.Windows.Forms.TabControl tabControl1;
+			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
+			System.Windows.Forms.Button _btnBack;
+			System.Windows.Forms.Label label13;
+			System.Windows.Forms.Label label14;
 			this._listFiles1 = new System.Windows.Forms.ListView();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -113,6 +117,11 @@
 			this._tabPgInput = new System.Windows.Forms.TabPage();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this._tabPgOutput = new System.Windows.Forms.TabPage();
+			this._panelInvalidInput = new System.Windows.Forms.Panel();
+			this.panel5 = new System.Windows.Forms.Panel();
+			this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
+			this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
+			this._panelValidInput = new System.Windows.Forms.Panel();
 			this._openDlgFiles = new System.Windows.Forms.OpenFileDialog();
 			this.programBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			groupBox1 = new System.Windows.Forms.GroupBox();
@@ -155,6 +164,10 @@
 			label1 = new System.Windows.Forms.Label();
 			label9 = new System.Windows.Forms.Label();
 			tabControl1 = new System.Windows.Forms.TabControl();
+			flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
+			_btnBack = new System.Windows.Forms.Button();
+			label13 = new System.Windows.Forms.Label();
+			label14 = new System.Windows.Forms.Label();
 			groupBox1.SuspendLayout();
 			flowLayoutPanel2.SuspendLayout();
 			groupBox2.SuspendLayout();
@@ -185,6 +198,7 @@
 			this.splitContainer2.Panel1.SuspendLayout();
 			this.splitContainer2.Panel2.SuspendLayout();
 			this.splitContainer2.SuspendLayout();
+			flowLayoutPanel13.SuspendLayout();
 			this._tabCtrlMain.SuspendLayout();
 			this._tabPgInput.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -192,6 +206,11 @@
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
 			this._tabPgOutput.SuspendLayout();
+			this._panelInvalidInput.SuspendLayout();
+			this.panel5.SuspendLayout();
+			this.flowLayoutPanel15.SuspendLayout();
+			this.flowLayoutPanel14.SuspendLayout();
+			this._panelValidInput.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -225,7 +244,7 @@
 			this._listFiles1.Name = "_listFiles1";
 			this._listFiles1.ShowGroups = false;
 			this._listFiles1.Size = new System.Drawing.Size(271, 382);
-			this._listFiles1.TabIndex = 2;
+			this._listFiles1.TabIndex = 1;
 			this._listFiles1.UseCompatibleStateImageBehavior = false;
 			this._listFiles1.View = System.Windows.Forms.View.Details;
 			this._listFiles1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.List_KeyUp);
@@ -278,7 +297,7 @@
 			this._btnBrowse1.Name = "_btnBrowse1";
 			this._btnBrowse1.Padding = new System.Windows.Forms.Padding(4);
 			this._btnBrowse1.Size = new System.Drawing.Size(63, 31);
-			this._btnBrowse1.TabIndex = 0;
+			this._btnBrowse1.TabIndex = 1;
 			this._btnBrowse1.Text = "Browse";
 			this._btnBrowse1.UseVisualStyleBackColor = true;
 			this._btnBrowse1.Click += new System.EventHandler(this.BtnBrowse_Click);
@@ -292,7 +311,7 @@
 			this._btnClear1.Name = "_btnClear1";
 			this._btnClear1.Padding = new System.Windows.Forms.Padding(4);
 			this._btnClear1.Size = new System.Drawing.Size(51, 31);
-			this._btnClear1.TabIndex = 1;
+			this._btnClear1.TabIndex = 0;
 			this._btnClear1.Text = "Clear";
 			this._btnClear1.UseVisualStyleBackColor = true;
 			this._btnClear1.Click += new System.EventHandler(this.BtnClear_Click);
@@ -346,7 +365,7 @@
 			this._listFiles2.Name = "_listFiles2";
 			this._listFiles2.ShowGroups = false;
 			this._listFiles2.Size = new System.Drawing.Size(269, 382);
-			this._listFiles2.TabIndex = 3;
+			this._listFiles2.TabIndex = 1;
 			this._listFiles2.UseCompatibleStateImageBehavior = false;
 			this._listFiles2.View = System.Windows.Forms.View.Details;
 			this._listFiles2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.List_KeyUp);
@@ -388,7 +407,7 @@
 			this._cmbBoxGenre2.Location = new System.Drawing.Point(8, 23);
 			this._cmbBoxGenre2.Name = "_cmbBoxGenre2";
 			this._cmbBoxGenre2.Size = new System.Drawing.Size(269, 21);
-			this._cmbBoxGenre2.TabIndex = 2;
+			this._cmbBoxGenre2.TabIndex = 0;
 			this._cmbBoxGenre2.Text = global::MidiEval.Analyzer.Properties.Settings.Default.Genre2;
 			this._cmbBoxGenre2.SelectedIndexChanged += new System.EventHandler(this.CmbBoxGenre_SelectedValueChanged);
 			this._cmbBoxGenre2.TextUpdate += new System.EventHandler(this.CmbBoxGenre_SelectedValueChanged);
@@ -418,7 +437,7 @@
 			this._btnBrowse2.Name = "_btnBrowse2";
 			this._btnBrowse2.Padding = new System.Windows.Forms.Padding(4);
 			this._btnBrowse2.Size = new System.Drawing.Size(63, 31);
-			this._btnBrowse2.TabIndex = 0;
+			this._btnBrowse2.TabIndex = 1;
 			this._btnBrowse2.Text = "Browse";
 			this._btnBrowse2.UseVisualStyleBackColor = true;
 			this._btnBrowse2.Click += new System.EventHandler(this.BtnBrowse_Click);
@@ -432,7 +451,7 @@
 			this._btnClear2.Name = "_btnClear2";
 			this._btnClear2.Padding = new System.Windows.Forms.Padding(4);
 			this._btnClear2.Size = new System.Drawing.Size(51, 31);
-			this._btnClear2.TabIndex = 2;
+			this._btnClear2.TabIndex = 0;
 			this._btnClear2.Text = "Clear";
 			this._btnClear2.UseVisualStyleBackColor = true;
 			this._btnClear2.Click += new System.EventHandler(this.BtnClear_Click);
@@ -463,7 +482,7 @@
 			this._btnAnalyze.Name = "_btnAnalyze";
 			this._btnAnalyze.Padding = new System.Windows.Forms.Padding(4);
 			this._btnAnalyze.Size = new System.Drawing.Size(64, 31);
-			this._btnAnalyze.TabIndex = 0;
+			this._btnAnalyze.TabIndex = 1;
 			this._btnAnalyze.Text = "&Analyze";
 			this._btnAnalyze.UseVisualStyleBackColor = true;
 			this._btnAnalyze.Click += new System.EventHandler(this.BtnAnalyze_Click);
@@ -477,7 +496,7 @@
 			this._cmbBoxProfile.Margin = new System.Windows.Forms.Padding(0, 5, 24, 0);
 			this._cmbBoxProfile.Name = "_cmbBoxProfile";
 			this._cmbBoxProfile.Size = new System.Drawing.Size(121, 21);
-			this._cmbBoxProfile.TabIndex = 1;
+			this._cmbBoxProfile.TabIndex = 0;
 			this._cmbBoxProfile.SelectedIndexChanged += new System.EventHandler(this.CmbBoxProfile_SelectedIndexChanged);
 			// 
 			// programBindingSource
@@ -512,35 +531,35 @@
 			// 
 			// _chartHarmonicities1
 			// 
-			chartArea3.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-			chartArea3.AxisX.MajorGrid.Enabled = false;
-			chartArea3.AxisX.MajorTickMark.Enabled = false;
-			chartArea3.AxisX.Minimum = 0D;
-			chartArea3.AxisX.Title = "Song";
-			chartArea3.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			chartArea3.AxisY.Title = "Harmonicity";
-			chartArea3.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			chartArea3.Name = "ChartArea1";
-			this._chartHarmonicities1.ChartAreas.Add(chartArea3);
+			chartArea1.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea1.AxisX.MajorGrid.Enabled = false;
+			chartArea1.AxisX.MajorTickMark.Enabled = false;
+			chartArea1.AxisX.Minimum = 0D;
+			chartArea1.AxisX.Title = "Song";
+			chartArea1.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			chartArea1.AxisY.Title = "Harmonicity";
+			chartArea1.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			chartArea1.Name = "ChartArea1";
+			this._chartHarmonicities1.ChartAreas.Add(chartArea1);
 			this._chartHarmonicities1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this._chartHarmonicities1.IsSoftShadows = false;
-			legend3.Enabled = false;
-			legend3.Name = "Legend1";
-			this._chartHarmonicities1.Legends.Add(legend3);
+			legend1.Enabled = false;
+			legend1.Name = "Legend1";
+			this._chartHarmonicities1.Legends.Add(legend1);
 			this._chartHarmonicities1.Location = new System.Drawing.Point(8, 120);
 			this._chartHarmonicities1.Name = "_chartHarmonicities1";
 			this._chartHarmonicities1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-			series3.ChartArea = "ChartArea1";
-			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
-			series3.Legend = "Legend1";
-			series3.Name = "Harmonicity";
-			series3.YValuesPerPoint = 4;
-			this._chartHarmonicities1.Series.Add(series3);
+			series1.ChartArea = "ChartArea1";
+			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
+			series1.Legend = "Legend1";
+			series1.Name = "Harmonicity";
+			series1.YValuesPerPoint = 4;
+			this._chartHarmonicities1.Series.Add(series1);
 			this._chartHarmonicities1.Size = new System.Drawing.Size(267, 277);
 			this._chartHarmonicities1.TabIndex = 5;
 			this._chartHarmonicities1.Text = "chart1";
-			title3.Name = "Harmonicity Chart";
-			this._chartHarmonicities1.Titles.Add(title3);
+			title1.Name = "Harmonicity Chart";
+			this._chartHarmonicities1.Titles.Add(title1);
 			// 
 			// tableLayoutPanel1
 			// 
@@ -658,35 +677,35 @@
 			// 
 			// _chartHarmonicities2
 			// 
-			chartArea4.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-			chartArea4.AxisX.MajorGrid.Enabled = false;
-			chartArea4.AxisX.MajorTickMark.Enabled = false;
-			chartArea4.AxisX.Minimum = 0D;
-			chartArea4.AxisX.Title = "Song";
-			chartArea4.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			chartArea4.AxisY.Title = "Harmonicity";
-			chartArea4.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			chartArea4.Name = "ChartArea1";
-			this._chartHarmonicities2.ChartAreas.Add(chartArea4);
+			chartArea2.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea2.AxisX.MajorGrid.Enabled = false;
+			chartArea2.AxisX.MajorTickMark.Enabled = false;
+			chartArea2.AxisX.Minimum = 0D;
+			chartArea2.AxisX.Title = "Song";
+			chartArea2.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			chartArea2.AxisY.Title = "Harmonicity";
+			chartArea2.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			chartArea2.Name = "ChartArea1";
+			this._chartHarmonicities2.ChartAreas.Add(chartArea2);
 			this._chartHarmonicities2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this._chartHarmonicities2.IsSoftShadows = false;
-			legend4.Enabled = false;
-			legend4.Name = "Legend1";
-			this._chartHarmonicities2.Legends.Add(legend4);
+			legend2.Enabled = false;
+			legend2.Name = "Legend1";
+			this._chartHarmonicities2.Legends.Add(legend2);
 			this._chartHarmonicities2.Location = new System.Drawing.Point(0, 97);
 			this._chartHarmonicities2.Name = "_chartHarmonicities2";
 			this._chartHarmonicities2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-			series4.ChartArea = "ChartArea1";
-			series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
-			series4.Legend = "Legend1";
-			series4.Name = "Harmonicity";
-			series4.YValuesPerPoint = 4;
-			this._chartHarmonicities2.Series.Add(series4);
+			series2.ChartArea = "ChartArea1";
+			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
+			series2.Legend = "Legend1";
+			series2.Name = "Harmonicity";
+			series2.YValuesPerPoint = 4;
+			this._chartHarmonicities2.Series.Add(series2);
 			this._chartHarmonicities2.Size = new System.Drawing.Size(265, 277);
 			this._chartHarmonicities2.TabIndex = 7;
 			this._chartHarmonicities2.Text = "chart1";
-			title4.Name = "Harmonicity Chart";
-			this._chartHarmonicities2.Titles.Add(title4);
+			title2.Name = "Harmonicity Chart";
+			this._chartHarmonicities2.Titles.Add(title2);
 			// 
 			// _labelHarmonicity2
 			// 
@@ -1167,6 +1186,63 @@
 			this.tabPage2.Text = "Structure";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
+			// flowLayoutPanel13
+			// 
+			flowLayoutPanel13.AutoSize = true;
+			flowLayoutPanel13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			flowLayoutPanel13.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			flowLayoutPanel13.Controls.Add(_btnBack);
+			flowLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+			flowLayoutPanel13.Location = new System.Drawing.Point(0, 481);
+			flowLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
+			flowLayoutPanel13.Name = "flowLayoutPanel13";
+			flowLayoutPanel13.Padding = new System.Windows.Forms.Padding(8, 8, 0, 8);
+			flowLayoutPanel13.Size = new System.Drawing.Size(596, 47);
+			flowLayoutPanel13.TabIndex = 6;
+			// 
+			// _btnBack
+			// 
+			_btnBack.AutoSize = true;
+			_btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			_btnBack.DialogResult = System.Windows.Forms.DialogResult.OK;
+			_btnBack.Location = new System.Drawing.Point(8, 8);
+			_btnBack.Margin = new System.Windows.Forms.Padding(0);
+			_btnBack.Name = "_btnBack";
+			_btnBack.Padding = new System.Windows.Forms.Padding(4);
+			_btnBack.Size = new System.Drawing.Size(49, 31);
+			_btnBack.TabIndex = 0;
+			_btnBack.Text = "&Back";
+			_btnBack.UseVisualStyleBackColor = true;
+			_btnBack.Click += new System.EventHandler(this.BtnBack_Click);
+			// 
+			// label13
+			// 
+			label13.AutoEllipsis = true;
+			label13.AutoSize = true;
+			label13.Font = new System.Drawing.Font("Segoe UI Light", 24F);
+			label13.Location = new System.Drawing.Point(0, 0);
+			label13.Margin = new System.Windows.Forms.Padding(0);
+			label13.Name = "label13";
+			label13.Padding = new System.Windows.Forms.Padding(56, 32, 56, 0);
+			label13.Size = new System.Drawing.Size(525, 77);
+			label13.TabIndex = 2;
+			label13.Text = "Input not suitable for analysis";
+			label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label14
+			// 
+			label14.AutoSize = true;
+			label14.Font = new System.Drawing.Font("Segoe UI Semilight", 12.75F);
+			label14.Location = new System.Drawing.Point(0, 0);
+			label14.Margin = new System.Windows.Forms.Padding(0);
+			label14.Name = "label14";
+			label14.Padding = new System.Windows.Forms.Padding(61, 16, 61, 16);
+			label14.Size = new System.Drawing.Size(560, 78);
+			label14.TabIndex = 0;
+			label14.Text = "MIDIEval is unable to produce results for your input data. Please check if your d" +
+    "ata are valid.";
+			label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// _tabCtrlMain
 			// 
 			this._tabCtrlMain.Controls.Add(this._tabPgInput);
@@ -1214,12 +1290,12 @@
 			this.splitContainer1.Size = new System.Drawing.Size(596, 489);
 			this.splitContainer1.SplitterDistance = 298;
 			this.splitContainer1.SplitterWidth = 2;
-			this.splitContainer1.TabIndex = 1;
+			this.splitContainer1.TabIndex = 0;
 			// 
 			// _tabPgOutput
 			// 
-			this._tabPgOutput.Controls.Add(tabControl1);
-			this._tabPgOutput.Controls.Add(flowLayoutPanel12);
+			this._tabPgOutput.Controls.Add(this._panelInvalidInput);
+			this._tabPgOutput.Controls.Add(this._panelValidInput);
 			this._tabPgOutput.Location = new System.Drawing.Point(4, 28);
 			this._tabPgOutput.Margin = new System.Windows.Forms.Padding(0);
 			this._tabPgOutput.Name = "_tabPgOutput";
@@ -1227,6 +1303,64 @@
 			this._tabPgOutput.TabIndex = 1;
 			this._tabPgOutput.Text = "Output";
 			this._tabPgOutput.UseVisualStyleBackColor = true;
+			// 
+			// _panelInvalidInput
+			// 
+			this._panelInvalidInput.Controls.Add(this.panel5);
+			this._panelInvalidInput.Controls.Add(flowLayoutPanel13);
+			this._panelInvalidInput.Controls.Add(this.flowLayoutPanel14);
+			this._panelInvalidInput.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._panelInvalidInput.Location = new System.Drawing.Point(0, 0);
+			this._panelInvalidInput.Name = "_panelInvalidInput";
+			this._panelInvalidInput.Size = new System.Drawing.Size(596, 528);
+			this._panelInvalidInput.TabIndex = 7;
+			// 
+			// panel5
+			// 
+			this.panel5.AutoScroll = true;
+			this.panel5.AutoSize = true;
+			this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.panel5.Controls.Add(this.flowLayoutPanel15);
+			this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel5.Location = new System.Drawing.Point(0, 77);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(596, 404);
+			this.panel5.TabIndex = 7;
+			// 
+			// flowLayoutPanel15
+			// 
+			this.flowLayoutPanel15.AutoSize = true;
+			this.flowLayoutPanel15.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.flowLayoutPanel15.Controls.Add(label14);
+			this.flowLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Top;
+			this.flowLayoutPanel15.Location = new System.Drawing.Point(0, 0);
+			this.flowLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
+			this.flowLayoutPanel15.Name = "flowLayoutPanel15";
+			this.flowLayoutPanel15.Size = new System.Drawing.Size(596, 78);
+			this.flowLayoutPanel15.TabIndex = 1;
+			// 
+			// flowLayoutPanel14
+			// 
+			this.flowLayoutPanel14.AutoSize = true;
+			this.flowLayoutPanel14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.flowLayoutPanel14.Controls.Add(label13);
+			this.flowLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Top;
+			this.flowLayoutPanel14.Location = new System.Drawing.Point(0, 0);
+			this.flowLayoutPanel14.Margin = new System.Windows.Forms.Padding(0);
+			this.flowLayoutPanel14.Name = "flowLayoutPanel14";
+			this.flowLayoutPanel14.Size = new System.Drawing.Size(596, 77);
+			this.flowLayoutPanel14.TabIndex = 5;
+			// 
+			// _panelValidInput
+			// 
+			this._panelValidInput.Controls.Add(tabControl1);
+			this._panelValidInput.Controls.Add(flowLayoutPanel12);
+			this._panelValidInput.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._panelValidInput.Location = new System.Drawing.Point(0, 0);
+			this._panelValidInput.Margin = new System.Windows.Forms.Padding(0);
+			this._panelValidInput.Name = "_panelValidInput";
+			this._panelValidInput.Size = new System.Drawing.Size(596, 528);
+			this._panelValidInput.TabIndex = 7;
 			// 
 			// _openDlgFiles
 			// 
@@ -1304,6 +1438,8 @@
 			this.splitContainer2.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
 			this.splitContainer2.ResumeLayout(false);
+			flowLayoutPanel13.ResumeLayout(false);
+			flowLayoutPanel13.PerformLayout();
 			this._tabCtrlMain.ResumeLayout(false);
 			this._tabPgInput.ResumeLayout(false);
 			this._tabPgInput.PerformLayout();
@@ -1312,7 +1448,16 @@
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
 			this._tabPgOutput.ResumeLayout(false);
-			this._tabPgOutput.PerformLayout();
+			this._panelInvalidInput.ResumeLayout(false);
+			this._panelInvalidInput.PerformLayout();
+			this.panel5.ResumeLayout(false);
+			this.panel5.PerformLayout();
+			this.flowLayoutPanel15.ResumeLayout(false);
+			this.flowLayoutPanel15.PerformLayout();
+			this.flowLayoutPanel14.ResumeLayout(false);
+			this.flowLayoutPanel14.PerformLayout();
+			this._panelValidInput.ResumeLayout(false);
+			this._panelValidInput.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).EndInit();
 			this.ResumeLayout(false);
 
@@ -1363,5 +1508,10 @@
 		private System.Windows.Forms.Label _labelAvgPhrases2;
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.TabPage tabPage2;
+		private System.Windows.Forms.Panel _panelValidInput;
+		private System.Windows.Forms.Panel _panelInvalidInput;
+		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;
+		private System.Windows.Forms.Panel panel5;
+		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel15;
 	}
 }

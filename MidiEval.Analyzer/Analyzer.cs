@@ -1,11 +1,12 @@
-﻿using MidiEval.Analyzer.Elements;
+﻿using MidiEval.Analyzer.Collections;
+using MidiEval.Analyzer.Elements;
 using MidiEval.Analyzer.Processing;
-using MidiEval.Analyzer.Processing.Collections;
 using MidiEval.Analyzer.Songs;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using NoteGroup = MidiEval.Analyzer.Processing.Collections.NoteGroup;
 
 namespace MidiEval.Analyzer {
 
@@ -17,6 +18,7 @@ namespace MidiEval.Analyzer {
 		private double[][,] _harmonicities;
 		private NoteGroup[/* songList */][/* song */][] _noteGroups;
 		private List<Song>[] _songLists;
+		private Pattern[/* songList */][/* song */][] _patterns;
 
 		/// <summary>
 		/// Gets the instance of the Analyzer.
@@ -48,6 +50,10 @@ namespace MidiEval.Analyzer {
 			get { return this._noteGroups; }
 		}
 
+		public Pattern[][][] Patterns {
+			get { return this._patterns; }
+		}
+
 		private Analyzer ReadSongs(Song[][] songs) {
 			this._songLists = new List<Song>[songs.Length];
 			for(var i = 0; i < this._songLists.Length; i++) {
@@ -64,6 +70,17 @@ namespace MidiEval.Analyzer {
 				this._noteGroups[i] = new NoteGroup[this._songLists[i].Count][];
 				for(var j = 0; j < this._songLists[i].Count; j++) {
 					this._noteGroups[i][j] = NoteGrouper.Instance.GroupNotes(this._songLists[i][j]);
+				}
+			}
+			return this;
+		}
+
+		private Analyzer AnalyzeStructures() {
+			this._patterns = new Pattern[this._noteGroups.Length][][];
+			for(var i = 0; i < this._noteGroups.Length; i++) {
+				this._patterns[i] = new Pattern[this._noteGroups[i].Length][];
+				for(var j = 0; j < this._noteGroups[i].Length; j++) {
+					this._patterns[i][j] = PatternFinder.Instance.FindPatterns(this._noteGroups[i][j]);
 				}
 			}
 			return this;
@@ -113,6 +130,7 @@ namespace MidiEval.Analyzer {
 				.ReadSongs(songs)
 				.AnalyzeNoteGroups()
 				.AnalyzeHarmonicities(profile);
+			//.AnalyzeStructures();
 		}
 	}
 }

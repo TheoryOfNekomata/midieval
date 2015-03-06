@@ -44,8 +44,18 @@ namespace MidiEval.Analyzer.Processing {
 		/// <param name="pitch2">The second pitch.</param>
 		/// <param name="profile">The key-finding profile to be used.</param>
 		/// <returns>The minor harmonicity between the two pitches.</returns>
-		private float GetMinorHarmonicity(Pitch pitch1, Pitch pitch2, KeyFindingProfile profile = KeyFindingProfile.Simple) {
-			return ProfileDictionary.Weights[profile][1, Math.Abs(pitch1.MidiPitch - pitch2.MidiPitch) % 12];
+		private float GetMinorHarmonicity(Pitch pitch1, Pitch pitch2, Key key, KeyFindingProfile profile = KeyFindingProfile.Simple) {
+			return
+				(
+					ProfileDictionary.Weights[profile][1, Math.Abs(pitch1.MidiPitch - pitch2.MidiPitch) % 12]
+					+ (
+						(this.Analyze(pitch1, key, profile)
+							+ this.Analyze(pitch2, key, profile))
+						/ 2
+					)
+				)
+
+			;
 		}
 
 		/// <summary>
@@ -55,8 +65,16 @@ namespace MidiEval.Analyzer.Processing {
 		/// <param name="pitch2">The second pitch.</param>
 		/// <param name="profile">The key-finding profile to be used.</param>
 		/// <returns>The major harmonicity between the two pitches.</returns>
-		private float GetMajorHarmonicity(Pitch pitch1, Pitch pitch2, KeyFindingProfile profile = KeyFindingProfile.Simple) {
-			return ProfileDictionary.Weights[profile][0, Math.Abs(pitch1.MidiPitch - pitch2.MidiPitch) % 12];
+		private float GetMajorHarmonicity(Pitch pitch1, Pitch pitch2, Key key, KeyFindingProfile profile = KeyFindingProfile.Simple) {
+			return
+				(
+					ProfileDictionary.Weights[profile][0, Math.Abs(pitch1.MidiPitch - pitch2.MidiPitch) % 12]
+					+ (
+						(this.Analyze(pitch1, key, profile)
+							+ this.Analyze(pitch2, key, profile))
+						/ 2
+					)
+				);
 		}
 
 		/// <summary>
@@ -78,8 +96,8 @@ namespace MidiEval.Analyzer.Processing {
 			return pitchArray
 				.Select((t, i) =>
 					(
-						this.GetMajorHarmonicity(t, pitchArray[(i + 1) % pitchArray.Length], profile)
-						+ this.GetMinorHarmonicity(t, pitchArray[(i + 1) % pitchArray.Length], profile)
+						this.GetMajorHarmonicity(t, pitchArray[(i + 1) % pitchArray.Length], keySignature, profile)
+						+ this.GetMinorHarmonicity(t, pitchArray[(i + 1) % pitchArray.Length], keySignature, profile)
 					) / 2
 				).ToArray();
 		}
@@ -91,8 +109,8 @@ namespace MidiEval.Analyzer.Processing {
 		/// <param name="profile">The key-finding profile to be used.</param>
 		/// <returns>Average harmonicity of the pitches.</returns>
 		/// <seealso cref="AnalyzeIntervals"/>
-		public float AnalyzeAverage(Pitch[] pitches, KeyFindingProfile profile = KeyFindingProfile.Simple) {
-			return this.AnalyzeIntervals(pitches, profile).Average();
+		public float AnalyzeAverage(Pitch[] pitches, KeyFindingProfile profile = KeyFindingProfile.Simple, Key keySignature = Key.CMajor) {
+			return this.AnalyzeIntervals(pitches, profile, keySignature).Average();
 		}
 	}
 }

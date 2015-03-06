@@ -61,5 +61,17 @@ namespace MidiEval.Analyzer.Collections {
 				return earliestNote[0];
 			}
 		}
+
+		public int Start {
+			get { return this.EarliestNote.NoteOn; }
+		}
+
+		public int End {
+			get { return this.LatestNote.NoteOff; }
+		}
+
+		public int Duration {
+			get { return this.LatestNote.NoteOff - this.EarliestNote.NoteOn; }
+		}
 	}
 }

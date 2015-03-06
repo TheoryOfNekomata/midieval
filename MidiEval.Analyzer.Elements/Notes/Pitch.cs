@@ -7,6 +7,10 @@ namespace MidiEval.Analyzer.Elements.Notes {
 	/// </summary>
 	public struct Pitch {
 
+		public bool Equals(Pitch other) {
+			return this.Key == other.Key && this.Octave == other.Octave;
+		}
+
 		/// <summary>
 		/// The key of the pitch.
 		/// </summary>
@@ -63,7 +67,9 @@ namespace MidiEval.Analyzer.Elements.Notes {
 		/// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
 		/// </returns>
 		public override int GetHashCode() {
-			return base.GetHashCode();
+			unchecked {
+				return ((int) this.Key * 397) ^ this.Octave;
+			}
 		}
 
 		/// <summary>
@@ -74,15 +80,9 @@ namespace MidiEval.Analyzer.Elements.Notes {
 		///   <c>true</c> if the specified <see cref="System.Object" /> is equal to this instance; otherwise, <c>false</c>.
 		/// </returns>
 		public override bool Equals(object obj) {
-			Pitch pitch;
-
-			try {
-				pitch = (Pitch) obj;
-			} catch(System.Exception) {
+			if(ReferenceEquals(null, obj))
 				return false;
-			}
-
-			return pitch.Key == this.Key && pitch.Octave == this.Octave;
+			return obj is Pitch && Equals((Pitch) obj);
 		}
 
 		/// <summary>

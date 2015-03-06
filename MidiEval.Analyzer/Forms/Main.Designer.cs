@@ -23,7 +23,6 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			this.components = new System.ComponentModel.Container();
 			System.Windows.Forms.GroupBox groupBox1;
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
 			System.Windows.Forms.GroupBox groupBox2;
@@ -72,6 +71,12 @@
 			System.Windows.Forms.Label label1;
 			System.Windows.Forms.Label label9;
 			System.Windows.Forms.TabControl tabControl1;
+			System.Windows.Forms.GroupBox groupBox5;
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.GroupBox groupBox6;
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			System.Windows.Forms.Label label13;
 			System.Windows.Forms.Label label14;
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
@@ -96,36 +101,41 @@
 			this._btnClear2 = new System.Windows.Forms.Button();
 			this._btnAnalyze = new System.Windows.Forms.Button();
 			this._cmbBoxProfile = new System.Windows.Forms.ComboBox();
-			this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.panel7 = new System.Windows.Forms.Panel();
 			this._chartHarmonicities1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this._labelHarmonicity1 = new System.Windows.Forms.Label();
+			this._labelHarmonicityGenre1 = new System.Windows.Forms.Label();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this._labelAvgNotes1 = new System.Windows.Forms.Label();
 			this._labelAvgPhrases1 = new System.Windows.Forms.Label();
-			this._labelHarmonicity1 = new System.Windows.Forms.Label();
-			this._labelGenre1 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this._chartHarmonicities2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this._labelHarmonicity2 = new System.Windows.Forms.Label();
-			this._labelGenre2 = new System.Windows.Forms.Label();
+			this._labelHarmonicityGenre2 = new System.Windows.Forms.Label();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this._labelAvgNotes2 = new System.Windows.Forms.Label();
 			this._labelAvgPhrases2 = new System.Windows.Forms.Label();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+			this.panel8 = new System.Windows.Forms.Panel();
+			this._chartStructure1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this._labelStructureGenre1 = new System.Windows.Forms.Label();
+			this._chartStructure2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this._labelStructureGenre2 = new System.Windows.Forms.Label();
 			this._tabCtrlMain = new System.Windows.Forms.TabControl();
 			this._tabPgInput = new System.Windows.Forms.TabPage();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this._tabPgOutput = new System.Windows.Forms.TabPage();
+			this._panelValidInput = new System.Windows.Forms.Panel();
 			this._panelInvalidInput = new System.Windows.Forms.Panel();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
 			this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.panel6 = new System.Windows.Forms.Panel();
-			this._panelValidInput = new System.Windows.Forms.Panel();
 			this._openDlgFiles = new System.Windows.Forms.OpenFileDialog();
-			this.programBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this._labelStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -170,6 +180,8 @@
 			label1 = new System.Windows.Forms.Label();
 			label9 = new System.Windows.Forms.Label();
 			tabControl1 = new System.Windows.Forms.TabControl();
+			groupBox5 = new System.Windows.Forms.GroupBox();
+			groupBox6 = new System.Windows.Forms.GroupBox();
 			label13 = new System.Windows.Forms.Label();
 			label14 = new System.Windows.Forms.Label();
 			flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
@@ -179,8 +191,8 @@
 			groupBox2.SuspendLayout();
 			flowLayoutPanel3.SuspendLayout();
 			flowLayoutPanel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
 			groupBox3.SuspendLayout();
+			this.panel7.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this._chartHarmonicities1)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
 			groupBox4.SuspendLayout();
@@ -204,6 +216,16 @@
 			this.splitContainer2.Panel1.SuspendLayout();
 			this.splitContainer2.Panel2.SuspendLayout();
 			this.splitContainer2.SuspendLayout();
+			this.tabPage2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+			this.splitContainer3.Panel1.SuspendLayout();
+			this.splitContainer3.Panel2.SuspendLayout();
+			this.splitContainer3.SuspendLayout();
+			groupBox5.SuspendLayout();
+			this.panel8.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this._chartStructure1)).BeginInit();
+			groupBox6.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this._chartStructure2)).BeginInit();
 			flowLayoutPanel13.SuspendLayout();
 			this._tabCtrlMain.SuspendLayout();
 			this._tabPgInput.SuspendLayout();
@@ -212,13 +234,12 @@
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
 			this._tabPgOutput.SuspendLayout();
+			this._panelValidInput.SuspendLayout();
 			this._panelInvalidInput.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.flowLayoutPanel15.SuspendLayout();
 			this.flowLayoutPanel14.SuspendLayout();
 			this.panel4.SuspendLayout();
-			this._panelValidInput.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -495,7 +516,6 @@
 			// 
 			// _cmbBoxProfile
 			// 
-			this._cmbBoxProfile.DataSource = this.programBindingSource;
 			this._cmbBoxProfile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this._cmbBoxProfile.FormattingEnabled = true;
 			this._cmbBoxProfile.Location = new System.Drawing.Point(379, 5);
@@ -504,10 +524,6 @@
 			this._cmbBoxProfile.Size = new System.Drawing.Size(121, 21);
 			this._cmbBoxProfile.TabIndex = 0;
 			this._cmbBoxProfile.SelectedIndexChanged += new System.EventHandler(this.CmbBoxProfile_SelectedIndexChanged);
-			// 
-			// programBindingSource
-			// 
-			this.programBindingSource.DataSource = typeof(MidiEval.Analyzer.Program);
 			// 
 			// label11
 			// 
@@ -521,10 +537,8 @@
 			// 
 			// groupBox3
 			// 
-			groupBox3.Controls.Add(this._chartHarmonicities1);
+			groupBox3.Controls.Add(this.panel7);
 			groupBox3.Controls.Add(this.tableLayoutPanel1);
-			groupBox3.Controls.Add(this._labelHarmonicity1);
-			groupBox3.Controls.Add(this._labelGenre1);
 			groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
 			groupBox3.Location = new System.Drawing.Point(8, 8);
 			groupBox3.Margin = new System.Windows.Forms.Padding(0);
@@ -535,8 +549,20 @@
 			groupBox3.TabStop = false;
 			groupBox3.Text = "Genre 1";
 			// 
+			// panel7
+			// 
+			this.panel7.Controls.Add(this._chartHarmonicities1);
+			this.panel7.Controls.Add(this._labelHarmonicity1);
+			this.panel7.Controls.Add(this._labelHarmonicityGenre1);
+			this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel7.Location = new System.Drawing.Point(8, 23);
+			this.panel7.Name = "panel7";
+			this.panel7.Size = new System.Drawing.Size(267, 280);
+			this.panel7.TabIndex = 7;
+			// 
 			// _chartHarmonicities1
 			// 
+			this._chartHarmonicities1.BackColor = System.Drawing.Color.Transparent;
 			chartArea1.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
 			chartArea1.AxisX.MajorGrid.Enabled = false;
 			chartArea1.AxisX.MajorTickMark.Enabled = false;
@@ -552,7 +578,7 @@
 			legend1.Enabled = false;
 			legend1.Name = "Legend1";
 			this._chartHarmonicities1.Legends.Add(legend1);
-			this._chartHarmonicities1.Location = new System.Drawing.Point(8, 120);
+			this._chartHarmonicities1.Location = new System.Drawing.Point(0, 97);
 			this._chartHarmonicities1.Name = "_chartHarmonicities1";
 			this._chartHarmonicities1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
 			series1.ChartArea = "ChartArea1";
@@ -564,8 +590,34 @@
 			this._chartHarmonicities1.Size = new System.Drawing.Size(267, 183);
 			this._chartHarmonicities1.TabIndex = 5;
 			this._chartHarmonicities1.Text = "chart1";
+			this._chartHarmonicities1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
 			title1.Name = "Harmonicity Chart";
 			this._chartHarmonicities1.Titles.Add(title1);
+			// 
+			// _labelHarmonicity1
+			// 
+			this._labelHarmonicity1.AutoSize = true;
+			this._labelHarmonicity1.Dock = System.Windows.Forms.DockStyle.Top;
+			this._labelHarmonicity1.Font = new System.Drawing.Font("Segoe UI Light", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._labelHarmonicity1.Location = new System.Drawing.Point(0, 32);
+			this._labelHarmonicity1.Margin = new System.Windows.Forms.Padding(0);
+			this._labelHarmonicity1.Name = "_labelHarmonicity1";
+			this._labelHarmonicity1.Size = new System.Drawing.Size(114, 65);
+			this._labelHarmonicity1.TabIndex = 4;
+			this._labelHarmonicity1.Text = "0.00";
+			// 
+			// _labelHarmonicityGenre1
+			// 
+			this._labelHarmonicityGenre1.AutoSize = true;
+			this._labelHarmonicityGenre1.Dock = System.Windows.Forms.DockStyle.Top;
+			this._labelHarmonicityGenre1.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._labelHarmonicityGenre1.Location = new System.Drawing.Point(0, 0);
+			this._labelHarmonicityGenre1.Margin = new System.Windows.Forms.Padding(0);
+			this._labelHarmonicityGenre1.Name = "_labelHarmonicityGenre1";
+			this._labelHarmonicityGenre1.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+			this._labelHarmonicityGenre1.Size = new System.Drawing.Size(136, 32);
+			this._labelHarmonicityGenre1.TabIndex = 3;
+			this._labelHarmonicityGenre1.Text = "{{Genre 1}}";
 			// 
 			// tableLayoutPanel1
 			// 
@@ -631,31 +683,6 @@
 			this._labelAvgPhrases1.TabIndex = 1;
 			this._labelAvgPhrases1.Text = "000.00";
 			// 
-			// _labelHarmonicity1
-			// 
-			this._labelHarmonicity1.AutoSize = true;
-			this._labelHarmonicity1.Dock = System.Windows.Forms.DockStyle.Top;
-			this._labelHarmonicity1.Font = new System.Drawing.Font("Segoe UI Light", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this._labelHarmonicity1.Location = new System.Drawing.Point(8, 55);
-			this._labelHarmonicity1.Margin = new System.Windows.Forms.Padding(0);
-			this._labelHarmonicity1.Name = "_labelHarmonicity1";
-			this._labelHarmonicity1.Size = new System.Drawing.Size(114, 65);
-			this._labelHarmonicity1.TabIndex = 4;
-			this._labelHarmonicity1.Text = "0.00";
-			// 
-			// _labelGenre1
-			// 
-			this._labelGenre1.AutoSize = true;
-			this._labelGenre1.Dock = System.Windows.Forms.DockStyle.Top;
-			this._labelGenre1.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this._labelGenre1.Location = new System.Drawing.Point(8, 23);
-			this._labelGenre1.Margin = new System.Windows.Forms.Padding(0);
-			this._labelGenre1.Name = "_labelGenre1";
-			this._labelGenre1.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-			this._labelGenre1.Size = new System.Drawing.Size(136, 32);
-			this._labelGenre1.TabIndex = 3;
-			this._labelGenre1.Text = "{{Genre 1}}";
-			// 
 			// groupBox4
 			// 
 			groupBox4.Controls.Add(this.panel3);
@@ -674,7 +701,7 @@
 			// 
 			this.panel3.Controls.Add(this._chartHarmonicities2);
 			this.panel3.Controls.Add(this._labelHarmonicity2);
-			this.panel3.Controls.Add(this._labelGenre2);
+			this.panel3.Controls.Add(this._labelHarmonicityGenre2);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel3.Location = new System.Drawing.Point(8, 23);
 			this.panel3.Name = "panel3";
@@ -683,6 +710,7 @@
 			// 
 			// _chartHarmonicities2
 			// 
+			this._chartHarmonicities2.BackColor = System.Drawing.Color.Transparent;
 			chartArea2.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
 			chartArea2.AxisX.MajorGrid.Enabled = false;
 			chartArea2.AxisX.MajorTickMark.Enabled = false;
@@ -710,6 +738,7 @@
 			this._chartHarmonicities2.Size = new System.Drawing.Size(265, 183);
 			this._chartHarmonicities2.TabIndex = 7;
 			this._chartHarmonicities2.Text = "chart1";
+			this._chartHarmonicities2.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
 			title2.Name = "Harmonicity Chart";
 			this._chartHarmonicities2.Titles.Add(title2);
 			// 
@@ -725,18 +754,18 @@
 			this._labelHarmonicity2.TabIndex = 5;
 			this._labelHarmonicity2.Text = "0.00";
 			// 
-			// _labelGenre2
+			// _labelHarmonicityGenre2
 			// 
-			this._labelGenre2.AutoSize = true;
-			this._labelGenre2.Dock = System.Windows.Forms.DockStyle.Top;
-			this._labelGenre2.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this._labelGenre2.Location = new System.Drawing.Point(0, 0);
-			this._labelGenre2.Margin = new System.Windows.Forms.Padding(0);
-			this._labelGenre2.Name = "_labelGenre2";
-			this._labelGenre2.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-			this._labelGenre2.Size = new System.Drawing.Size(140, 32);
-			this._labelGenre2.TabIndex = 4;
-			this._labelGenre2.Text = "{{Genre 2}}";
+			this._labelHarmonicityGenre2.AutoSize = true;
+			this._labelHarmonicityGenre2.Dock = System.Windows.Forms.DockStyle.Top;
+			this._labelHarmonicityGenre2.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._labelHarmonicityGenre2.Location = new System.Drawing.Point(0, 0);
+			this._labelHarmonicityGenre2.Margin = new System.Windows.Forms.Padding(0);
+			this._labelHarmonicityGenre2.Name = "_labelHarmonicityGenre2";
+			this._labelHarmonicityGenre2.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+			this._labelHarmonicityGenre2.Size = new System.Drawing.Size(140, 32);
+			this._labelHarmonicityGenre2.TabIndex = 4;
+			this._labelHarmonicityGenre2.Text = "{{Genre 2}}";
 			// 
 			// tableLayoutPanel2
 			// 
@@ -1184,13 +1213,148 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.splitContainer3);
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
+			this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
 			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(588, 417);
+			this.tabPage2.Size = new System.Drawing.Size(588, 387);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Structure";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// splitContainer3
+			// 
+			this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer3.IsSplitterFixed = true;
+			this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer3.Margin = new System.Windows.Forms.Padding(0);
+			this.splitContainer3.Name = "splitContainer3";
+			// 
+			// splitContainer3.Panel1
+			// 
+			this.splitContainer3.Panel1.Controls.Add(groupBox5);
+			this.splitContainer3.Panel1.Padding = new System.Windows.Forms.Padding(8, 8, 3, 8);
+			// 
+			// splitContainer3.Panel2
+			// 
+			this.splitContainer3.Panel2.Controls.Add(groupBox6);
+			this.splitContainer3.Panel2.Padding = new System.Windows.Forms.Padding(3, 8, 8, 8);
+			this.splitContainer3.Size = new System.Drawing.Size(588, 387);
+			this.splitContainer3.SplitterDistance = 294;
+			this.splitContainer3.SplitterWidth = 2;
+			this.splitContainer3.TabIndex = 3;
+			// 
+			// groupBox5
+			// 
+			groupBox5.Controls.Add(this.panel8);
+			groupBox5.Controls.Add(this._labelStructureGenre1);
+			groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+			groupBox5.Location = new System.Drawing.Point(8, 8);
+			groupBox5.Margin = new System.Windows.Forms.Padding(0);
+			groupBox5.Name = "groupBox5";
+			groupBox5.Padding = new System.Windows.Forms.Padding(8);
+			groupBox5.Size = new System.Drawing.Size(283, 371);
+			groupBox5.TabIndex = 0;
+			groupBox5.TabStop = false;
+			groupBox5.Text = "Genre 1";
+			// 
+			// panel8
+			// 
+			this.panel8.Controls.Add(this._chartStructure1);
+			this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel8.Location = new System.Drawing.Point(8, 55);
+			this.panel8.Name = "panel8";
+			this.panel8.Size = new System.Drawing.Size(267, 308);
+			this.panel8.TabIndex = 4;
+			// 
+			// _chartStructure1
+			// 
+			this._chartStructure1.BackColor = System.Drawing.Color.Transparent;
+			chartArea3.AxisX.MajorGrid.Enabled = false;
+			chartArea3.AxisX.Title = "Song";
+			chartArea3.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8F);
+			chartArea3.AxisY.Title = "Song Length (minutes)";
+			chartArea3.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8F);
+			chartArea3.Name = "ChartArea1";
+			this._chartStructure1.ChartAreas.Add(chartArea3);
+			this._chartStructure1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._chartStructure1.Location = new System.Drawing.Point(0, 0);
+			this._chartStructure1.Margin = new System.Windows.Forms.Padding(0);
+			this._chartStructure1.Name = "_chartStructure1";
+			this._chartStructure1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+			series3.ChartArea = "ChartArea1";
+			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+			series3.IsVisibleInLegend = false;
+			series3.Name = "Structure";
+			this._chartStructure1.Series.Add(series3);
+			this._chartStructure1.Size = new System.Drawing.Size(267, 308);
+			this._chartStructure1.TabIndex = 0;
+			this._chartStructure1.Text = "chart1";
+			this._chartStructure1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
+			// 
+			// _labelStructureGenre1
+			// 
+			this._labelStructureGenre1.AutoSize = true;
+			this._labelStructureGenre1.Dock = System.Windows.Forms.DockStyle.Top;
+			this._labelStructureGenre1.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._labelStructureGenre1.Location = new System.Drawing.Point(8, 23);
+			this._labelStructureGenre1.Margin = new System.Windows.Forms.Padding(0);
+			this._labelStructureGenre1.Name = "_labelStructureGenre1";
+			this._labelStructureGenre1.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+			this._labelStructureGenre1.Size = new System.Drawing.Size(136, 32);
+			this._labelStructureGenre1.TabIndex = 3;
+			this._labelStructureGenre1.Text = "{{Genre 1}}";
+			// 
+			// groupBox6
+			// 
+			groupBox6.Controls.Add(this._chartStructure2);
+			groupBox6.Controls.Add(this._labelStructureGenre2);
+			groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+			groupBox6.Location = new System.Drawing.Point(3, 8);
+			groupBox6.Margin = new System.Windows.Forms.Padding(0);
+			groupBox6.Name = "groupBox6";
+			groupBox6.Padding = new System.Windows.Forms.Padding(8);
+			groupBox6.Size = new System.Drawing.Size(281, 371);
+			groupBox6.TabIndex = 0;
+			groupBox6.TabStop = false;
+			groupBox6.Text = "Genre 2";
+			// 
+			// _chartStructure2
+			// 
+			this._chartStructure2.BackColor = System.Drawing.Color.Transparent;
+			chartArea4.AxisX.MajorGrid.Enabled = false;
+			chartArea4.AxisX.Title = "Song";
+			chartArea4.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 8F);
+			chartArea4.AxisY.Title = "Song Length (minutes)";
+			chartArea4.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 8F);
+			chartArea4.Name = "ChartArea1";
+			this._chartStructure2.ChartAreas.Add(chartArea4);
+			this._chartStructure2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._chartStructure2.Location = new System.Drawing.Point(8, 55);
+			this._chartStructure2.Margin = new System.Windows.Forms.Padding(0);
+			this._chartStructure2.Name = "_chartStructure2";
+			this._chartStructure2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+			series4.ChartArea = "ChartArea1";
+			series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+			series4.Name = "Structure";
+			this._chartStructure2.Series.Add(series4);
+			this._chartStructure2.Size = new System.Drawing.Size(265, 308);
+			this._chartStructure2.TabIndex = 5;
+			this._chartStructure2.Text = "chart1";
+			this._chartStructure2.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
+			// 
+			// _labelStructureGenre2
+			// 
+			this._labelStructureGenre2.AutoSize = true;
+			this._labelStructureGenre2.Dock = System.Windows.Forms.DockStyle.Top;
+			this._labelStructureGenre2.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._labelStructureGenre2.Location = new System.Drawing.Point(8, 23);
+			this._labelStructureGenre2.Margin = new System.Windows.Forms.Padding(0);
+			this._labelStructureGenre2.Name = "_labelStructureGenre2";
+			this._labelStructureGenre2.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+			this._labelStructureGenre2.Size = new System.Drawing.Size(140, 32);
+			this._labelStructureGenre2.TabIndex = 4;
+			this._labelStructureGenre2.Text = "{{Genre 2}}";
 			// 
 			// label13
 			// 
@@ -1309,6 +1473,17 @@
 			this._tabPgOutput.Text = "Output";
 			this._tabPgOutput.UseVisualStyleBackColor = true;
 			// 
+			// _panelValidInput
+			// 
+			this._panelValidInput.Controls.Add(tabControl1);
+			this._panelValidInput.Controls.Add(flowLayoutPanel12);
+			this._panelValidInput.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._panelValidInput.Location = new System.Drawing.Point(0, 0);
+			this._panelValidInput.Margin = new System.Windows.Forms.Padding(0);
+			this._panelValidInput.Name = "_panelValidInput";
+			this._panelValidInput.Size = new System.Drawing.Size(596, 442);
+			this._panelValidInput.TabIndex = 7;
+			// 
 			// _panelInvalidInput
 			// 
 			this._panelInvalidInput.Controls.Add(this.panel5);
@@ -1377,17 +1552,6 @@
 			this.panel6.Size = new System.Drawing.Size(66, 64);
 			this.panel6.TabIndex = 0;
 			// 
-			// _panelValidInput
-			// 
-			this._panelValidInput.Controls.Add(tabControl1);
-			this._panelValidInput.Controls.Add(flowLayoutPanel12);
-			this._panelValidInput.Dock = System.Windows.Forms.DockStyle.Fill;
-			this._panelValidInput.Location = new System.Drawing.Point(0, 0);
-			this._panelValidInput.Margin = new System.Windows.Forms.Padding(0);
-			this._panelValidInput.Name = "_panelValidInput";
-			this._panelValidInput.Size = new System.Drawing.Size(596, 442);
-			this._panelValidInput.TabIndex = 7;
-			// 
 			// _openDlgFiles
 			// 
 			this._openDlgFiles.DefaultExt = "mid";
@@ -1397,10 +1561,6 @@
 			this._openDlgFiles.RestoreDirectory = true;
 			this._openDlgFiles.SupportMultiDottedExtensions = true;
 			this._openDlgFiles.Title = "Open MIDI Files";
-			// 
-			// programBindingSource1
-			// 
-			this.programBindingSource1.DataSource = typeof(MidiEval.Analyzer.Program);
 			// 
 			// panel2
 			// 
@@ -1464,9 +1624,10 @@
 			flowLayoutPanel3.PerformLayout();
 			flowLayoutPanel1.ResumeLayout(false);
 			flowLayoutPanel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
 			groupBox3.ResumeLayout(false);
 			groupBox3.PerformLayout();
+			this.panel7.ResumeLayout(false);
+			this.panel7.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this._chartHarmonicities1)).EndInit();
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
@@ -1504,6 +1665,18 @@
 			this.splitContainer2.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
 			this.splitContainer2.ResumeLayout(false);
+			this.tabPage2.ResumeLayout(false);
+			this.splitContainer3.Panel1.ResumeLayout(false);
+			this.splitContainer3.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+			this.splitContainer3.ResumeLayout(false);
+			groupBox5.ResumeLayout(false);
+			groupBox5.PerformLayout();
+			this.panel8.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this._chartStructure1)).EndInit();
+			groupBox6.ResumeLayout(false);
+			groupBox6.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this._chartStructure2)).EndInit();
 			flowLayoutPanel13.ResumeLayout(false);
 			flowLayoutPanel13.PerformLayout();
 			this._tabCtrlMain.ResumeLayout(false);
@@ -1513,6 +1686,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
 			this._tabPgOutput.ResumeLayout(false);
+			this._panelValidInput.ResumeLayout(false);
+			this._panelValidInput.PerformLayout();
 			this._panelInvalidInput.ResumeLayout(false);
 			this._panelInvalidInput.PerformLayout();
 			this.panel5.ResumeLayout(false);
@@ -1522,9 +1697,6 @@
 			this.flowLayoutPanel14.ResumeLayout(false);
 			this.flowLayoutPanel14.PerformLayout();
 			this.panel4.ResumeLayout(false);
-			this._panelValidInput.ResumeLayout(false);
-			this._panelValidInput.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).EndInit();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
 			this.ResumeLayout(false);
@@ -1561,14 +1733,12 @@
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.ComboBox _cmbBoxProfile;
 		private System.Windows.Forms.Label _labelHarmonicity1;
-		private System.Windows.Forms.Label _labelGenre1;
-		private System.Windows.Forms.BindingSource programBindingSource;
+		private System.Windows.Forms.Label _labelHarmonicityGenre1;
 		private System.Windows.Forms.DataVisualization.Charting.Chart _chartHarmonicities1;
 		private System.Windows.Forms.Label _labelHarmonicity2;
-		private System.Windows.Forms.Label _labelGenre2;
+		private System.Windows.Forms.Label _labelHarmonicityGenre2;
 		private System.Windows.Forms.DataVisualization.Charting.Chart _chartHarmonicities2;
 		private System.Windows.Forms.TabControl _tabCtrlMain;
-		private System.Windows.Forms.BindingSource programBindingSource1;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Label _labelAvgNotes1;
 		private System.Windows.Forms.Label _labelAvgPhrases1;
@@ -1588,5 +1758,12 @@
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.ToolStripStatusLabel _labelStatus;
 		private System.Windows.Forms.ToolStripProgressBar _progBarStatus;
+		private System.Windows.Forms.Panel panel7;
+		private System.Windows.Forms.SplitContainer splitContainer3;
+		private System.Windows.Forms.Label _labelStructureGenre1;
+		private System.Windows.Forms.Label _labelStructureGenre2;
+		private System.Windows.Forms.Panel panel8;
+		private System.Windows.Forms.DataVisualization.Charting.Chart _chartStructure1;
+		private System.Windows.Forms.DataVisualization.Charting.Chart _chartStructure2;
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using MidiEval.Analyzer.Elements.Notes;
+using System;
 
 namespace MidiEval.Analyzer.Elements {
 
@@ -6,6 +7,19 @@ namespace MidiEval.Analyzer.Elements {
 	/// Class for a note.
 	/// </summary>
 	public class Note {
+
+		protected bool Equals(Note other) {
+			return this.Pitch.Equals(other.Pitch) && this.NoteOn == other.NoteOn && this.NoteOff == other.NoteOff;
+		}
+
+		public override int GetHashCode() {
+			unchecked {
+				var hashCode = this.Pitch.GetHashCode();
+				hashCode = (hashCode * 397) ^ this.NoteOn;
+				hashCode = (hashCode * 397) ^ this.NoteOff;
+				return hashCode;
+			}
+		}
 
 		/// <summary>
 		/// The pitch of the note.
@@ -39,6 +53,16 @@ namespace MidiEval.Analyzer.Elements {
 			this.Pitch = pitch;
 			this.NoteOn = noteOn;
 			this.NoteOff = noteOff;
+		}
+
+		public override bool Equals(object obj) {
+			if(ReferenceEquals(null, obj))
+				return false;
+			if(ReferenceEquals(this, obj))
+				return true;
+			if(obj.GetType() != this.GetType())
+				return false;
+			return Equals((Note) obj);
 		}
 	}
 }
